@@ -61,15 +61,28 @@ body::before {
 }
 
 /* ==========================================
-   カードコンテナ（アニメーション開始位置）
+   カードコンテナ（レスポンシブ対応版）
    ========================================== */
 .card-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px; /* 余白を広く */
-    max-width: 900px;
+    gap: 12px; /* スマホ向けにカード同士の間隔を少しスリムに */
+    width: 100%;
+    max-width: 1200px; /* PCで3列並んだ時にゆったり表示できるよう拡大 */
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 10px;
+    box-sizing: border-box;
+
+    /* スマホ表示：2カラム（2列） */
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* PC・タブレット表示（画面幅 768px 以上）：3カラム（3列）に変更 */
+@media (min-width: 768px) {
+    .card-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px; /* PCではカード間の余白を広げて見やすくする */
+        padding: 20px;
+    }
 }
 
 /* ==========================================
