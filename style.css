@@ -86,6 +86,74 @@ body::before {
 }
 
 /* ==========================================
+   スマホ（767px以下）で確実に2列表示＆重なり防止
+   ========================================== */
+@media (max-width: 767px) {
+    /* 1. カードコンテナを2列＆余白を調整 */
+    .card-container {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 15px !important;
+        padding: 15px 25px !important;
+    }
+
+    /* 2. カード自体が溢れないように設定 */
+    .profile-card {
+        padding: 10px 6px !important;
+        box-sizing: border-box !important;
+        min-width: 0 !important;
+        width: 100% !important;
+    }
+
+    /* 3. アイコン画像を縮小 */
+    .profile-icon {
+        width: 50px !important;
+        height: 50px !important;
+        margin-bottom: 6px !important;
+    }
+
+    /* 4. 名前の見出しと横並びレイアウトの調整 */
+    .name-header {
+        margin-bottom: 8px !important;
+        min-height: auto !important;
+    }
+
+    .profile-name {
+        font-size: 0.8rem !important;
+        white-space: normal !important;
+        word-break: break-all !important;
+    }
+
+    /* 5. 画像アイコンボタン */
+    .image-gallery-btn {
+        padding: 2px 5px !important;
+        font-size: 0.75rem !important;
+    }
+
+    /* 6. コメント枠（★ここを修正！ボタンと被らないよう上余白36pxを確保） */
+    .comment-frame {
+        padding: 36px 6px 10px 6px !important; /* 上 右 下 左 */
+    }
+
+    /* 7. 翻訳ボタン（スマホ用に少しだけコンパクト化） */
+    .translate-btn {
+        top: 6px !important;
+        left: 6px !important;
+        padding: 2px 7px !important;
+        font-size: 0.68rem !important;
+    }
+
+    .comment-text-wrapper p {
+        font-size: 0.75rem !important;
+        line-height: 1.35 !important;
+    }
+
+    .read-more-btn {
+        font-size: 0.7rem !important;
+        margin-top: 6px !important;
+    }
+}
+
+/* ==========================================
    プロフィールカード（主役：華やかスタイル）
    ========================================== */
 .profile-card {
