@@ -1,0 +1,1815 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message for Namie-sensei</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ★追加：オープニングアニメーション用幕 -->
+    <div id="splash-overlay">
+        <div class="splash-logo-wrapper">
+            <img src="img/header-logo.png" alt="ロゴ" class="splash-logo">
+        </div>
+    </div>
+
+    <!-- ▼ 上部固定ヘッダー（既存のまま） -->
+    <header class="site-header">
+        <div class="header-inner">
+            <img src="img/header-logo.png" alt="ロゴ" class="site-logo">
+        </div>
+    </header>
+
+<!-- 検索用 -->
+    <div class="search-container">
+        <input type="text" id="search-input" class="search-input" placeholder="Find messages" aria-label="検索">
+        <span class="search-icon">🔍</span>
+    </div>
+
+    <!-- 2カラムをまとめる親コンテナ -->
+    <div class="card-container">
+
+        <!-- 1つ目のカード -->
+        <div class="profile-card" style="--index: 1;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
+                </h2>           
+                <!-- 画像表示用ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>       
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                    <div class="comment-text-wrapper">
+                        <!-- 日本語メッセージ -->
+                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br>3行に収まるように自動で省略されます。<br><br>吾輩は猫である。名前はまだ無い。<br>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<br><br>
+この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。<br><br>その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突-起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+                        <!-- 英語メッセージ（最初は非表示になります） -->
+                        <p class="text-en">Your message goes here. Long messages are welcome. If your message exceeds the display limit, it will be automatically truncated to fit within three lines.<br><br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum risus ligula, et rutrum leo luctus eu. Vestibulum urna metus, molestie ut justo quis, porttitor ornare ex. Donec at erat vel nulla congue ullamcorper. Vivamus non vehicula elit. Quisque bibendum molestie eros vel porttitor. Nunc hendrerit, leo at lacinia tristique, velit orci volutpat quam, non condimentum lectus augue luctus sem. Nunc ut nisi eu massa aliquet ultricies id vitae magna. Donec venenatis mauris ut enim scelerisque ornare. Maecenas fringilla urna ex, sed rutrum libero tincidunt in. Duis pharetra facilisis scelerisque. Phasellus porttitor odio at nulla hendrerit, quis sollicitudin lorem accumsan.</p>
+                    </div>
+            </div>
+                <!-- 全文を見るボタン -->
+                <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+        <!-- 2つ目のカード -->
+        <div class="profile-card" style="--index: 2;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
+                </h2>           
+                <!-- 画像表示用ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>       
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                    <div class="comment-text-wrapper">
+                        <!-- 日本語メッセージ -->
+                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br>3行に収まるように自動で省略されます。<br><br>吾輩は猫である。名前はまだ無い。<br>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<br><br>
+この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。<br><br>その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突-起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+                        <!-- 英語メッセージ（最初は非表示になります） -->
+                        <p class="text-en">Your message goes here. Long messages are welcome. If your message exceeds the display limit, it will be automatically truncated to fit within three lines.<br><br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum risus ligula, et rutrum leo luctus eu. Vestibulum urna metus, molestie ut justo quis, porttitor ornare ex. Donec at erat vel nulla congue ullamcorper. Vivamus non vehicula elit. Quisque bibendum molestie eros vel porttitor. Nunc hendrerit, leo at lacinia tristique, velit orci volutpat quam, non condimentum lectus augue luctus sem. Nunc ut nisi eu massa aliquet ultricies id vitae magna. Donec venenatis mauris ut enim scelerisque ornare. Maecenas fringilla urna ex, sed rutrum libero tincidunt in. Duis pharetra facilisis scelerisque. Phasellus porttitor odio at nulla hendrerit, quis sollicitudin lorem accumsan.</p>
+                    </div>
+            </div>
+                <!-- 全文を見るボタン -->
+                <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+        <!-- 3つ目のカード -->
+        <div class="profile-card" style="--index: 3;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
+                </h2>           
+                <!-- 画像表示用ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>       
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                    <div class="comment-text-wrapper">
+                        <!-- 日本語メッセージ -->
+                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br>3行に収まるように自動で省略されます。<br><br>吾輩は猫である。名前はまだ無い。<br>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<br><br>
+この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。<br><br>その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突-起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+                        <!-- 英語メッセージ（最初は非表示になります） -->
+                        <p class="text-en">Your message goes here. Long messages are welcome. If your message exceeds the display limit, it will be automatically truncated to fit within three lines.<br><br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum risus ligula, et rutrum leo luctus eu. Vestibulum urna metus, molestie ut justo quis, porttitor ornare ex. Donec at erat vel nulla congue ullamcorper. Vivamus non vehicula elit. Quisque bibendum molestie eros vel porttitor. Nunc hendrerit, leo at lacinia tristique, velit orci volutpat quam, non condimentum lectus augue luctus sem. Nunc ut nisi eu massa aliquet ultricies id vitae magna. Donec venenatis mauris ut enim scelerisque ornare. Maecenas fringilla urna ex, sed rutrum libero tincidunt in. Duis pharetra facilisis scelerisque. Phasellus porttitor odio at nulla hendrerit, quis sollicitudin lorem accumsan.</p>
+                    </div>
+            </div>
+                <!-- 全文を見るボタン -->
+                <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+        <!-- 4つ目のカード -->
+        <div class="profile-card" style="--index: 4;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
+                </h2>           
+                <!-- 画像表示用ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>       
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                    <div class="comment-text-wrapper">
+                        <!-- 日本語メッセージ -->
+                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br>3行に収まるように自動で省略されます。<br><br>吾輩は猫である。名前はまだ無い。<br>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<br><br>
+この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。<br><br>その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突-起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+                        <!-- 英語メッセージ（最初は非表示になります） -->
+                        <p class="text-en">Your message goes here. Long messages are welcome. If your message exceeds the display limit, it will be automatically truncated to fit within three lines.<br><br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum risus ligula, et rutrum leo luctus eu. Vestibulum urna metus, molestie ut justo quis, porttitor ornare ex. Donec at erat vel nulla congue ullamcorper. Vivamus non vehicula elit. Quisque bibendum molestie eros vel porttitor. Nunc hendrerit, leo at lacinia tristique, velit orci volutpat quam, non condimentum lectus augue luctus sem. Nunc ut nisi eu massa aliquet ultricies id vitae magna. Donec venenatis mauris ut enim scelerisque ornare. Maecenas fringilla urna ex, sed rutrum libero tincidunt in. Duis pharetra facilisis scelerisque. Phasellus porttitor odio at nulla hendrerit, quis sollicitudin lorem accumsan.</p>
+                    </div>
+            </div>
+                <!-- 全文を見るボタン -->
+                <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+                <!-- 5つ目のカード -->
+        <div class="profile-card" style="--index: 5;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
+                </h2>           
+                <!-- 画像表示用ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>       
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                    <div class="comment-text-wrapper">
+                        <!-- 日本語メッセージ -->
+                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br>3行に収まるように自動で省略されます。<br><br>吾輩は猫である。名前はまだ無い。<br>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<br><br>
+この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。<br><br>その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突-起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+                        <!-- 英語メッセージ（最初は非表示になります） -->
+                        <p class="text-en">Your message goes here. Long messages are welcome. If your message exceeds the display limit, it will be automatically truncated to fit within three lines.<br><br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum risus ligula, et rutrum leo luctus eu. Vestibulum urna metus, molestie ut justo quis, porttitor ornare ex. Donec at erat vel nulla congue ullamcorper. Vivamus non vehicula elit. Quisque bibendum molestie eros vel porttitor. Nunc hendrerit, leo at lacinia tristique, velit orci volutpat quam, non condimentum lectus augue luctus sem. Nunc ut nisi eu massa aliquet ultricies id vitae magna. Donec venenatis mauris ut enim scelerisque ornare. Maecenas fringilla urna ex, sed rutrum libero tincidunt in. Duis pharetra facilisis scelerisque. Phasellus porttitor odio at nulla hendrerit, quis sollicitudin lorem accumsan.</p>
+                    </div>
+            </div>
+                <!-- 全文を見るボタン -->
+                <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+        <!-- 6つ目のカード -->
+        <div class="profile-card" style="--index: 6;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
+                </h2>           
+                <!-- 画像表示用ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>       
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                    <div class="comment-text-wrapper">
+                        <!-- 日本語メッセージ -->
+                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br>3行に収まるように自動で省略されます。<br><br>吾輩は猫である。名前はまだ無い。<br>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<br><br>
+この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。<br><br>その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突-起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+                        <!-- 英語メッセージ（最初は非表示になります） -->
+                        <p class="text-en">Your message goes here. Long messages are welcome. If your message exceeds the display limit, it will be automatically truncated to fit within three lines.<br><br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum risus ligula, et rutrum leo luctus eu. Vestibulum urna metus, molestie ut justo quis, porttitor ornare ex. Donec at erat vel nulla congue ullamcorper. Vivamus non vehicula elit. Quisque bibendum molestie eros vel porttitor. Nunc hendrerit, leo at lacinia tristique, velit orci volutpat quam, non condimentum lectus augue luctus sem. Nunc ut nisi eu massa aliquet ultricies id vitae magna. Donec venenatis mauris ut enim scelerisque ornare. Maecenas fringilla urna ex, sed rutrum libero tincidunt in. Duis pharetra facilisis scelerisque. Phasellus porttitor odio at nulla hendrerit, quis sollicitudin lorem accumsan.</p>
+                    </div>
+            </div>
+                <!-- 全文を見るボタン -->
+                <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+                <!-- 7つ目のカード -->
+        <div class="profile-card" style="--index: 7;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
+                </h2>           
+                <!-- 画像表示用ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>       
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                    <div class="comment-text-wrapper">
+                        <!-- 日本語メッセージ -->
+                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br>3行に収まるように自動で省略されます。<br><br>吾輩は猫である。名前はまだ無い。<br>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<br><br>
+この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。<br><br>その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突-起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+                        <!-- 英語メッセージ（最初は非表示になります） -->
+                        <p class="text-en">Your message goes here. Long messages are welcome. If your message exceeds the display limit, it will be automatically truncated to fit within three lines.<br><br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum risus ligula, et rutrum leo luctus eu. Vestibulum urna metus, molestie ut justo quis, porttitor ornare ex. Donec at erat vel nulla congue ullamcorper. Vivamus non vehicula elit. Quisque bibendum molestie eros vel porttitor. Nunc hendrerit, leo at lacinia tristique, velit orci volutpat quam, non condimentum lectus augue luctus sem. Nunc ut nisi eu massa aliquet ultricies id vitae magna. Donec venenatis mauris ut enim scelerisque ornare. Maecenas fringilla urna ex, sed rutrum libero tincidunt in. Duis pharetra facilisis scelerisque. Phasellus porttitor odio at nulla hendrerit, quis sollicitudin lorem accumsan.</p>
+                    </div>
+            </div>
+                <!-- 全文を見るボタン -->
+                <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+        <!-- 8つ目のカード -->
+        <div class="profile-card" style="--index: 8;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
+                </h2>           
+                <!-- 画像表示用ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>       
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                    <div class="comment-text-wrapper">
+                        <!-- 日本語メッセージ -->
+                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br>3行に収まるように自動で省略されます。<br><br>吾輩は猫である。名前はまだ無い。<br>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<br><br>
+この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。<br><br>その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突-起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+                        <!-- 英語メッセージ（最初は非表示になります） -->
+                        <p class="text-en">Your message goes here. Long messages are welcome. If your message exceeds the display limit, it will be automatically truncated to fit within three lines.<br><br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum risus ligula, et rutrum leo luctus eu. Vestibulum urna metus, molestie ut justo quis, porttitor ornare ex. Donec at erat vel nulla congue ullamcorper. Vivamus non vehicula elit. Quisque bibendum molestie eros vel porttitor. Nunc hendrerit, leo at lacinia tristique, velit orci volutpat quam, non condimentum lectus augue luctus sem. Nunc ut nisi eu massa aliquet ultricies id vitae magna. Donec venenatis mauris ut enim scelerisque ornare. Maecenas fringilla urna ex, sed rutrum libero tincidunt in. Duis pharetra facilisis scelerisque. Phasellus porttitor odio at nulla hendrerit, quis sollicitudin lorem accumsan.</p>
+                    </div>
+            </div>
+                <!-- 全文を見るボタン -->
+                <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+                <!-- 9つ目のカード -->
+        <div class="profile-card" style="--index: 9;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
+                </h2>           
+                <!-- 画像表示用ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>       
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                    <div class="comment-text-wrapper">
+                        <!-- 日本語メッセージ -->
+                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br>3行に収まるように自動で省略されます。<br><br>吾輩は猫である。名前はまだ無い。<br>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<br><br>
+この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。<br><br>その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突-起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+                        <!-- 英語メッセージ（最初は非表示になります） -->
+                        <p class="text-en">Your message goes here. Long messages are welcome. If your message exceeds the display limit, it will be automatically truncated to fit within three lines.<br><br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum risus ligula, et rutrum leo luctus eu. Vestibulum urna metus, molestie ut justo quis, porttitor ornare ex. Donec at erat vel nulla congue ullamcorper. Vivamus non vehicula elit. Quisque bibendum molestie eros vel porttitor. Nunc hendrerit, leo at lacinia tristique, velit orci volutpat quam, non condimentum lectus augue luctus sem. Nunc ut nisi eu massa aliquet ultricies id vitae magna. Donec venenatis mauris ut enim scelerisque ornare. Maecenas fringilla urna ex, sed rutrum libero tincidunt in. Duis pharetra facilisis scelerisque. Phasellus porttitor odio at nulla hendrerit, quis sollicitudin lorem accumsan.</p>
+                    </div>
+            </div>
+                <!-- 全文を見るボタン -->
+                <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+        <!-- 10つ目のカード -->
+        <div class="profile-card" style="--index: 10;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
+                </h2>           
+                <!-- 画像表示用ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>       
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                    <div class="comment-text-wrapper">
+                        <!-- 日本語メッセージ -->
+                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br>3行に収まるように自動で省略されます。<br><br>吾輩は猫である。名前はまだ無い。<br>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<br><br>
+この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。<br><br>その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突-起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+                        <!-- 英語メッセージ（最初は非表示になります） -->
+                        <p class="text-en">Your message goes here. Long messages are welcome. If your message exceeds the display limit, it will be automatically truncated to fit within three lines.<br><br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum risus ligula, et rutrum leo luctus eu. Vestibulum urna metus, molestie ut justo quis, porttitor ornare ex. Donec at erat vel nulla congue ullamcorper. Vivamus non vehicula elit. Quisque bibendum molestie eros vel porttitor. Nunc hendrerit, leo at lacinia tristique, velit orci volutpat quam, non condimentum lectus augue luctus sem. Nunc ut nisi eu massa aliquet ultricies id vitae magna. Donec venenatis mauris ut enim scelerisque ornare. Maecenas fringilla urna ex, sed rutrum libero tincidunt in. Duis pharetra facilisis scelerisque. Phasellus porttitor odio at nulla hendrerit, quis sollicitudin lorem accumsan.</p>
+                    </div>
+            </div>
+                <!-- 全文を見るボタン -->
+                <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+                <!-- 11つ目のカード -->
+        <div class="profile-card" style="--index: 11;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
+                </h2>           
+                <!-- 画像表示用ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>       
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                    <div class="comment-text-wrapper">
+                        <!-- 日本語メッセージ -->
+                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br>3行に収まるように自動で省略されます。<br><br>吾輩は猫である。名前はまだ無い。<br>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<br><br>
+この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。<br><br>その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突-起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+                        <!-- 英語メッセージ（最初は非表示になります） -->
+                        <p class="text-en">Your message goes here. Long messages are welcome. If your message exceeds the display limit, it will be automatically truncated to fit within three lines.<br><br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum risus ligula, et rutrum leo luctus eu. Vestibulum urna metus, molestie ut justo quis, porttitor ornare ex. Donec at erat vel nulla congue ullamcorper. Vivamus non vehicula elit. Quisque bibendum molestie eros vel porttitor. Nunc hendrerit, leo at lacinia tristique, velit orci volutpat quam, non condimentum lectus augue luctus sem. Nunc ut nisi eu massa aliquet ultricies id vitae magna. Donec venenatis mauris ut enim scelerisque ornare. Maecenas fringilla urna ex, sed rutrum libero tincidunt in. Duis pharetra facilisis scelerisque. Phasellus porttitor odio at nulla hendrerit, quis sollicitudin lorem accumsan.</p>
+                    </div>
+            </div>
+                <!-- 全文を見るボタン -->
+                <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+        <!-- 12つ目のカード -->
+        <div class="profile-card" style="--index: 12;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
+                </h2>           
+                <!-- 画像表示用ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>       
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                    <div class="comment-text-wrapper">
+                        <!-- 日本語メッセージ -->
+                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br>3行に収まるように自動で省略されます。<br><br>吾輩は猫である。名前はまだ無い。<br>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<br><br>
+この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。<br><br>その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突-起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+                        <!-- 英語メッセージ（最初は非表示になります） -->
+                        <p class="text-en">Your message goes here. Long messages are welcome. If your message exceeds the display limit, it will be automatically truncated to fit within three lines.<br><br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum risus ligula, et rutrum leo luctus eu. Vestibulum urna metus, molestie ut justo quis, porttitor ornare ex. Donec at erat vel nulla congue ullamcorper. Vivamus non vehicula elit. Quisque bibendum molestie eros vel porttitor. Nunc hendrerit, leo at lacinia tristique, velit orci volutpat quam, non condimentum lectus augue luctus sem. Nunc ut nisi eu massa aliquet ultricies id vitae magna. Donec venenatis mauris ut enim scelerisque ornare. Maecenas fringilla urna ex, sed rutrum libero tincidunt in. Duis pharetra facilisis scelerisque. Phasellus porttitor odio at nulla hendrerit, quis sollicitudin lorem accumsan.</p>
+                    </div>
+            </div>
+                <!-- 全文を見るボタン -->
+                <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+                <!-- 13つ目のカード -->
+        <div class="profile-card" style="--index: 13;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
+                </h2>           
+                <!-- 画像表示用ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>       
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                    <div class="comment-text-wrapper">
+                        <!-- 日本語メッセージ -->
+                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br>3行に収まるように自動で省略されます。<br><br>吾輩は猫である。名前はまだ無い。<br>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<br><br>
+この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。<br><br>その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突-起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+                        <!-- 英語メッセージ（最初は非表示になります） -->
+                        <p class="text-en">Your message goes here. Long messages are welcome. If your message exceeds the display limit, it will be automatically truncated to fit within three lines.<br><br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum risus ligula, et rutrum leo luctus eu. Vestibulum urna metus, molestie ut justo quis, porttitor ornare ex. Donec at erat vel nulla congue ullamcorper. Vivamus non vehicula elit. Quisque bibendum molestie eros vel porttitor. Nunc hendrerit, leo at lacinia tristique, velit orci volutpat quam, non condimentum lectus augue luctus sem. Nunc ut nisi eu massa aliquet ultricies id vitae magna. Donec venenatis mauris ut enim scelerisque ornare. Maecenas fringilla urna ex, sed rutrum libero tincidunt in. Duis pharetra facilisis scelerisque. Phasellus porttitor odio at nulla hendrerit, quis sollicitudin lorem accumsan.</p>
+                    </div>
+            </div>
+                <!-- 全文を見るボタン -->
+                <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+        <!-- 14つ目のカード -->
+        <div class="profile-card" style="--index: 14;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
+                </h2>           
+                <!-- 画像表示用ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>       
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                    <div class="comment-text-wrapper">
+                        <!-- 日本語メッセージ -->
+                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br>3行に収まるように自動で省略されます。<br><br>吾輩は猫である。名前はまだ無い。<br>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<br><br>
+この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。<br><br>その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突-起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+                        <!-- 英語メッセージ（最初は非表示になります） -->
+                        <p class="text-en">Your message goes here. Long messages are welcome. If your message exceeds the display limit, it will be automatically truncated to fit within three lines.<br><br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum risus ligula, et rutrum leo luctus eu. Vestibulum urna metus, molestie ut justo quis, porttitor ornare ex. Donec at erat vel nulla congue ullamcorper. Vivamus non vehicula elit. Quisque bibendum molestie eros vel porttitor. Nunc hendrerit, leo at lacinia tristique, velit orci volutpat quam, non condimentum lectus augue luctus sem. Nunc ut nisi eu massa aliquet ultricies id vitae magna. Donec venenatis mauris ut enim scelerisque ornare. Maecenas fringilla urna ex, sed rutrum libero tincidunt in. Duis pharetra facilisis scelerisque. Phasellus porttitor odio at nulla hendrerit, quis sollicitudin lorem accumsan.</p>
+                    </div>
+            </div>
+                <!-- 全文を見るボタン -->
+                <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+                <!-- 15つ目のカード -->
+        <div class="profile-card" style="--index: 15;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
+                </h2>           
+                <!-- 画像表示用ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>       
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                    <div class="comment-text-wrapper">
+                        <!-- 日本語メッセージ -->
+                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br>3行に収まるように自動で省略されます。<br><br>吾輩は猫である。名前はまだ無い。<br>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<br><br>
+この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。<br><br>その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突-起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+                        <!-- 英語メッセージ（最初は非表示になります） -->
+                        <p class="text-en">Your message goes here. Long messages are welcome. If your message exceeds the display limit, it will be automatically truncated to fit within three lines.<br><br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum risus ligula, et rutrum leo luctus eu. Vestibulum urna metus, molestie ut justo quis, porttitor ornare ex. Donec at erat vel nulla congue ullamcorper. Vivamus non vehicula elit. Quisque bibendum molestie eros vel porttitor. Nunc hendrerit, leo at lacinia tristique, velit orci volutpat quam, non condimentum lectus augue luctus sem. Nunc ut nisi eu massa aliquet ultricies id vitae magna. Donec venenatis mauris ut enim scelerisque ornare. Maecenas fringilla urna ex, sed rutrum libero tincidunt in. Duis pharetra facilisis scelerisque. Phasellus porttitor odio at nulla hendrerit, quis sollicitudin lorem accumsan.</p>
+                    </div>
+            </div>
+                <!-- 全文を見るボタン -->
+                <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+        <!-- 16つ目のカード -->
+        <div class="profile-card" style="--index: 16;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
+                </h2>           
+                <!-- 画像表示用ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>       
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                    <div class="comment-text-wrapper">
+                        <!-- 日本語メッセージ -->
+                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br>3行に収まるように自動で省略されます。<br><br>吾輩は猫である。名前はまだ無い。<br>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<br><br>
+この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。<br><br>その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突-起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+                        <!-- 英語メッセージ（最初は非表示になります） -->
+                        <p class="text-en">Your message goes here. Long messages are welcome. If your message exceeds the display limit, it will be automatically truncated to fit within three lines.<br><br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum risus ligula, et rutrum leo luctus eu. Vestibulum urna metus, molestie ut justo quis, porttitor ornare ex. Donec at erat vel nulla congue ullamcorper. Vivamus non vehicula elit. Quisque bibendum molestie eros vel porttitor. Nunc hendrerit, leo at lacinia tristique, velit orci volutpat quam, non condimentum lectus augue luctus sem. Nunc ut nisi eu massa aliquet ultricies id vitae magna. Donec venenatis mauris ut enim scelerisque ornare. Maecenas fringilla urna ex, sed rutrum libero tincidunt in. Duis pharetra facilisis scelerisque. Phasellus porttitor odio at nulla hendrerit, quis sollicitudin lorem accumsan.</p>
+                    </div>
+            </div>
+                <!-- 全文を見るボタン -->
+                <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+
+                <!-- 17つ目のカード -->
+        <div class="profile-card" style="--index: 17;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
+                </h2>           
+                <!-- 画像表示用ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>       
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                    <div class="comment-text-wrapper">
+                        <!-- 日本語メッセージ -->
+                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br>3行に収まるように自動で省略されます。<br><br>吾輩は猫である。名前はまだ無い。<br>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<br><br>
+この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。<br><br>その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突-起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+                        <!-- 英語メッセージ（最初は非表示になります） -->
+                        <p class="text-en">Your message goes here. Long messages are welcome. If your message exceeds the display limit, it will be automatically truncated to fit within three lines.<br><br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum risus ligula, et rutrum leo luctus eu. Vestibulum urna metus, molestie ut justo quis, porttitor ornare ex. Donec at erat vel nulla congue ullamcorper. Vivamus non vehicula elit. Quisque bibendum molestie eros vel porttitor. Nunc hendrerit, leo at lacinia tristique, velit orci volutpat quam, non condimentum lectus augue luctus sem. Nunc ut nisi eu massa aliquet ultricies id vitae magna. Donec venenatis mauris ut enim scelerisque ornare. Maecenas fringilla urna ex, sed rutrum libero tincidunt in. Duis pharetra facilisis scelerisque. Phasellus porttitor odio at nulla hendrerit, quis sollicitudin lorem accumsan.</p>
+                    </div>
+            </div>
+                <!-- 全文を見るボタン -->
+                <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+        <!-- 18つ目のカード -->
+        <div class="profile-card" style="--index: 18;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
+                </h2>           
+                <!-- 画像表示用ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>       
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                    <div class="comment-text-wrapper">
+                        <!-- 日本語メッセージ -->
+                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br>3行に収まるように自動で省略されます。<br><br>吾輩は猫である。名前はまだ無い。<br>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<br><br>
+この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。<br><br>その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突-起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+                        <!-- 英語メッセージ（最初は非表示になります） -->
+                        <p class="text-en">Your message goes here. Long messages are welcome. If your message exceeds the display limit, it will be automatically truncated to fit within three lines.<br><br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum risus ligula, et rutrum leo luctus eu. Vestibulum urna metus, molestie ut justo quis, porttitor ornare ex. Donec at erat vel nulla congue ullamcorper. Vivamus non vehicula elit. Quisque bibendum molestie eros vel porttitor. Nunc hendrerit, leo at lacinia tristique, velit orci volutpat quam, non condimentum lectus augue luctus sem. Nunc ut nisi eu massa aliquet ultricies id vitae magna. Donec venenatis mauris ut enim scelerisque ornare. Maecenas fringilla urna ex, sed rutrum libero tincidunt in. Duis pharetra facilisis scelerisque. Phasellus porttitor odio at nulla hendrerit, quis sollicitudin lorem accumsan.</p>
+                    </div>
+            </div>
+                <!-- 全文を見るボタン -->
+                <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+                <!-- 19つ目のカード -->
+        <div class="profile-card" style="--index: 19;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
+                </h2>           
+                <!-- 画像表示用ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>       
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                    <div class="comment-text-wrapper">
+                        <!-- 日本語メッセージ -->
+                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br>3行に収まるように自動で省略されます。<br><br>吾輩は猫である。名前はまだ無い。<br>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<br><br>
+この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。<br><br>その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突-起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+                        <!-- 英語メッセージ（最初は非表示になります） -->
+                        <p class="text-en">Your message goes here. Long messages are welcome. If your message exceeds the display limit, it will be automatically truncated to fit within three lines.<br><br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum risus ligula, et rutrum leo luctus eu. Vestibulum urna metus, molestie ut justo quis, porttitor ornare ex. Donec at erat vel nulla congue ullamcorper. Vivamus non vehicula elit. Quisque bibendum molestie eros vel porttitor. Nunc hendrerit, leo at lacinia tristique, velit orci volutpat quam, non condimentum lectus augue luctus sem. Nunc ut nisi eu massa aliquet ultricies id vitae magna. Donec venenatis mauris ut enim scelerisque ornare. Maecenas fringilla urna ex, sed rutrum libero tincidunt in. Duis pharetra facilisis scelerisque. Phasellus porttitor odio at nulla hendrerit, quis sollicitudin lorem accumsan.</p>
+                    </div>
+            </div>
+                <!-- 全文を見るボタン -->
+                <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+        <!-- 20つ目のカード -->
+        <div class="profile-card" style="--index: 20;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
+                </h2>           
+                <!-- 画像表示用ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>       
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                    <div class="comment-text-wrapper">
+                        <!-- 日本語メッセージ -->
+                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br>3行に収まるように自動で省略されます。<br><br>吾輩は猫である。名前はまだ無い。<br>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<br><br>
+この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。<br><br>その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突-起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+                        <!-- 英語メッセージ（最初は非表示になります） -->
+                        <p class="text-en">Your message goes here. Long messages are welcome. If your message exceeds the display limit, it will be automatically truncated to fit within three lines.<br><br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum risus ligula, et rutrum leo luctus eu. Vestibulum urna metus, molestie ut justo quis, porttitor ornare ex. Donec at erat vel nulla congue ullamcorper. Vivamus non vehicula elit. Quisque bibendum molestie eros vel porttitor. Nunc hendrerit, leo at lacinia tristique, velit orci volutpat quam, non condimentum lectus augue luctus sem. Nunc ut nisi eu massa aliquet ultricies id vitae magna. Donec venenatis mauris ut enim scelerisque ornare. Maecenas fringilla urna ex, sed rutrum libero tincidunt in. Duis pharetra facilisis scelerisque. Phasellus porttitor odio at nulla hendrerit, quis sollicitudin lorem accumsan.</p>
+                    </div>
+            </div>
+                <!-- 全文を見るボタン -->
+                <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+                <!-- 21つ目のカード -->
+        <div class="profile-card" style="--index: 21;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
+                </h2>           
+                <!-- 画像表示用ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>       
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                    <div class="comment-text-wrapper">
+                        <!-- 日本語メッセージ -->
+                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br>3行に収まるように自動で省略されます。<br><br>吾輩は猫である。名前はまだ無い。<br>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<br><br>
+この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。<br><br>その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突-起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+                        <!-- 英語メッセージ（最初は非表示になります） -->
+                        <p class="text-en">Your message goes here. Long messages are welcome. If your message exceeds the display limit, it will be automatically truncated to fit within three lines.<br><br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum risus ligula, et rutrum leo luctus eu. Vestibulum urna metus, molestie ut justo quis, porttitor ornare ex. Donec at erat vel nulla congue ullamcorper. Vivamus non vehicula elit. Quisque bibendum molestie eros vel porttitor. Nunc hendrerit, leo at lacinia tristique, velit orci volutpat quam, non condimentum lectus augue luctus sem. Nunc ut nisi eu massa aliquet ultricies id vitae magna. Donec venenatis mauris ut enim scelerisque ornare. Maecenas fringilla urna ex, sed rutrum libero tincidunt in. Duis pharetra facilisis scelerisque. Phasellus porttitor odio at nulla hendrerit, quis sollicitudin lorem accumsan.</p>
+                    </div>
+            </div>
+                <!-- 全文を見るボタン -->
+                <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+        <!-- 22つ目のカード -->
+        <div class="profile-card" style="--index: 22;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
+                </h2>           
+                <!-- 画像表示用ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>       
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                    <div class="comment-text-wrapper">
+                        <!-- 日本語メッセージ -->
+                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br>3行に収まるように自動で省略されます。<br><br>吾輩は猫である。名前はまだ無い。<br>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<br><br>
+この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。<br><br>その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突-起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+                        <!-- 英語メッセージ（最初は非表示になります） -->
+                        <p class="text-en">Your message goes here. Long messages are welcome. If your message exceeds the display limit, it will be automatically truncated to fit within three lines.<br><br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum risus ligula, et rutrum leo luctus eu. Vestibulum urna metus, molestie ut justo quis, porttitor ornare ex. Donec at erat vel nulla congue ullamcorper. Vivamus non vehicula elit. Quisque bibendum molestie eros vel porttitor. Nunc hendrerit, leo at lacinia tristique, velit orci volutpat quam, non condimentum lectus augue luctus sem. Nunc ut nisi eu massa aliquet ultricies id vitae magna. Donec venenatis mauris ut enim scelerisque ornare. Maecenas fringilla urna ex, sed rutrum libero tincidunt in. Duis pharetra facilisis scelerisque. Phasellus porttitor odio at nulla hendrerit, quis sollicitudin lorem accumsan.</p>
+                    </div>
+            </div>
+                <!-- 全文を見るボタン -->
+                <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+                <!-- 23つ目のカード -->
+        <div class="profile-card" style="--index: 23;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
+                </h2>           
+                <!-- 画像表示用ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>       
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                    <div class="comment-text-wrapper">
+                        <!-- 日本語メッセージ -->
+                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br>3行に収まるように自動で省略されます。<br><br>吾輩は猫である。名前はまだ無い。<br>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<br><br>
+この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。<br><br>その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突-起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+                        <!-- 英語メッセージ（最初は非表示になります） -->
+                        <p class="text-en">Your message goes here. Long messages are welcome. If your message exceeds the display limit, it will be automatically truncated to fit within three lines.<br><br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum risus ligula, et rutrum leo luctus eu. Vestibulum urna metus, molestie ut justo quis, porttitor ornare ex. Donec at erat vel nulla congue ullamcorper. Vivamus non vehicula elit. Quisque bibendum molestie eros vel porttitor. Nunc hendrerit, leo at lacinia tristique, velit orci volutpat quam, non condimentum lectus augue luctus sem. Nunc ut nisi eu massa aliquet ultricies id vitae magna. Donec venenatis mauris ut enim scelerisque ornare. Maecenas fringilla urna ex, sed rutrum libero tincidunt in. Duis pharetra facilisis scelerisque. Phasellus porttitor odio at nulla hendrerit, quis sollicitudin lorem accumsan.</p>
+                    </div>
+            </div>
+                <!-- 全文を見るボタン -->
+                <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+        <!-- 24つ目のカード -->
+        <div class="profile-card" style="--index: 24;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
+                </h2>           
+                <!-- 画像表示用ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>       
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                    <div class="comment-text-wrapper">
+                        <!-- 日本語メッセージ -->
+                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br>3行に収まるように自動で省略されます。<br><br>吾輩は猫である。名前はまだ無い。<br>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<br><br>
+この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。<br><br>その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突-起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+                        <!-- 英語メッセージ（最初は非表示になります） -->
+                        <p class="text-en">Your message goes here. Long messages are welcome. If your message exceeds the display limit, it will be automatically truncated to fit within three lines.<br><br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum risus ligula, et rutrum leo luctus eu. Vestibulum urna metus, molestie ut justo quis, porttitor ornare ex. Donec at erat vel nulla congue ullamcorper. Vivamus non vehicula elit. Quisque bibendum molestie eros vel porttitor. Nunc hendrerit, leo at lacinia tristique, velit orci volutpat quam, non condimentum lectus augue luctus sem. Nunc ut nisi eu massa aliquet ultricies id vitae magna. Donec venenatis mauris ut enim scelerisque ornare. Maecenas fringilla urna ex, sed rutrum libero tincidunt in. Duis pharetra facilisis scelerisque. Phasellus porttitor odio at nulla hendrerit, quis sollicitudin lorem accumsan.</p>
+                    </div>
+            </div>
+                <!-- 全文を見るボタン -->
+                <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+                <!-- 25つ目のカード -->
+        <div class="profile-card" style="--index: 25;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
+                </h2>           
+                <!-- 画像表示用ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>       
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                    <div class="comment-text-wrapper">
+                        <!-- 日本語メッセージ -->
+                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br>3行に収まるように自動で省略されます。<br><br>吾輩は猫である。名前はまだ無い。<br>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<br><br>
+この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。<br><br>その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突-起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+                        <!-- 英語メッセージ（最初は非表示になります） -->
+                        <p class="text-en">Your message goes here. Long messages are welcome. If your message exceeds the display limit, it will be automatically truncated to fit within three lines.<br><br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum risus ligula, et rutrum leo luctus eu. Vestibulum urna metus, molestie ut justo quis, porttitor ornare ex. Donec at erat vel nulla congue ullamcorper. Vivamus non vehicula elit. Quisque bibendum molestie eros vel porttitor. Nunc hendrerit, leo at lacinia tristique, velit orci volutpat quam, non condimentum lectus augue luctus sem. Nunc ut nisi eu massa aliquet ultricies id vitae magna. Donec venenatis mauris ut enim scelerisque ornare. Maecenas fringilla urna ex, sed rutrum libero tincidunt in. Duis pharetra facilisis scelerisque. Phasellus porttitor odio at nulla hendrerit, quis sollicitudin lorem accumsan.</p>
+                    </div>
+            </div>
+                <!-- 全文を見るボタン -->
+                <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+        <!-- 26つ目のカード -->
+        <div class="profile-card" style="--index: 26;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
+                </h2>           
+                <!-- 画像表示用ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>       
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                    <div class="comment-text-wrapper">
+                        <!-- 日本語メッセージ -->
+                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br>3行に収まるように自動で省略されます。<br><br>吾輩は猫である。名前はまだ無い。<br>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<br><br>
+この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。<br><br>その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突-起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+                        <!-- 英語メッセージ（最初は非表示になります） -->
+                        <p class="text-en">Your message goes here. Long messages are welcome. If your message exceeds the display limit, it will be automatically truncated to fit within three lines.<br><br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum risus ligula, et rutrum leo luctus eu. Vestibulum urna metus, molestie ut justo quis, porttitor ornare ex. Donec at erat vel nulla congue ullamcorper. Vivamus non vehicula elit. Quisque bibendum molestie eros vel porttitor. Nunc hendrerit, leo at lacinia tristique, velit orci volutpat quam, non condimentum lectus augue luctus sem. Nunc ut nisi eu massa aliquet ultricies id vitae magna. Donec venenatis mauris ut enim scelerisque ornare. Maecenas fringilla urna ex, sed rutrum libero tincidunt in. Duis pharetra facilisis scelerisque. Phasellus porttitor odio at nulla hendrerit, quis sollicitudin lorem accumsan.</p>
+                    </div>
+            </div>
+                <!-- 全文を見るボタン -->
+                <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+                <!-- 27つ目のカード -->
+        <div class="profile-card" style="--index: 27;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
+                </h2>           
+                <!-- 画像表示用ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>       
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                    <div class="comment-text-wrapper">
+                        <!-- 日本語メッセージ -->
+                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br>3行に収まるように自動で省略されます。<br><br>吾輩は猫である。名前はまだ無い。<br>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<br><br>
+この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。<br><br>その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突-起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+                        <!-- 英語メッセージ（最初は非表示になります） -->
+                        <p class="text-en">Your message goes here. Long messages are welcome. If your message exceeds the display limit, it will be automatically truncated to fit within three lines.<br><br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum risus ligula, et rutrum leo luctus eu. Vestibulum urna metus, molestie ut justo quis, porttitor ornare ex. Donec at erat vel nulla congue ullamcorper. Vivamus non vehicula elit. Quisque bibendum molestie eros vel porttitor. Nunc hendrerit, leo at lacinia tristique, velit orci volutpat quam, non condimentum lectus augue luctus sem. Nunc ut nisi eu massa aliquet ultricies id vitae magna. Donec venenatis mauris ut enim scelerisque ornare. Maecenas fringilla urna ex, sed rutrum libero tincidunt in. Duis pharetra facilisis scelerisque. Phasellus porttitor odio at nulla hendrerit, quis sollicitudin lorem accumsan.</p>
+                    </div>
+            </div>
+                <!-- 全文を見るボタン -->
+                <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+        <!-- 28つ目のカード -->
+        <div class="profile-card" style="--index: 28;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
+                </h2>           
+                <!-- 画像表示用ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>       
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                    <div class="comment-text-wrapper">
+                        <!-- 日本語メッセージ -->
+                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br>3行に収まるように自動で省略されます。<br><br>吾輩は猫である。名前はまだ無い。<br>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<br><br>
+この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。<br><br>その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突-起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+                        <!-- 英語メッセージ（最初は非表示になります） -->
+                        <p class="text-en">Your message goes here. Long messages are welcome. If your message exceeds the display limit, it will be automatically truncated to fit within three lines.<br><br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum risus ligula, et rutrum leo luctus eu. Vestibulum urna metus, molestie ut justo quis, porttitor ornare ex. Donec at erat vel nulla congue ullamcorper. Vivamus non vehicula elit. Quisque bibendum molestie eros vel porttitor. Nunc hendrerit, leo at lacinia tristique, velit orci volutpat quam, non condimentum lectus augue luctus sem. Nunc ut nisi eu massa aliquet ultricies id vitae magna. Donec venenatis mauris ut enim scelerisque ornare. Maecenas fringilla urna ex, sed rutrum libero tincidunt in. Duis pharetra facilisis scelerisque. Phasellus porttitor odio at nulla hendrerit, quis sollicitudin lorem accumsan.</p>
+                    </div>
+            </div>
+                <!-- 全文を見るボタン -->
+                <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+                <!-- 29つ目のカード -->
+        <div class="profile-card" style="--index: 29;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
+                </h2>           
+                <!-- 画像表示用ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>       
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                    <div class="comment-text-wrapper">
+                        <!-- 日本語メッセージ -->
+                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br>3行に収まるように自動で省略されます。<br><br>吾輩は猫である。名前はまだ無い。<br>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<br><br>
+この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。<br><br>その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突-起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+                        <!-- 英語メッセージ（最初は非表示になります） -->
+                        <p class="text-en">Your message goes here. Long messages are welcome. If your message exceeds the display limit, it will be automatically truncated to fit within three lines.<br><br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum risus ligula, et rutrum leo luctus eu. Vestibulum urna metus, molestie ut justo quis, porttitor ornare ex. Donec at erat vel nulla congue ullamcorper. Vivamus non vehicula elit. Quisque bibendum molestie eros vel porttitor. Nunc hendrerit, leo at lacinia tristique, velit orci volutpat quam, non condimentum lectus augue luctus sem. Nunc ut nisi eu massa aliquet ultricies id vitae magna. Donec venenatis mauris ut enim scelerisque ornare. Maecenas fringilla urna ex, sed rutrum libero tincidunt in. Duis pharetra facilisis scelerisque. Phasellus porttitor odio at nulla hendrerit, quis sollicitudin lorem accumsan.</p>
+                    </div>
+            </div>
+                <!-- 全文を見るボタン -->
+                <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+        <!-- 30つ目のカード -->
+        <div class="profile-card" style="--index: 30;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
+                </h2>           
+                <!-- 画像表示用ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>       
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                    <div class="comment-text-wrapper">
+                        <!-- 日本語メッセージ -->
+                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br>3行に収まるように自動で省略されます。<br><br>吾輩は猫である。名前はまだ無い。<br>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<br><br>
+この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。<br><br>その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突-起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+                        <!-- 英語メッセージ（最初は非表示になります） -->
+                        <p class="text-en">Your message goes here. Long messages are welcome. If your message exceeds the display limit, it will be automatically truncated to fit within three lines.<br><br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum risus ligula, et rutrum leo luctus eu. Vestibulum urna metus, molestie ut justo quis, porttitor ornare ex. Donec at erat vel nulla congue ullamcorper. Vivamus non vehicula elit. Quisque bibendum molestie eros vel porttitor. Nunc hendrerit, leo at lacinia tristique, velit orci volutpat quam, non condimentum lectus augue luctus sem. Nunc ut nisi eu massa aliquet ultricies id vitae magna. Donec venenatis mauris ut enim scelerisque ornare. Maecenas fringilla urna ex, sed rutrum libero tincidunt in. Duis pharetra facilisis scelerisque. Phasellus porttitor odio at nulla hendrerit, quis sollicitudin lorem accumsan.</p>
+                    </div>
+            </div>
+                <!-- 全文を見るボタン -->
+                <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+                <!-- 31つ目のカード -->
+        <div class="profile-card" style="--index: 31;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
+                </h2>           
+                <!-- 画像表示用ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>       
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                    <div class="comment-text-wrapper">
+                        <!-- 日本語メッセージ -->
+                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br>3行に収まるように自動で省略されます。<br><br>吾輩は猫である。名前はまだ無い。<br>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<br><br>
+この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。<br><br>その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突-起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+                        <!-- 英語メッセージ（最初は非表示になります） -->
+                        <p class="text-en">Your message goes here. Long messages are welcome. If your message exceeds the display limit, it will be automatically truncated to fit within three lines.<br><br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum risus ligula, et rutrum leo luctus eu. Vestibulum urna metus, molestie ut justo quis, porttitor ornare ex. Donec at erat vel nulla congue ullamcorper. Vivamus non vehicula elit. Quisque bibendum molestie eros vel porttitor. Nunc hendrerit, leo at lacinia tristique, velit orci volutpat quam, non condimentum lectus augue luctus sem. Nunc ut nisi eu massa aliquet ultricies id vitae magna. Donec venenatis mauris ut enim scelerisque ornare. Maecenas fringilla urna ex, sed rutrum libero tincidunt in. Duis pharetra facilisis scelerisque. Phasellus porttitor odio at nulla hendrerit, quis sollicitudin lorem accumsan.</p>
+                    </div>
+            </div>
+                <!-- 全文を見るボタン -->
+                <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+        <!-- 32つ目のカード -->
+        <div class="profile-card" style="--index: 32;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
+                </h2>           
+                <!-- 画像表示用ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>       
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                    <div class="comment-text-wrapper">
+                        <!-- 日本語メッセージ -->
+                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br>3行に収まるように自動で省略されます。<br><br>吾輩は猫である。名前はまだ無い。<br>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<br><br>
+この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。<br><br>その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突-起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+                        <!-- 英語メッセージ（最初は非表示になります） -->
+                        <p class="text-en">Your message goes here. Long messages are welcome. If your message exceeds the display limit, it will be automatically truncated to fit within three lines.<br><br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum risus ligula, et rutrum leo luctus eu. Vestibulum urna metus, molestie ut justo quis, porttitor ornare ex. Donec at erat vel nulla congue ullamcorper. Vivamus non vehicula elit. Quisque bibendum molestie eros vel porttitor. Nunc hendrerit, leo at lacinia tristique, velit orci volutpat quam, non condimentum lectus augue luctus sem. Nunc ut nisi eu massa aliquet ultricies id vitae magna. Donec venenatis mauris ut enim scelerisque ornare. Maecenas fringilla urna ex, sed rutrum libero tincidunt in. Duis pharetra facilisis scelerisque. Phasellus porttitor odio at nulla hendrerit, quis sollicitudin lorem accumsan.</p>
+                    </div>
+            </div>
+                <!-- 全文を見るボタン -->
+                <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+                <!-- 33つ目のカード -->
+        <div class="profile-card" style="--index: 33;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
+                </h2>           
+                <!-- 画像表示用ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>       
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                    <div class="comment-text-wrapper">
+                        <!-- 日本語メッセージ -->
+                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br>3行に収まるように自動で省略されます。<br><br>吾輩は猫である。名前はまだ無い。<br>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<br><br>
+この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。<br><br>その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突-起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+                        <!-- 英語メッセージ（最初は非表示になります） -->
+                        <p class="text-en">Your message goes here. Long messages are welcome. If your message exceeds the display limit, it will be automatically truncated to fit within three lines.<br><br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum risus ligula, et rutrum leo luctus eu. Vestibulum urna metus, molestie ut justo quis, porttitor ornare ex. Donec at erat vel nulla congue ullamcorper. Vivamus non vehicula elit. Quisque bibendum molestie eros vel porttitor. Nunc hendrerit, leo at lacinia tristique, velit orci volutpat quam, non condimentum lectus augue luctus sem. Nunc ut nisi eu massa aliquet ultricies id vitae magna. Donec venenatis mauris ut enim scelerisque ornare. Maecenas fringilla urna ex, sed rutrum libero tincidunt in. Duis pharetra facilisis scelerisque. Phasellus porttitor odio at nulla hendrerit, quis sollicitudin lorem accumsan.</p>
+                    </div>
+            </div>
+                <!-- 全文を見るボタン -->
+                <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+        <!-- 34つ目のカード -->
+        <div class="profile-card" style="--index: 34;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
+                </h2>           
+                <!-- 画像表示用ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>       
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                    <div class="comment-text-wrapper">
+                        <!-- 日本語メッセージ -->
+                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br>3行に収まるように自動で省略されます。<br><br>吾輩は猫である。名前はまだ無い。<br>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<br><br>
+この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。<br><br>その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突-起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+                        <!-- 英語メッセージ（最初は非表示になります） -->
+                        <p class="text-en">Your message goes here. Long messages are welcome. If your message exceeds the display limit, it will be automatically truncated to fit within three lines.<br><br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum risus ligula, et rutrum leo luctus eu. Vestibulum urna metus, molestie ut justo quis, porttitor ornare ex. Donec at erat vel nulla congue ullamcorper. Vivamus non vehicula elit. Quisque bibendum molestie eros vel porttitor. Nunc hendrerit, leo at lacinia tristique, velit orci volutpat quam, non condimentum lectus augue luctus sem. Nunc ut nisi eu massa aliquet ultricies id vitae magna. Donec venenatis mauris ut enim scelerisque ornare. Maecenas fringilla urna ex, sed rutrum libero tincidunt in. Duis pharetra facilisis scelerisque. Phasellus porttitor odio at nulla hendrerit, quis sollicitudin lorem accumsan.</p>
+                    </div>
+            </div>
+                <!-- 全文を見るボタン -->
+                <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+                <!-- 35つ目のカード -->
+        <div class="profile-card" style="--index: 35;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
+                </h2>           
+                <!-- 画像表示用ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>       
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                    <div class="comment-text-wrapper">
+                        <!-- 日本語メッセージ -->
+                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br>3行に収まるように自動で省略されます。<br><br>吾輩は猫である。名前はまだ無い。<br>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<br><br>
+この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。<br><br>その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突-起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+                        <!-- 英語メッセージ（最初は非表示になります） -->
+                        <p class="text-en">Your message goes here. Long messages are welcome. If your message exceeds the display limit, it will be automatically truncated to fit within three lines.<br><br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum risus ligula, et rutrum leo luctus eu. Vestibulum urna metus, molestie ut justo quis, porttitor ornare ex. Donec at erat vel nulla congue ullamcorper. Vivamus non vehicula elit. Quisque bibendum molestie eros vel porttitor. Nunc hendrerit, leo at lacinia tristique, velit orci volutpat quam, non condimentum lectus augue luctus sem. Nunc ut nisi eu massa aliquet ultricies id vitae magna. Donec venenatis mauris ut enim scelerisque ornare. Maecenas fringilla urna ex, sed rutrum libero tincidunt in. Duis pharetra facilisis scelerisque. Phasellus porttitor odio at nulla hendrerit, quis sollicitudin lorem accumsan.</p>
+                    </div>
+            </div>
+                <!-- 全文を見るボタン -->
+                <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+        <!-- 36つ目のカード -->
+        <div class="profile-card" style="--index: 36;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
+                </h2>           
+                <!-- 画像表示用ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>       
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                    <div class="comment-text-wrapper">
+                        <!-- 日本語メッセージ -->
+                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br>3行に収まるように自動で省略されます。<br><br>吾輩は猫である。名前はまだ無い。<br>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<br><br>
+この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。<br><br>その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突-起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+                        <!-- 英語メッセージ（最初は非表示になります） -->
+                        <p class="text-en">Your message goes here. Long messages are welcome. If your message exceeds the display limit, it will be automatically truncated to fit within three lines.<br><br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum risus ligula, et rutrum leo luctus eu. Vestibulum urna metus, molestie ut justo quis, porttitor ornare ex. Donec at erat vel nulla congue ullamcorper. Vivamus non vehicula elit. Quisque bibendum molestie eros vel porttitor. Nunc hendrerit, leo at lacinia tristique, velit orci volutpat quam, non condimentum lectus augue luctus sem. Nunc ut nisi eu massa aliquet ultricies id vitae magna. Donec venenatis mauris ut enim scelerisque ornare. Maecenas fringilla urna ex, sed rutrum libero tincidunt in. Duis pharetra facilisis scelerisque. Phasellus porttitor odio at nulla hendrerit, quis sollicitudin lorem accumsan.</p>
+                    </div>
+            </div>
+                <!-- 全文を見るボタン -->
+                <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+                <!-- 37つ目のカード -->
+        <div class="profile-card" style="--index: 37;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
+                </h2>           
+                <!-- 画像表示用ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>       
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                    <div class="comment-text-wrapper">
+                        <!-- 日本語メッセージ -->
+                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br>3行に収まるように自動で省略されます。<br><br>吾輩は猫である。名前はまだ無い。<br>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<br><br>
+この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。<br><br>その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突-起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+                        <!-- 英語メッセージ（最初は非表示になります） -->
+                        <p class="text-en">Your message goes here. Long messages are welcome. If your message exceeds the display limit, it will be automatically truncated to fit within three lines.<br><br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum risus ligula, et rutrum leo luctus eu. Vestibulum urna metus, molestie ut justo quis, porttitor ornare ex. Donec at erat vel nulla congue ullamcorper. Vivamus non vehicula elit. Quisque bibendum molestie eros vel porttitor. Nunc hendrerit, leo at lacinia tristique, velit orci volutpat quam, non condimentum lectus augue luctus sem. Nunc ut nisi eu massa aliquet ultricies id vitae magna. Donec venenatis mauris ut enim scelerisque ornare. Maecenas fringilla urna ex, sed rutrum libero tincidunt in. Duis pharetra facilisis scelerisque. Phasellus porttitor odio at nulla hendrerit, quis sollicitudin lorem accumsan.</p>
+                    </div>
+            </div>
+                <!-- 全文を見るボタン -->
+                <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+        <!-- 38つ目のカード -->
+        <div class="profile-card" style="--index: 38;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
+                </h2>           
+                <!-- 画像表示用ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>       
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                    <div class="comment-text-wrapper">
+                        <!-- 日本語メッセージ -->
+                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br>3行に収まるように自動で省略されます。<br><br>吾輩は猫である。名前はまだ無い。<br>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<br><br>
+この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。<br><br>その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突-起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+                        <!-- 英語メッセージ（最初は非表示になります） -->
+                        <p class="text-en">Your message goes here. Long messages are welcome. If your message exceeds the display limit, it will be automatically truncated to fit within three lines.<br><br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum risus ligula, et rutrum leo luctus eu. Vestibulum urna metus, molestie ut justo quis, porttitor ornare ex. Donec at erat vel nulla congue ullamcorper. Vivamus non vehicula elit. Quisque bibendum molestie eros vel porttitor. Nunc hendrerit, leo at lacinia tristique, velit orci volutpat quam, non condimentum lectus augue luctus sem. Nunc ut nisi eu massa aliquet ultricies id vitae magna. Donec venenatis mauris ut enim scelerisque ornare. Maecenas fringilla urna ex, sed rutrum libero tincidunt in. Duis pharetra facilisis scelerisque. Phasellus porttitor odio at nulla hendrerit, quis sollicitudin lorem accumsan.</p>
+                    </div>
+            </div>
+                <!-- 全文を見るボタン -->
+                <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+                <!-- 39つ目のカード -->
+        <div class="profile-card" style="--index: 39;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
+                </h2>           
+                <!-- 画像表示用ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>       
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                    <div class="comment-text-wrapper">
+                        <!-- 日本語メッセージ -->
+                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br>3行に収まるように自動で省略されます。<br><br>吾輩は猫である。名前はまだ無い。<br>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<br><br>
+この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。<br><br>その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突-起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+                        <!-- 英語メッセージ（最初は非表示になります） -->
+                        <p class="text-en">Your message goes here. Long messages are welcome. If your message exceeds the display limit, it will be automatically truncated to fit within three lines.<br><br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum risus ligula, et rutrum leo luctus eu. Vestibulum urna metus, molestie ut justo quis, porttitor ornare ex. Donec at erat vel nulla congue ullamcorper. Vivamus non vehicula elit. Quisque bibendum molestie eros vel porttitor. Nunc hendrerit, leo at lacinia tristique, velit orci volutpat quam, non condimentum lectus augue luctus sem. Nunc ut nisi eu massa aliquet ultricies id vitae magna. Donec venenatis mauris ut enim scelerisque ornare. Maecenas fringilla urna ex, sed rutrum libero tincidunt in. Duis pharetra facilisis scelerisque. Phasellus porttitor odio at nulla hendrerit, quis sollicitudin lorem accumsan.</p>
+                    </div>
+            </div>
+                <!-- 全文を見るボタン -->
+                <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+        <!-- 40つ目のカード -->
+        <div class="profile-card" style="--index: 40;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
+                </h2>           
+                <!-- 画像表示用ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>       
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                    <div class="comment-text-wrapper">
+                        <!-- 日本語メッセージ -->
+                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br>3行に収まるように自動で省略されます。<br><br>吾輩は猫である。名前はまだ無い。<br>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<br><br>
+この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。<br><br>その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突-起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+                        <!-- 英語メッセージ（最初は非表示になります） -->
+                        <p class="text-en">Your message goes here. Long messages are welcome. If your message exceeds the display limit, it will be automatically truncated to fit within three lines.<br><br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum risus ligula, et rutrum leo luctus eu. Vestibulum urna metus, molestie ut justo quis, porttitor ornare ex. Donec at erat vel nulla congue ullamcorper. Vivamus non vehicula elit. Quisque bibendum molestie eros vel porttitor. Nunc hendrerit, leo at lacinia tristique, velit orci volutpat quam, non condimentum lectus augue luctus sem. Nunc ut nisi eu massa aliquet ultricies id vitae magna. Donec venenatis mauris ut enim scelerisque ornare. Maecenas fringilla urna ex, sed rutrum libero tincidunt in. Duis pharetra facilisis scelerisque. Phasellus porttitor odio at nulla hendrerit, quis sollicitudin lorem accumsan.</p>
+                    </div>
+            </div>
+                <!-- 全文を見るボタン -->
+                <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+                <!-- 41つ目のカード -->
+        <div class="profile-card" style="--index: 41;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
+                </h2>           
+                <!-- 画像表示用ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>       
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                    <div class="comment-text-wrapper">
+                        <!-- 日本語メッセージ -->
+                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br>3行に収まるように自動で省略されます。<br><br>吾輩は猫である。名前はまだ無い。<br>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<br><br>
+この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。<br><br>その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突-起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+                        <!-- 英語メッセージ（最初は非表示になります） -->
+                        <p class="text-en">Your message goes here. Long messages are welcome. If your message exceeds the display limit, it will be automatically truncated to fit within three lines.<br><br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum risus ligula, et rutrum leo luctus eu. Vestibulum urna metus, molestie ut justo quis, porttitor ornare ex. Donec at erat vel nulla congue ullamcorper. Vivamus non vehicula elit. Quisque bibendum molestie eros vel porttitor. Nunc hendrerit, leo at lacinia tristique, velit orci volutpat quam, non condimentum lectus augue luctus sem. Nunc ut nisi eu massa aliquet ultricies id vitae magna. Donec venenatis mauris ut enim scelerisque ornare. Maecenas fringilla urna ex, sed rutrum libero tincidunt in. Duis pharetra facilisis scelerisque. Phasellus porttitor odio at nulla hendrerit, quis sollicitudin lorem accumsan.</p>
+                    </div>
+            </div>
+                <!-- 全文を見るボタン -->
+                <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+        <!-- 42つ目のカード -->
+        <div class="profile-card" style="--index: 42;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
+                </h2>           
+                <!-- 画像表示用ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>       
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                    <div class="comment-text-wrapper">
+                        <!-- 日本語メッセージ -->
+                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br>3行に収まるように自動で省略されます。<br><br>吾輩は猫である。名前はまだ無い。<br>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<br><br>
+この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。<br><br>その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突-起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+                        <!-- 英語メッセージ（最初は非表示になります） -->
+                        <p class="text-en">Your message goes here. Long messages are welcome. If your message exceeds the display limit, it will be automatically truncated to fit within three lines.<br><br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum risus ligula, et rutrum leo luctus eu. Vestibulum urna metus, molestie ut justo quis, porttitor ornare ex. Donec at erat vel nulla congue ullamcorper. Vivamus non vehicula elit. Quisque bibendum molestie eros vel porttitor. Nunc hendrerit, leo at lacinia tristique, velit orci volutpat quam, non condimentum lectus augue luctus sem. Nunc ut nisi eu massa aliquet ultricies id vitae magna. Donec venenatis mauris ut enim scelerisque ornare. Maecenas fringilla urna ex, sed rutrum libero tincidunt in. Duis pharetra facilisis scelerisque. Phasellus porttitor odio at nulla hendrerit, quis sollicitudin lorem accumsan.</p>
+                    </div>
+            </div>
+                <!-- 全文を見るボタン -->
+                <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+                <!-- 43つ目のカード -->
+        <div class="profile-card" style="--index: 43;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
+                </h2>           
+                <!-- 画像表示用ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>       
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                    <div class="comment-text-wrapper">
+                        <!-- 日本語メッセージ -->
+                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br>3行に収まるように自動で省略されます。<br><br>吾輩は猫である。名前はまだ無い。<br>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<br><br>
+この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。<br><br>その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突-起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+                        <!-- 英語メッセージ（最初は非表示になります） -->
+                        <p class="text-en">Your message goes here. Long messages are welcome. If your message exceeds the display limit, it will be automatically truncated to fit within three lines.<br><br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum risus ligula, et rutrum leo luctus eu. Vestibulum urna metus, molestie ut justo quis, porttitor ornare ex. Donec at erat vel nulla congue ullamcorper. Vivamus non vehicula elit. Quisque bibendum molestie eros vel porttitor. Nunc hendrerit, leo at lacinia tristique, velit orci volutpat quam, non condimentum lectus augue luctus sem. Nunc ut nisi eu massa aliquet ultricies id vitae magna. Donec venenatis mauris ut enim scelerisque ornare. Maecenas fringilla urna ex, sed rutrum libero tincidunt in. Duis pharetra facilisis scelerisque. Phasellus porttitor odio at nulla hendrerit, quis sollicitudin lorem accumsan.</p>
+                    </div>
+            </div>
+                <!-- 全文を見るボタン -->
+                <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+        <!-- 44つ目のカード -->
+        <div class="profile-card" style="--index: 44;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
+                </h2>           
+                <!-- 画像表示用ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>       
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                    <div class="comment-text-wrapper">
+                        <!-- 日本語メッセージ -->
+                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br>3行に収まるように自動で省略されます。<br><br>吾輩は猫である。名前はまだ無い。<br>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<br><br>
+この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。<br><br>その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突-起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+                        <!-- 英語メッセージ（最初は非表示になります） -->
+                        <p class="text-en">Your message goes here. Long messages are welcome. If your message exceeds the display limit, it will be automatically truncated to fit within three lines.<br><br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum risus ligula, et rutrum leo luctus eu. Vestibulum urna metus, molestie ut justo quis, porttitor ornare ex. Donec at erat vel nulla congue ullamcorper. Vivamus non vehicula elit. Quisque bibendum molestie eros vel porttitor. Nunc hendrerit, leo at lacinia tristique, velit orci volutpat quam, non condimentum lectus augue luctus sem. Nunc ut nisi eu massa aliquet ultricies id vitae magna. Donec venenatis mauris ut enim scelerisque ornare. Maecenas fringilla urna ex, sed rutrum libero tincidunt in. Duis pharetra facilisis scelerisque. Phasellus porttitor odio at nulla hendrerit, quis sollicitudin lorem accumsan.</p>
+                    </div>
+            </div>
+                <!-- 全文を見るボタン -->
+                <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+                <!-- 45つ目のカード -->
+        <div class="profile-card" style="--index: 45;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
+                </h2>           
+                <!-- 画像表示用ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>       
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                    <div class="comment-text-wrapper">
+                        <!-- 日本語メッセージ -->
+                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br>3行に収まるように自動で省略されます。<br><br>吾輩は猫である。名前はまだ無い。<br>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<br><br>
+この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。<br><br>その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突-起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+                        <!-- 英語メッセージ（最初は非表示になります） -->
+                        <p class="text-en">Your message goes here. Long messages are welcome. If your message exceeds the display limit, it will be automatically truncated to fit within three lines.<br><br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum risus ligula, et rutrum leo luctus eu. Vestibulum urna metus, molestie ut justo quis, porttitor ornare ex. Donec at erat vel nulla congue ullamcorper. Vivamus non vehicula elit. Quisque bibendum molestie eros vel porttitor. Nunc hendrerit, leo at lacinia tristique, velit orci volutpat quam, non condimentum lectus augue luctus sem. Nunc ut nisi eu massa aliquet ultricies id vitae magna. Donec venenatis mauris ut enim scelerisque ornare. Maecenas fringilla urna ex, sed rutrum libero tincidunt in. Duis pharetra facilisis scelerisque. Phasellus porttitor odio at nulla hendrerit, quis sollicitudin lorem accumsan.</p>
+                    </div>
+            </div>
+                <!-- 全文を見るボタン -->
+                <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+        <!-- 46つ目のカード -->
+        <div class="profile-card" style="--index: 46;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
+                </h2>           
+                <!-- 画像表示用ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>       
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                    <div class="comment-text-wrapper">
+                        <!-- 日本語メッセージ -->
+                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br>3行に収まるように自動で省略されます。<br><br>吾輩は猫である。名前はまだ無い。<br>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<br><br>
+この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。<br><br>その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突-起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+                        <!-- 英語メッセージ（最初は非表示になります） -->
+                        <p class="text-en">Your message goes here. Long messages are welcome. If your message exceeds the display limit, it will be automatically truncated to fit within three lines.<br><br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum risus ligula, et rutrum leo luctus eu. Vestibulum urna metus, molestie ut justo quis, porttitor ornare ex. Donec at erat vel nulla congue ullamcorper. Vivamus non vehicula elit. Quisque bibendum molestie eros vel porttitor. Nunc hendrerit, leo at lacinia tristique, velit orci volutpat quam, non condimentum lectus augue luctus sem. Nunc ut nisi eu massa aliquet ultricies id vitae magna. Donec venenatis mauris ut enim scelerisque ornare. Maecenas fringilla urna ex, sed rutrum libero tincidunt in. Duis pharetra facilisis scelerisque. Phasellus porttitor odio at nulla hendrerit, quis sollicitudin lorem accumsan.</p>
+                    </div>
+            </div>
+                <!-- 全文を見るボタン -->
+                <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+                <!-- 47つ目のカード -->
+        <div class="profile-card" style="--index: 47;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
+                </h2>           
+                <!-- 画像表示用ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>       
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                    <div class="comment-text-wrapper">
+                        <!-- 日本語メッセージ -->
+                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br>3行に収まるように自動で省略されます。<br><br>吾輩は猫である。名前はまだ無い。<br>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<br><br>
+この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。<br><br>その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突-起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+                        <!-- 英語メッセージ（最初は非表示になります） -->
+                        <p class="text-en">Your message goes here. Long messages are welcome. If your message exceeds the display limit, it will be automatically truncated to fit within three lines.<br><br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum risus ligula, et rutrum leo luctus eu. Vestibulum urna metus, molestie ut justo quis, porttitor ornare ex. Donec at erat vel nulla congue ullamcorper. Vivamus non vehicula elit. Quisque bibendum molestie eros vel porttitor. Nunc hendrerit, leo at lacinia tristique, velit orci volutpat quam, non condimentum lectus augue luctus sem. Nunc ut nisi eu massa aliquet ultricies id vitae magna. Donec venenatis mauris ut enim scelerisque ornare. Maecenas fringilla urna ex, sed rutrum libero tincidunt in. Duis pharetra facilisis scelerisque. Phasellus porttitor odio at nulla hendrerit, quis sollicitudin lorem accumsan.</p>
+                    </div>
+            </div>
+                <!-- 全文を見るボタン -->
+                <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+        <!-- 48つ目のカード -->
+        <div class="profile-card" style="--index: 48;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
+                </h2>           
+                <!-- 画像表示用ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>       
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                    <div class="comment-text-wrapper">
+                        <!-- 日本語メッセージ -->
+                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br>3行に収まるように自動で省略されます。<br><br>吾輩は猫である。名前はまだ無い。<br>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<br><br>
+この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。<br><br>その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突-起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+                        <!-- 英語メッセージ（最初は非表示になります） -->
+                        <p class="text-en">Your message goes here. Long messages are welcome. If your message exceeds the display limit, it will be automatically truncated to fit within three lines.<br><br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum risus ligula, et rutrum leo luctus eu. Vestibulum urna metus, molestie ut justo quis, porttitor ornare ex. Donec at erat vel nulla congue ullamcorper. Vivamus non vehicula elit. Quisque bibendum molestie eros vel porttitor. Nunc hendrerit, leo at lacinia tristique, velit orci volutpat quam, non condimentum lectus augue luctus sem. Nunc ut nisi eu massa aliquet ultricies id vitae magna. Donec venenatis mauris ut enim scelerisque ornare. Maecenas fringilla urna ex, sed rutrum libero tincidunt in. Duis pharetra facilisis scelerisque. Phasellus porttitor odio at nulla hendrerit, quis sollicitudin lorem accumsan.</p>
+                    </div>
+            </div>
+                <!-- 全文を見るボタン -->
+                <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+        <!-- 49つ目のカード -->
+        <div class="profile-card" style="--index: 49;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
+                </h2>           
+                <!-- 画像表示用ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>       
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                    <div class="comment-text-wrapper">
+                        <!-- 日本語メッセージ -->
+                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br>3行に収まるように自動で省略されます。<br><br>吾輩は猫である。名前はまだ無い。<br>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<br><br>
+この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。<br><br>その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突-起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+                        <!-- 英語メッセージ（最初は非表示になります） -->
+                        <p class="text-en">Your message goes here. Long messages are welcome. If your message exceeds the display limit, it will be automatically truncated to fit within three lines.<br><br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum risus ligula, et rutrum leo luctus eu. Vestibulum urna metus, molestie ut justo quis, porttitor ornare ex. Donec at erat vel nulla congue ullamcorper. Vivamus non vehicula elit. Quisque bibendum molestie eros vel porttitor. Nunc hendrerit, leo at lacinia tristique, velit orci volutpat quam, non condimentum lectus augue luctus sem. Nunc ut nisi eu massa aliquet ultricies id vitae magna. Donec venenatis mauris ut enim scelerisque ornare. Maecenas fringilla urna ex, sed rutrum libero tincidunt in. Duis pharetra facilisis scelerisque. Phasellus porttitor odio at nulla hendrerit, quis sollicitudin lorem accumsan.</p>
+                    </div>
+            </div>
+                <!-- 全文を見るボタン -->
+                <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+    </div>
+
+<!-- 検索結果「該当なしメッセージ」 -->
+        <div id="no-results" class="no-results">
+            <p>🔍 該当するメッセージが見つかりませんでした</p>
+        </div>
+
+
+
+<!-- 画面端に追加するモーダル（拡大ポップアップ）構造 -->
+    <div id="message-modal" class="modal-overlay">
+        <div class="modal-card">
+            <!-- 閉じるボタン -->
+            <button class="modal-close-btn" type="button" aria-label="閉じる">×</button>
+            <!-- ここにクリックされたカードの中身がコピーされて表示されます -->
+            <div class="modal-body"></div>
+        </div>
+    </div>
+
+<!-- 画像拡大用モーダル（×ボタンを削除し、ヒントテキストを追加） -->
+    <div id="image-modal" class="modal-overlay">
+        <div class="image-modal-card">
+            <img src="" alt="拡大画像" id="modal-img-src">
+            <p class="image-modal-hint">タップで閉じます</p>
+        </div>
+    </div>
+
+
+</body>
+ 
+    <!-- ここから下に <script> タグ -->
+<script>
+    // ==========================================
+    // 1. 翻訳ボタンの機能
+    // ==========================================
+    function setupTranslateBtn(btn) {
+        btn.addEventListener('click', () => {
+            const commentFrame = btn.closest('.comment-frame');
+            const btnText = btn.querySelector('.btn-text');
+            const isEnglish = commentFrame.classList.toggle('is-translated');
+            
+            if (isEnglish) {
+                btnText.textContent = 'original';
+            } else {
+                btnText.textContent = 'translate';
+            }
+        });
+    }
+
+    document.querySelectorAll('.translate-btn').forEach(setupTranslateBtn);
+
+
+    // ==========================================
+    // 2. メッセージモーダル（拡大表示）の機能
+    // ==========================================
+    const modal = document.getElementById('message-modal');
+    const modalBody = modal.querySelector('.modal-body');
+    const modalClose = modal.querySelector('.modal-close-btn');
+
+    document.querySelectorAll('.read-more-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const card = e.target.closest('.profile-card');
+            const cardClone = card.cloneNode(true);
+            
+            cardClone.querySelector('.read-more-btn').style.display = 'none';
+            cardClone.querySelector('.comment-text-wrapper').style.webkitLineClamp = 'unset';
+            
+            const cloneTranslateBtn = cardClone.querySelector('.translate-btn');
+            if (cloneTranslateBtn) {
+                setupTranslateBtn(cloneTranslateBtn);
+            }
+
+            modalBody.innerHTML = '';
+            modalBody.appendChild(cardClone);
+            modal.classList.add('is-open');
+        });
+    });
+
+    modalClose.addEventListener('click', () => modal.classList.remove('is-open'));
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.remove('is-open');
+        }
+    });
+
+
+// ==========================================
+    // 3. 画像モーダル（全文表示モーダル内でも動作）
+    // ==========================================
+    const imageModal = document.getElementById('image-modal');
+    const modalImgSrc = document.getElementById('modal-img-src');
+
+    // ページ全体のクリックを監視することで、複製されたボタンでも確実に動くようにします
+    document.addEventListener('click', (e) => {
+        const btn = e.target.closest('.image-gallery-btn');
+        if (btn) {
+            e.stopPropagation();
+            const imgSrc = btn.getAttribute('data-img');
+            if (imgSrc) {
+                modalImgSrc.src = imgSrc;
+                imageModal.classList.add('is-open');
+            }
+        }
+    });
+
+    // 画像モーダル画面のどこをタップしても閉じる
+    imageModal.addEventListener('click', () => {
+        imageModal.classList.remove('is-open');
+    });
+    
+    // ==========================================
+    // 4. リアルタイム検索機能
+    // ==========================================
+    const searchInput = document.getElementById('search-input');
+    const cardContainer = document.querySelector('.card-container');
+    const noResults = document.getElementById('no-results');
+
+    if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase().trim();
+            const cards = document.querySelectorAll('.card-container .profile-card');
+            let visibleCount = 0;
+
+            if (query !== '') {
+                cardContainer.classList.add('is-searching');
+            } else {
+                cardContainer.classList.remove('is-searching');
+            }
+
+            cards.forEach(card => {
+                const name = card.querySelector('.profile-name')?.textContent.toLowerCase() || '';
+                const textJa = card.querySelector('.text-ja')?.textContent.toLowerCase() || '';
+                const textEn = card.querySelector('.text-en')?.textContent.toLowerCase() || '';
+
+                if (name.includes(query) || textJa.includes(query) || textEn.includes(query)) {
+                    card.classList.remove('is-hidden');
+                    visibleCount++;
+                } else {
+                    card.classList.add('is-hidden');
+                }
+            });
+
+            if (noResults) {
+                if (visibleCount === 0 && query !== '') {
+                    noResults.classList.add('is-visible');
+                } else {
+                    noResults.classList.remove('is-visible');
+                }
+            }
+        });
+    }
+
+// オープニング画面の自動制御
+    const splash = document.getElementById('splash-overlay');
+    if (splash) {
+        setTimeout(() => {
+            splash.style.display = 'none';
+        }, 2200); // 演出完了後に要素を消去
+    }
+
+</script>
+
+</body>
+</html>

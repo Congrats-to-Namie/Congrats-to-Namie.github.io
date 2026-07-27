@@ -1,0 +1,674 @@
+/* ==========================================
+   全体の基本設定（華やかグラデーション背景）
+   ========================================== */
+body {
+    font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+    /* 華やかなパステルグラデーションの背景 */
+    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+    /* あるいは、もっと鮮やかにするなら以下コメントアウトを外す */
+    /* background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%); */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    overflow-x: hidden; /* 横スクロール防止 */
+}
+
+/* 背景に動きのある装飾を追加（オプション） */
+body::before {
+    content: '';
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    /* 薄い円形のグラデーションを散りばめる */
+    background-image: 
+        radial-gradient(circle at 30% 30%, rgba(224, 195, 252, 0.3) 0%, transparent 40%),
+        radial-gradient(circle at 70% 70%, rgba(142, 197, 252, 0.3) 0%, transparent 40%);
+    z-index: -1; /* 最背面 */
+}
+
+/* ==========================================
+   上部固定ヘッダー（グラスモルフィズム風）
+   ========================================== */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    /* 半透明の背景（すりガラス効果） */
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px); /* 背景をぼかす */
+    -webkit-backdrop-filter: blur(10px);
+    padding: 15px 20px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05); /* 柔らかい影 */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.header-inner {
+    max-width: 900px; /* 少し広く */
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* ロゴを中心へ */
+}
+
+.site-logo {
+    height: 40px; /* 少し大きく */
+    width: auto;
+    display: block;
+    /* ロゴにも少し影をつけて立体感を */
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+/* ==========================================
+   カードコンテナ（アニメーション開始位置）
+   ========================================== */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px; /* 余白を広く */
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* ==========================================
+   プロフィールカード（主役：華やかスタイル）
+   ========================================== */
+.profile-card {
+    /* グラスモルフィズム：半透明背景 */
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    
+    /* 非常に薄い白色の枠線で縁取り */
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 24px; /* 角丸を強く */
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    /* 柔らかく、広がりのある影で浮遊感を出す */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    
+    /* トランジション（動きのスムーズさ）の設定 */
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), 
+                box-shadow 0.3s ease, 
+                background-color 0.3s ease;
+    
+    /* 初期状態は少し透明で下に配置（アニメーション用） */
+    opacity: 0;
+    transform: translateY(20px);
+    
+    /* アニメーションの定義 */
+    animation: fadeInUp 0.6s ease forwards;
+
+    /* アニメーションの遅延時間を自動計算 */
+    animation-delay: calc(1.8s + min(var(--index, 1) - 1, 8) * 0.15s); 
+}
+
+/* 検索実行中（.is-searching）は待ち時間を解除して一瞬で表示する */
+.card-container.is-searching .profile-card {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+}
+
+/* カードのホバーエフェクト：拡大(scale)を外し、ズレを防ぐ */
+.profile-card:hover {
+    transform: translateY(-6px); /* 拡大せず、上に浮き上がる動きのみにする */
+    box-shadow: 0 20px 40px rgba(142, 197, 252, 0.25); /* アクセントカラーの影 */
+    background-color: rgba(255, 255, 255, 0.9); /* 白さを増す */
+}
+
+/* アニメーションの定義 */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ==========================================
+   プロフィールアイコン（グラデーション縁取り＋ホバーアニメーション）
+   ========================================== */
+
+/* アイコン用リンク枠（余白と丸みを保持） */
+.profile-icon-link {
+    display: inline-block;
+    border-radius: 50%;
+    margin-bottom: 15px; /* アイコン下の余白 */
+}
+
+/* アイコン本体 */
+.profile-icon {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    
+    /* リンクなしの場合の余白 */
+    margin-bottom: 15px; 
+    
+    /* ★グラデーションの縁取り（そのままキープ！） */
+    padding: 4px;
+    background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+    /* ★アニメーション用 smooth 設定 */
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease;
+}
+
+/* リンクがある場合のアイコン余白調整 */
+.profile-icon-link .profile-icon {
+    margin-bottom: 0;
+}
+
+/* ★カーソルが重なった時の浮き上がりアニメーション */
+.profile-icon-link:hover .profile-icon {
+    transform: translateY(-5px) scale(1.05); /* 少し浮き上がって拡大 */
+    box-shadow: 0 12px 24px rgba(142, 197, 252, 0.4); /* 縁取りに合わせた柔らかい影 */
+}
+
+
+/* ==========================================
+   名前（グラデーション文字＋アンダーライン）
+   ========================================== */
+.profile-name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 0.05em;
+    
+    /* ★グラデーション文字（そのままキープ！） */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* リンクがある名前のアンダーライン設定 */
+.profile-name a {
+    /* グラデーション文字をリンク内でも継承する設定 */
+    background: inherit;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    /* 下線のデザイン */
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-color: #764ba2; /* 下線は文字グラデーションの濃い色に合わせる */
+    transition: opacity 0.2s ease;
+}
+
+.profile-name a:hover {
+    opacity: 0.75;
+}
+
+/* ==========================================
+   メッセージコメント欄（最重要：華やかフレーム）
+   ========================================== */
+.comment-frame {
+    width: 100%;
+    /* プレーンな点線から、柔らかい背景と影へ変更 */
+    border: none;
+    border-radius: 16px;
+    padding: 20px;
+    
+    /* 非常に薄いアクセントカラーの背景 */
+    background-color: rgba(142, 197, 252, 0.05);
+    
+    /* 内側に向かう柔らかい影（くぼんで見える効果） */
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.03);
+    
+    position: relative; /* 吹き出しのヒゲ用 */
+    box-sizing: border-box;
+}
+
+/* メッセージテキスト：読みやすく、かつ洗練された印象に */
+.comment-frame p {
+    margin: 0;
+    color: #444;
+    font-size: 1rem;
+    line-height: 1.7; /* 行間を広くして読みやすく */
+    position: relative;
+    z-index: 1;
+}
+
+/* スマートフォン向け設定（余白の調整） */
+@media (max-width: 600px) {
+    .card-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 30px 25px; /* スマホ時の余白を最適化 */
+    }
+    
+    .profile-card {
+        padding: 25px;
+    }
+}
+
+/* ==========================================
+   翻訳ボタン＆テキスト切り替え機能
+   ========================================== */
+
+/* コメント欄の位置基準を設定 */
+.comment-frame {
+    position: relative; /* ボタンを右上固定するための基準 */
+    padding-top: 40px; /* ボタンとテキストが重ならないよう上に少し余白を作る */
+}
+
+/* 翻訳ボタンのスタイル（小さくておしゃれなカプセル型） */
+.translate-btn {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 10px;
+    border: 1px solid rgba(142, 197, 252, 0.5);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #555;
+    font-size: 0.75rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.translate-btn:hover {
+    background-color: #ffffff;
+    transform: scale(1.05);
+    color: #667eea;
+    border-color: #667eea;
+}
+
+/* 通常時は「英語テキスト」を隠す */
+.comment-frame .text-en {
+    display: none;
+}
+
+/* 翻訳モード（.is-translated クラスがついた時）の切り替え設定 */
+/* 日本語を隠す */
+.comment-frame.is-translated .text-ja {
+    display: none;
+}
+/* 英語を表示する */
+.comment-frame.is-translated .text-en {
+    display: block;
+    animation: fadeIn 0.3s ease; /* ふわっと切り替わる効果 */
+}
+
+/* ふわっと切り替わるアニメーション */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================
+   長文の省略表示 & モーダル（拡大表示）
+   ========================================== */
+
+/* 1. カード内の文章を3行に制限して「…」で省略 */
+.comment-text-wrapper {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* 表示したい行数（3行） */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* 2. 「全文を見る」ボタンのスタイル */
+.read-more-btn {
+    display: inline-block;
+    margin-top: 10px;
+    background: none;
+    border: none;
+    color: #667eea;
+    font-weight: bold;
+    font-size: 0.85rem;
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.2s ease;
+}
+
+.read-more-btn:hover {
+    color: #764ba2;
+    text-decoration: underline;
+}
+
+/* 3. モーダル背景（半透明＋すりガラス） */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    
+    /* 通常時は非表示 */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+/* モーダルが開いた時（is-open クラス付与時） */
+.modal-overlay.is-open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* 4. モーダルカード本体 */
+.modal-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 24px;
+    max-width: 500px;
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: auto; /* 長すぎる場合はモーダル内スクロール */
+    padding: 35px 25px 25px 25px;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+    
+    /* ふわっと拡大して出てくる効果 */
+    transform: scale(0.9) translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.is-open .modal-card {
+    transform: scale(1) translateY(0);
+}
+
+/* モーダル内のカード枠のスタイル微調整 */
+.modal-body .profile-card {
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+    opacity: 1;
+    transform: none;
+    animation: none;
+}
+
+/* 5. 閉じる（×）ボタン */
+.modal-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #888;
+    cursor: pointer;
+    z-index: 10;
+    line-height: 1;
+}
+
+.modal-close-btn:hover {
+    color: #333;
+}
+
+/* 画像モーダルをメッセージモーダルよりも前面に表示する */
+#image-modal {
+    z-index: 2000;
+}
+
+
+/* ==========================================
+   検索フォーム
+   ========================================== */
+.search-container {
+    max-width: 450px;
+    margin: 30px auto 10px auto;
+    position: relative;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* 検索入力欄 */
+.search-input {
+    width: 100%;
+    padding: 12px 20px 12px 45px; /* アイコンの分、左側を広く空ける */
+    border-radius: 30px;
+    border: 1px solid rgba(142, 197, 252, 0.5);
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    font-size: 0.95rem;
+    color: #333;
+    outline: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+/* 検索欄にカーソルが入ったとき（フォーカス時） */
+.search-input:focus {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: #667eea;
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.15);
+}
+
+/* 虫眼鏡アイコン */
+.search-icon {
+    position: absolute;
+    left: 38px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.9rem;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* 検索結果で非表示にするカード */
+.profile-card.is-hidden {
+    display: none !important;
+}
+
+/* 該当するメッセージがゼロのとき */
+.no-results {
+    display: none;
+    grid-column: 1 / -1; /* 2カラム分を突き抜けて中央に表示 */
+    text-align: center;
+    padding: 50px 20px;
+    color: #777;
+    font-weight: bold;
+}
+
+.no-results.is-visible {
+    display: block;
+}
+
+/* ==========================================
+   名前とリンクのスタイル
+   ========================================== */
+.name-header {
+    display: grid;
+    /* 左余白(1fr) : 名前(auto) : 右エリア(1fr) の3列に分割 */
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    margin-bottom: 16px;
+    min-height: 32px;
+}
+
+.profile-name {
+    grid-column: 2; /* 必ず真ん中の列に配置（これでカード中央に固定されます） */
+    margin-bottom: 0;
+    text-align: center;
+    white-space: nowrap; /* 名前の途中改行を防止 */
+}
+
+/* リンクがある名前のみ常時アンダーラインを表示 */
+.profile-name a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-color: #667eea;
+    transition: opacity 0.2s ease;
+}
+
+.profile-name a:hover {
+    opacity: 0.7;
+}
+
+/* ==========================================
+   画像アイコンボタン（名前の横用）
+   ========================================== */
+.image-gallery-btn {
+    grid-column: 3; /* 右側の列に配置 */
+    justify-self: start; /* 名前のすぐ右隣（左寄せ）に配置 */
+    margin-left: 8px; /* 名前との間の隙間 */
+    
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(142, 197, 252, 0.6);
+    border-radius: 20px;
+    padding: 3px 8px;
+    font-size: 0.85rem;
+    color: #555;
+    cursor: pointer;
+    margin-bottom: 0;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-gallery-btn:hover {
+    background: #ffffff;
+    color: #667eea;
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(102, 126, 234, 0.2);
+}
+
+/* ==========================================
+   画像モーダル専用スタイル（タップで閉じる版）
+   ========================================== */
+.image-modal-card {
+    position: relative;
+    max-width: 90vw;
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; /* タップできることが直感的にわかるカーソル */
+}
+
+.image-modal-card img {
+    max-width: 100%;
+    max-height: 80vh;
+    border-radius: 16px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    object-fit: contain;
+}
+
+/* 「タップで閉じます」の案内文字 */
+.image-modal-hint {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.85rem;
+    margin-top: 12px;
+    letter-spacing: 0.05em;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+
+/* ==========================================
+   オープニング（スプラッシュ）アニメーション決定版
+   ========================================== */
+
+/* 1. 画面全体を覆う背景幕 */
+#splash-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* ★ここを 100vw から 100% に変更 */
+    height: 100vh;
+    
+    /* 以下は変更なし */
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    overflow: hidden;
+    
+    animation: 
+        shrinkSplash 0.8s cubic-bezier(0.77, 0, 0.175, 1) 1.0s forwards,
+        fadeOutSplash 0.3s ease 1.8s forwards;
+}
+
+/* 2. 中央のロゴ枠（ロゴは中央でフェードインするだけ） */
+.splash-logo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* 中央で「ふわっ」と現れるアニメーション（移動は親の縮小に自動で付いていきます） */
+    animation: logoFadeIn 0.6s ease 0.2s forwards;
+    opacity: 0;
+}
+
+/* スプラッシュ用ロゴ（本物と完全に同じ高さ・影） */
+.splash-logo {
+    height: 40px;
+    width: auto;
+    display: block;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+
+/* ==========================================
+   アニメーションのキーフレーム定義
+   ========================================== */
+
+/* ① ロゴが画面中央でふんわり表示 */
+@keyframes logoFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ② 背景幕が上に向かってヘッダーの高さ(71px)まで自然に縮む */
+@keyframes shrinkSplash {
+    0% {
+        height: 100vh;
+    }
+    100% {
+        /* padding 15px*2 + logo 40px + border 1px = 71px */
+        height: 71px; 
+    }
+}
+
+/* ③ 本物のヘッダーと完全一致した状態で幕を消去 */
+@keyframes fadeOutSplash {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
