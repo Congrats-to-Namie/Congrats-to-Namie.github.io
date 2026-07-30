@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title変更作業</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <title変更作業< /title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <!-- ★追加：オープニングアニメーション用幕 -->
+    <!-- ★オープニングアニメーション用幕 -->
     <div id="splash-overlay">
         <div class="splash-logo-wrapper">
             <img src="img/header-logo.png" alt="ロゴ" class="splash-logo">
+
+            <!-- ★修正：srcを空にし、id="random-splash-img" を追加 -->
+            <img src="" alt="サブイラスト" class="splash-sub-img" id="random-splash-img">
         </div>
     </div>
 
@@ -23,7 +28,7 @@
         </div>
     </header>
 
-<!-- 検索用 -->
+    <!-- 検索用 -->
     <div class="search-container">
         <input type="text" id="search-input" class="search-input" placeholder="Find messages" aria-label="検索">
         <span class="search-icon">🔍</span>
@@ -40,24 +45,24 @@
             <div class="name-header">
                 <h2 class="profile-name">
                     <a href="https://x.com/pg_lao" target="_blank" rel="noopener noreferrer">pglao</a>
-                </h2>           
+                </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
-            </div>       
+            </div>
             <div class="comment-frame">
                 <!-- 左上翻訳ボタン -->
                 <button class="translate-btn" type="button" aria-label="言語切り替え">
                     <span class="btn-icon">🌐</span>
                     <span class="btn-text">translate</span>
                 </button>
-                    <div class="comment-text-wrapper">
-                        <!-- message-A -->
-                        <p class="text-ja">Namie 先生，初画集発売おめでとうございます！<br><br></p>
-                        <!-- message-B -->
-                        <p class="text-en">Congratulations on the release of your first artbook, Namie-sensei!<br><br></p>
-                    </div>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">Namie 先生，初画集発売おめでとうございます！<br><br></p>
+                    <!-- message-B -->
+                    <p class="text-en">Congratulations on the release of your first artbook, Namie-sensei!<br><br></p>
+                </div>
             </div>
-                <!-- 全文を見るボタン -->
-                <button class="read-more-btn" type="button">▼Read the full message</button>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
         </div>
 
         <!-- 2-coment-->
@@ -68,24 +73,25 @@
             <div class="name-header">
                 <h2 class="profile-name">
                     <a href="https://x.com" target="_blank" rel="noopener noreferrer">びすろう</a>
-                </h2>           
+                </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
-            </div>       
+            </div>
             <div class="comment-frame">
                 <!-- 左上翻訳ボタン -->
                 <button class="translate-btn" type="button" aria-label="言語切り替え">
                     <span class="btn-icon">🌐</span>
                     <span class="btn-text">translate</span>
                 </button>
-                    <div class="comment-text-wrapper">
-                        <!-- message-A -->
-                        <p class="text-ja">Namie先生、初画集『千景箱 -Kaleidoscope』の発売おめでとうございます！<br>鮮やかな色彩でイラストを描くNamie先生を今後も応援しています！<br></p>
-                        <!-- message-B -->
-                        <p class="text-en">Your message goes here. Long messages are welcome.<br> </p>
-                    </div>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">Namie先生、初画集『千景箱
+                        -Kaleidoscope』の発売おめでとうございます！<br>鮮やかな色彩でイラストを描くNamie先生を今後も応援しています！<br></p>
+                    <!-- message-B -->
+                    <p class="text-en">Your message goes here. Long messages are welcome.<br> </p>
+                </div>
             </div>
-                <!-- 全文を見るボタン -->
-                <button class="read-more-btn" type="button">▼Read the full message</button>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
         </div>
 
         <!-- 3-coment-->
@@ -96,27 +102,28 @@
             <div class="name-header">
                 <h2 class="profile-name">
                     <a href="https://x.com" target="_blank" rel="noopener noreferrer">ドッグさん</a>
-                </h2>           
+                </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
-                <button class="image-gallery-btn" type="button" data-img="pic/dogsan-pic - dogsan2.jpg" aria-label="画像を見る">
+                <button class="image-gallery-btn" type="button" data-img="pic/dogsan-pic - dogsan2.jpg"
+                    aria-label="画像を見る">
                     <i class="fa-regular fa-images"></i>
                 </button>
-            </div>       
+            </div>
             <div class="comment-frame">
                 <!-- 左上翻訳ボタン -->
                 <button class="translate-btn" type="button" aria-label="言語切り替え">
                     <span class="btn-icon">🌐</span>
                     <span class="btn-text">translate</span>
                 </button>
-                    <div class="comment-text-wrapper">
-                        <!-- message-A -->
-                        <p class="text-ja">お祝いページ制作中です。<br>随時反映していくので少々お待ちください。<br></p>
-                        <!-- message-B -->
-                        <p class="text-en">労働するドードー、労ドードー<br><br></p>
-                    </div>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">お祝いページ制作中です。<br>随時反映していくので少々お待ちください。<br></p>
+                    <!-- message-B -->
+                    <p class="text-en">労働するドードー、労ドードー<br><br></p>
+                </div>
             </div>
-                <!-- 全文を見るボタン -->
-                <button class="read-more-btn" type="button">▼Read the full message</button>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
         </div>
 
         <!-- 4-coment-->
@@ -127,27 +134,28 @@
             <div class="name-header">
                 <h2 class="profile-name">
                     <a href="https://x.com" target="_blank" rel="noopener noreferrer">Miri Montan</a>
-                </h2>           
+                </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
-            </div>       
+            </div>
             <div class="comment-frame">
                 <!-- 左上翻訳ボタン -->
                 <button class="translate-btn" type="button" aria-label="言語切り替え">
                     <span class="btn-icon">🌐</span>
                     <span class="btn-text">translate</span>
                 </button>
-                    <div class="comment-text-wrapper">
-                        <!-- message-A -->
-                        <p class="text-ja">Thank you for creating such beautiful illustrations and for always working so hard - you are an inspiration to so many people. </p>
-                        <!-- message-B -->
-                        <p class="text-en">美しいイラストを描き続け、いつも懸命に活動してくださり、本当にありがとうございます。先生は本当にたくさんの人にとって憧れであり、励みになっています。</p>
-                    </div>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">Thank you for creating such beautiful illustrations and for always working so
+                        hard - you are an inspiration to so many people. </p>
+                    <!-- message-B -->
+                    <p class="text-en">美しいイラストを描き続け、いつも懸命に活動してくださり、本当にありがとうございます。先生は本当にたくさんの人にとって憧れであり、励みになっています。</p>
+                </div>
             </div>
-                <!-- 全文を見るボタン -->
-                <button class="read-more-btn" type="button">▼Read the full message</button>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
         </div>
 
-                <!-- 5-coment-->
+        <!-- 5-coment-->
         <div class="profile-card" style="--index: 5;">
             <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
                 <img src="img/common-icon1.png" alt="プロフィールアイコン" class="profile-icon">
@@ -155,24 +163,26 @@
             <div class="name-header">
                 <h2 class="profile-name">
                     <a href="https://x.com" target="_blank" rel="noopener noreferrer">cobbu</a>
-                </h2>           
+                </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
-            </div>       
+            </div>
             <div class="comment-frame">
                 <!-- 左上翻訳ボタン -->
                 <button class="translate-btn" type="button" aria-label="言語切り替え">
                     <span class="btn-icon">🌐</span>
                     <span class="btn-text">translate</span>
                 </button>
-                    <div class="comment-text-wrapper">
-                        <!-- message-A -->
-                        <p class="text-ja">Dear Namie-sensei, <br>Congratulations! I wish I could visit in-person. Maybe next time! I will keep supporting you in all of your future endeavors! Much love, - cobbu</p>
-                        <!-- message-B -->
-                        <p class="text-en">Namie先生へ<br>おめでとうございます！本当は直接会場へ行きたかったです。また次の機会がありますように！<br>これからも先生のご活躍をずっと応援しています！</p>
-                    </div>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">Dear Namie-sensei, <br>Congratulations! I wish I could visit in-person. Maybe
+                        next time! I will keep supporting you in all of your future endeavors! Much love, - cobbu</p>
+                    <!-- message-B -->
+                    <p class="text-en">
+                        Namie先生へ<br>おめでとうございます！本当は直接会場へ行きたかったです。また次の機会がありますように！<br>これからも先生のご活躍をずっと応援しています！</p>
+                </div>
             </div>
-                <!-- 全文を見るボタン -->
-                <button class="read-more-btn" type="button">▼Read the full message</button>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
         </div>
 
         <!-- 6-coment-->
@@ -183,27 +193,29 @@
             <div class="name-header">
                 <h2 class="profile-name">
                     <a href="https://x.com" target="_blank" rel="noopener noreferrer">Jamuko</a>
-                </h2>           
+                </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
-            </div>       
+            </div>
             <div class="comment-frame">
                 <!-- 左上翻訳ボタン -->
                 <button class="translate-btn" type="button" aria-label="言語切り替え">
                     <span class="btn-icon">🌐</span>
                     <span class="btn-text">translate</span>
                 </button>
-                    <div class="comment-text-wrapper">
-                        <!-- message-A -->
-                        <p class="text-ja">The book is so beautiful and feels like a culmination of Namie&#039;s love and hard work for many years up until now! I can&#039;t wait to look through it myself~</p>
-                        <!-- message-B -->
-                        <p class="text-en">この画集は本当に美しくて、これまで何年にもわたるNamie先生の愛情と努力の結晶が詰まっているように感じます！私も早く手に取ってじっくり見るのが待ちきれません♪</p>
-                    </div>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">The book is so beautiful and feels like a culmination of Namie's love and
+                        hard work for many years up until now! I can't wait to look through it myself~</p>
+                    <!-- message-B -->
+                    <p class="text-en">この画集は本当に美しくて、これまで何年にもわたるNamie先生の愛情と努力の結晶が詰まっているように感じます！私も早く手に取ってじっくり見るのが待ちきれません♪
+                    </p>
+                </div>
             </div>
-                <!-- 全文を見るボタン -->
-                <button class="read-more-btn" type="button">▼Read the full message</button>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
         </div>
 
-                <!-- 7-coment-->
+        <!-- 7-coment-->
         <div class="profile-card" style="--index: 7;">
             <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
                 <img src="img/common-icon3.png" alt="プロフィールアイコン" class="profile-icon">
@@ -211,24 +223,25 @@
             <div class="name-header">
                 <h2 class="profile-name">
                     <a href="https://x.com" target="_blank" rel="noopener noreferrer">coup e</a>
-                </h2>           
+                </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
-            </div>       
+            </div>
             <div class="comment-frame">
                 <!-- 左上翻訳ボタン -->
                 <button class="translate-btn" type="button" aria-label="言語切り替え">
                     <span class="btn-icon">🌐</span>
                     <span class="btn-text">translate</span>
                 </button>
-                    <div class="comment-text-wrapper">
-                        <!-- message-A -->
-                        <p class="text-ja">先生が描かれる世界観大好きです！<br>個展開催おめでとうございます！</p>
-                        <!-- message-B -->
-                        <p class="text-en">I absolutely love the worlds you create!<br>Congratulations on your exhibition!</p>
-                    </div>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">先生が描かれる世界観大好きです！<br>個展開催おめでとうございます！</p>
+                    <!-- message-B -->
+                    <p class="text-en">I absolutely love the worlds you create!<br>Congratulations on your exhibition!
+                    </p>
+                </div>
             </div>
-                <!-- 全文を見るボタン -->
-                <button class="read-more-btn" type="button">▼Read the full message</button>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
         </div>
 
         <!-- 8-coment-->
@@ -239,27 +252,27 @@
             <div class="name-header">
                 <h2 class="profile-name">
                     <a href="https://x.com" target="_blank" rel="noopener noreferrer">gomaaaaaa</a>
-                </h2>           
+                </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
-            </div>       
+            </div>
             <div class="comment-frame">
                 <!-- 左上翻訳ボタン -->
                 <button class="translate-btn" type="button" aria-label="言語切り替え">
                     <span class="btn-icon">🌐</span>
                     <span class="btn-text">translate</span>
                 </button>
-                    <div class="comment-text-wrapper">
-                        <!-- message-A -->
-                        <p class="text-ja">(* • ω • )b<br><br></p>
-                        <!-- message-B -->
-                        <p class="text-en">(* • ω • )b<br><br></p>
-                    </div>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">(* • ω • )b<br><br></p>
+                    <!-- message-B -->
+                    <p class="text-en">(* • ω • )b<br><br></p>
+                </div>
             </div>
-                <!-- 全文を見るボタン -->
-                <button class="read-more-btn" type="button">▼Read the full message</button>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
         </div>
 
-                <!-- 9-coment-->
+        <!-- 9-coment-->
         <div class="profile-card" style="--index: 9;">
             <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
                 <img src="img/common-icon1.png" alt="プロフィールアイコン" class="profile-icon">
@@ -267,24 +280,26 @@
             <div class="name-header">
                 <h2 class="profile-name">
                     <a href="https://x.com" target="_blank" rel="noopener noreferrer">どう</a>
-                </h2>           
+                </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
-            </div>       
+            </div>
             <div class="comment-frame">
                 <!-- 左上翻訳ボタン -->
                 <button class="translate-btn" type="button" aria-label="言語切り替え">
                     <span class="btn-icon">🌐</span>
                     <span class="btn-text">translate</span>
                 </button>
-                    <div class="comment-text-wrapper">
-                        <!-- message-A -->
-                        <p class="text-ja">namie先生を応援できることや素敵な作品を楽しむ事ができてとても幸せです！<br>namie先生と、namie先生が描くキャラクターの幸せを願っています&lt;3</p>
-                        <!-- message-B -->
-                        <p class="text-en">I am so happy to support you and enjoy your wonderful art! <br>Wishing you and all the characters you draw a lifetime of happiness! &lt;3</p>
-                    </div>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">
+                        namie先生を応援できることや素敵な作品を楽しむ事ができてとても幸せです！<br>namie先生と、namie先生が描くキャラクターの幸せを願っています&lt;3</p>
+                    <!-- message-B -->
+                    <p class="text-en">I am so happy to support you and enjoy your wonderful art! <br>Wishing you and
+                        all the characters you draw a lifetime of happiness! &lt;3</p>
+                </div>
             </div>
-                <!-- 全文を見るボタン -->
-                <button class="read-more-btn" type="button">▼Read the full message</button>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
         </div>
 
         <!-- 10-coment-->
@@ -295,27 +310,28 @@
             <div class="name-header">
                 <h2 class="profile-name">
                     <a href="https://x.com" target="_blank" rel="noopener noreferrer">しろち</a>
-                </h2>           
+                </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
-            </div>       
+            </div>
             <div class="comment-frame">
                 <!-- 左上翻訳ボタン -->
                 <button class="translate-btn" type="button" aria-label="言語切り替え">
                     <span class="btn-icon">🌐</span>
                     <span class="btn-text">translate</span>
                 </button>
-                    <div class="comment-text-wrapper">
-                        <!-- message-A -->
-                        <p class="text-ja">素敵なイラストをいつもありがとうございます！<br>これからも健やかに長くご活躍される事を祈っています！</p>
-                        <!-- message-B -->
-                        <p class="text-en">Thank you, as always, for your beautiful illustrations!<br>I wish you good health and many more years of wonderful work to come!</p>
-                    </div>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">素敵なイラストをいつもありがとうございます！<br>これからも健やかに長くご活躍される事を祈っています！</p>
+                    <!-- message-B -->
+                    <p class="text-en">Thank you, as always, for your beautiful illustrations!<br>I wish you good health
+                        and many more years of wonderful work to come!</p>
+                </div>
             </div>
-                <!-- 全文を見るボタン -->
-                <button class="read-more-btn" type="button">▼Read the full message</button>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
         </div>
 
-                <!-- 11-coment-->
+        <!-- 11-coment-->
         <div class="profile-card" style="--index: 11;">
             <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
                 <img src="img/common-icon3.png" alt="プロフィールアイコン" class="profile-icon">
@@ -323,24 +339,27 @@
             <div class="name-header">
                 <h2 class="profile-name">
                     <a href="https://x.com" target="_blank" rel="noopener noreferrer">四季</a>
-                </h2>           
+                </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
-            </div>       
+            </div>
             <div class="comment-frame">
                 <!-- 左上翻訳ボタン -->
                 <button class="translate-btn" type="button" aria-label="言語切り替え">
                     <span class="btn-icon">🌐</span>
                     <span class="btn-text">translate</span>
                 </button>
-                    <div class="comment-text-wrapper">
-                        <!-- message-A -->
-                        <p class="text-ja">いつも可愛らしい素敵な作品を届けてくださりありがとうございます。ゲーム内イラストを拝見するのがほとんどでしたが、この機会にオリジナルの世界観も楽しみたいと思います。</p>
-                        <!-- message-B -->
-                        <p class="text-en">Thank you for always creating such adorable and beautiful artwork. Most of the time I've experienced your illustrations through the games you've worked on, but I'm really looking forward to exploring your original world through this opportunity as well.</p>
-                    </div>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">
+                        いつも可愛らしい素敵な作品を届けてくださりありがとうございます。ゲーム内イラストを拝見するのがほとんどでしたが、この機会にオリジナルの世界観も楽しみたいと思います。</p>
+                    <!-- message-B -->
+                    <p class="text-en">Thank you for always creating such adorable and beautiful artwork. Most of the
+                        time I've experienced your illustrations through the games you've worked on, but I'm really
+                        looking forward to exploring your original world through this opportunity as well.</p>
+                </div>
             </div>
-                <!-- 全文を見るボタン -->
-                <button class="read-more-btn" type="button">▼Read the full message</button>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
         </div>
 
         <!-- 12-coment-->
@@ -351,27 +370,28 @@
             <div class="name-header">
                 <h2 class="profile-name">
                     <a href="https://x.com" target="_blank" rel="noopener noreferrer">エゾシカ</a>
-                </h2>           
+                </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
-            </div>       
+            </div>
             <div class="comment-frame">
                 <!-- 左上翻訳ボタン -->
                 <button class="translate-btn" type="button" aria-label="言語切り替え">
                     <span class="btn-icon">🌐</span>
                     <span class="btn-text">translate</span>
                 </button>
-                    <div class="comment-text-wrapper">
-                        <!-- message-A -->
-                        <p class="text-ja">貴女のイラストを見る事は私の喜びです。素敵なイラストをありがとう！！</p>
-                        <!-- message-B -->
-                        <p class="text-en">Seeing your illustrations always brings me joy. Thank you for creating such wonderful artwork!!</p>
-                    </div>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">貴女のイラストを見る事は私の喜びです。素敵なイラストをありがとう！！</p>
+                    <!-- message-B -->
+                    <p class="text-en">Seeing your illustrations always brings me joy. Thank you for creating such
+                        wonderful artwork!!</p>
+                </div>
             </div>
-                <!-- 全文を見るボタン -->
-                <button class="read-more-btn" type="button">▼Read the full message</button>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
         </div>
 
-                <!-- 13-coment-->
+        <!-- 13-coment-->
         <div class="profile-card" style="--index: 13;">
             <a href="https://x.com/1t1o1m1o1m1i" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
                 <img src="icon/Tomomi-icon - Tomomi.png" alt="プロフィールアイコン" class="profile-icon">
@@ -379,30 +399,33 @@
             <div class="name-header">
                 <h2 class="profile-name">
                     <a href="https://x.com/1t1o1m1o1m1i" target="_blank" rel="noopener noreferrer">Tomomi</a>
-                </h2>           
+                </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
-            </div>       
+            </div>
             <div class="comment-frame">
                 <!-- 左上翻訳ボタン -->
                 <button class="translate-btn" type="button" aria-label="言語切り替え">
                     <span class="btn-icon">🌐</span>
                     <span class="btn-text">translate</span>
                 </button>
-                    <div class="comment-text-wrapper">
-                        <!-- message-A -->
-                        <p class="text-ja">日本で2度目の個展開催、初画集発売おめでとうございます！<br>
-                                            本格的にファンになったのは昨年からですが、先生のオリジナルキャラクター、アークナイツのキャラクターに日々癒されています^^<br>
-                                            今後もかわいいキャラクター達を、先生自身も楽しみながら沢山生み出していってください✨<br>
-                                            陰ながら応援しています！</p>
-                        <!-- message-B -->
-                        <p class="text-en">Congratulations on your second solo exhibition in Japan and on the release of your first artbook!<br>
-                                            I only became a true fan last year, but your original characters and the characters you've created for Arknights have been bringing me joy every day. ^^<br>
-                                            I hope you'll continue creating many more adorable characters while enjoying the creative process yourself. ✨<br>
-                                            I'll always be cheering you on from afar!</p>
-                    </div>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">日本で2度目の個展開催、初画集発売おめでとうございます！<br>
+                        本格的にファンになったのは昨年からですが、先生のオリジナルキャラクター、アークナイツのキャラクターに日々癒されています^^<br>
+                        今後もかわいいキャラクター達を、先生自身も楽しみながら沢山生み出していってください✨<br>
+                        陰ながら応援しています！</p>
+                    <!-- message-B -->
+                    <p class="text-en">Congratulations on your second solo exhibition in Japan and on the release of
+                        your first artbook!<br>
+                        I only became a true fan last year, but your original characters and the characters you've
+                        created for Arknights have been bringing me joy every day. ^^<br>
+                        I hope you'll continue creating many more adorable characters while enjoying the creative
+                        process yourself. ✨<br>
+                        I'll always be cheering you on from afar!</p>
+                </div>
             </div>
-                <!-- 全文を見るボタン -->
-                <button class="read-more-btn" type="button">▼Read the full message</button>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
         </div>
 
         <!-- 14-coment-->
@@ -413,27 +436,27 @@
             <div class="name-header">
                 <h2 class="profile-name">
                     <a href="https://x.com" target="_blank" rel="noopener noreferrer">ノキ</a>
-                </h2>           
+                </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
-            </div>       
+            </div>
             <div class="comment-frame">
                 <!-- 左上翻訳ボタン -->
                 <button class="translate-btn" type="button" aria-label="言語切り替え">
                     <span class="btn-icon">🌐</span>
                     <span class="btn-text">translate</span>
                 </button>
-                    <div class="comment-text-wrapper">
-                        <!-- message-A -->
-                        <p class="text-ja"><br><br><br> </p>
-                        <!-- message-B -->
-                        <p class="text-en"><br><br><br></p>
-                    </div>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja"><br><br><br> </p>
+                    <!-- message-B -->
+                    <p class="text-en"><br><br><br></p>
+                </div>
             </div>
-                <!-- 全文を見るボタン -->
-                <button class="read-more-btn" type="button">▼Read the full message</button>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
         </div>
 
-                <!-- 15-coment-->
+        <!-- 15-coment-->
         <div class="profile-card" style="--index: 15;">
             <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
                 <img src="img/common-icon3.png" alt="プロフィールアイコン" class="profile-icon">
@@ -441,24 +464,25 @@
             <div class="name-header">
                 <h2 class="profile-name">
                     <a href="https://x.com" target="_blank" rel="noopener noreferrer">輝志レン</a>
-                </h2>           
+                </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
-            </div>       
+            </div>
             <div class="comment-frame">
                 <!-- 左上翻訳ボタン -->
                 <button class="translate-btn" type="button" aria-label="言語切り替え">
                     <span class="btn-icon">🌐</span>
                     <span class="btn-text">translate</span>
                 </button>
-                    <div class="comment-text-wrapper">
-                        <!-- message-A -->
-                        <p class="text-ja">画集発売＆個展開催おめでとうございます！<br><br></p>
-                        <!-- message-B -->
-                        <p class="text-en">Congratulations on the release of your artbook and the opening of your exhibition!<br><br></p>
-                    </div>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">画集発売＆個展開催おめでとうございます！<br><br></p>
+                    <!-- message-B -->
+                    <p class="text-en">Congratulations on the release of your artbook and the opening of your
+                        exhibition!<br><br></p>
+                </div>
             </div>
-                <!-- 全文を見るボタン -->
-                <button class="read-more-btn" type="button">▼Read the full message</button>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
         </div>
 
         <!-- 16-coment-->
@@ -469,35 +493,37 @@
             <div class="name-header">
                 <h2 class="profile-name">
                     <a href="https://x.com/GenSo670" target="_blank" rel="noopener noreferrer">GenSo</a>
-                </h2>           
+                </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
                 <button class="image-gallery-btn" type="button" data-img="pic/GenSo-pic - GenSo.JPG" aria-label="画像を見る">
                     <i class="fa-regular fa-images"></i>
                 </button>
-            </div>       
+            </div>
             <div class="comment-frame">
                 <!-- 左上翻訳ボタン -->
                 <button class="translate-btn" type="button" aria-label="言語切り替え">
                     <span class="btn-icon">🌐</span>
                     <span class="btn-text">translate</span>
                 </button>
-                    <div class="comment-text-wrapper">
-                        <!-- message-A -->
-                        <p class="text-ja">Namie先生、初画集『千景箱 -Kaleidoscope』のご発売＆個展のご開催、本当におめでとうございます！<br>
-                                            Namie先生が描かれる美しい色彩と世界観が大好きです。<br>
-                                            これからも素敵な作品を楽しみに、ずっと応援しています！</p>
-                        <!-- message-B -->
-                        <p class="text-en">Namie-sensei, congratulations on the release of your first art book, 『千景箱 -Kaleidoscope』, and on your commemorative exhibition!<br>
-                                            I absolutely love the beautiful colors and unique worlds you create. I’m so happy to see your wonderful works brought together in both an art book and an exhibition.<br>
-                                            I look forward to seeing more of your amazing work and will continue supporting you!</p>
-                    </div>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">Namie先生、初画集『千景箱 -Kaleidoscope』のご発売＆個展のご開催、本当におめでとうございます！<br>
+                        Namie先生が描かれる美しい色彩と世界観が大好きです。<br>
+                        これからも素敵な作品を楽しみに、ずっと応援しています！</p>
+                    <!-- message-B -->
+                    <p class="text-en">Namie-sensei, congratulations on the release of your first art book, 『千景箱
+                        -Kaleidoscope』, and on your commemorative exhibition!<br>
+                        I absolutely love the beautiful colors and unique worlds you create. I’m so happy to see your
+                        wonderful works brought together in both an art book and an exhibition.<br>
+                        I look forward to seeing more of your amazing work and will continue supporting you!</p>
+                </div>
             </div>
-                <!-- 全文を見るボタン -->
-                <button class="read-more-btn" type="button">▼Read the full message</button>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
         </div>
 
 
-                <!-- 17-coment-->
+        <!-- 17-coment-->
         <div class="profile-card" style="--index: 17;">
             <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
                 <img src="img/common-icon1.png" alt="プロフィールアイコン" class="profile-icon">
@@ -505,24 +531,24 @@
             <div class="name-header">
                 <h2 class="profile-name">
                     <a href="https://x.com" target="_blank" rel="noopener noreferrer">gamehand_souls</a>
-                </h2>           
+                </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
-            </div>       
+            </div>
             <div class="comment-frame">
                 <!-- 左上翻訳ボタン -->
                 <button class="translate-btn" type="button" aria-label="言語切り替え">
                     <span class="btn-icon">🌐</span>
                     <span class="btn-text">translate</span>
                 </button>
-                    <div class="comment-text-wrapper">
-                        <!-- message-A -->
-                        <p class="text-ja">いつも素敵な作品をありがとうございます！</p>
-                        <!-- message-B -->
-                        <p class="text-en">Thank you, as always, for your wonderful artwork!</p>
-                    </div>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">いつも素敵な作品をありがとうございます！</p>
+                    <!-- message-B -->
+                    <p class="text-en">Thank you, as always, for your wonderful artwork!</p>
+                </div>
             </div>
-                <!-- 全文を見るボタン -->
-                <button class="read-more-btn" type="button">▼Read the full message</button>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
         </div>
 
         <!-- 18-coment-->
@@ -533,1002 +559,1661 @@
             <div class="name-header">
                 <h2 class="profile-name">
                     <a href="https://x.com" target="_blank" rel="noopener noreferrer">チョウデン</a>
-                </h2>           
+                </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
-            </div>       
+            </div>
             <div class="comment-frame">
                 <!-- 左上翻訳ボタン -->
                 <button class="translate-btn" type="button" aria-label="言語切り替え">
                     <span class="btn-icon">🌐</span>
                     <span class="btn-text">translate</span>
                 </button>
-                    <div class="comment-text-wrapper">
-                        <!-- message-A -->
-                        <p class="text-ja">Namie先生、画集発売並びに個展の開催おめでとうございます！<br>
-                                            先生の可愛らしいイラストや色使い大好きです✨<br>
-                                            これからも応援しています！</p>
-                        <!-- message-B -->
-                        <p class="text-en">Namie-sensei, congratulations on the release of your artbook and the opening of your exhibition!<br>
-                                            I absolutely love your adorable illustrations and your beautiful use of color. ✨<br>
-                                            I'll continue supporting you!</p>
-                    </div>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">Namie先生、画集発売並びに個展の開催おめでとうございます！<br>
+                        先生の可愛らしいイラストや色使い大好きです✨<br>
+                        これからも応援しています！</p>
+                    <!-- message-B -->
+                    <p class="text-en">Namie-sensei, congratulations on the release of your artbook and the opening of
+                        your exhibition!<br>
+                        I absolutely love your adorable illustrations and your beautiful use of color. ✨<br>
+                        I'll continue supporting you!</p>
+                </div>
             </div>
-                <!-- 全文を見るボタン -->
-                <button class="read-more-btn" type="button">▼Read the full message</button>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
         </div>
 
-<!-- 2026/07/28ここまでやったメモ -->
+        <!-- 2026/07/28ここまでやったメモ -->
 
-                <!-- 19-coment-->
+        <!-- 19-coment-->
         <div class="profile-card" style="--index: 19;">
             <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
-                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+                <img src="img/common-icon3.png" alt="プロフィールアイコン" class="profile-icon">
             </a>
             <div class="name-header">
                 <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
-                </h2>           
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">YOOKI</a>
+                </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
                 <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
                     <i class="fa-regular fa-images"></i>
                 </button>
-            </div>       
+            </div>
             <div class="comment-frame">
                 <!-- 左上翻訳ボタン -->
                 <button class="translate-btn" type="button" aria-label="言語切り替え">
                     <span class="btn-icon">🌐</span>
                     <span class="btn-text">translate</span>
                 </button>
-                    <div class="comment-text-wrapper">
-                        <!-- message-A -->
-                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br> </p>
-                        <!-- message-B -->
-                        <p class="text-en">Your message goes here. Long messages are welcome.<br> </p>
-                    </div>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">画集発売おめでとうございます！！<br>
+                        Namie先生のイラストもいつも楽しそうな毎日なつぶやきを見るのが大好きです！！<br>
+                        これからもずっとずーっと大好きです！！</p>
+                    <!-- message-B -->
+                    <p class="text-en">Congratulations on the release of your artbook!!<br>
+                        I always enjoy both your illustrations and your cheerful posts about everyday life.<br>
+                        I'll always, always be a huge fan of yours!!</p>
+                </div>
             </div>
-                <!-- 全文を見るボタン -->
-                <button class="read-more-btn" type="button">▼Read the full message</button>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
         </div>
 
         <!-- 20-coment-->
         <div class="profile-card" style="--index: 20;">
             <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
-                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+                <img src="img/common-icon4.png" alt="プロフィールアイコン" class="profile-icon">
             </a>
             <div class="name-header">
                 <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
-                </h2>           
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">Boedromion</a>
+                </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
                 <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
                     <i class="fa-regular fa-images"></i>
                 </button>
-            </div>       
+            </div>
             <div class="comment-frame">
                 <!-- 左上翻訳ボタン -->
                 <button class="translate-btn" type="button" aria-label="言語切り替え">
                     <span class="btn-icon">🌐</span>
                     <span class="btn-text">translate</span>
                 </button>
-                    <div class="comment-text-wrapper">
-                        <!-- message-A -->
-                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br> </p>
-                        <!-- message-B -->
-                        <p class="text-en">Your message goes here. Long messages are welcome.<br> </p>
-                    </div>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">Congratulations on achieving yet another dream!<br>
+                        You really are unstoppable!</p>
+                    <!-- message-B -->
+                    <p class="text-en">また一つ夢を叶えられたのですね！本当におめでとうございます！<br>
+                        先生の快進撃はまだまだ止まりそうにありませんね！</p>
+                </div>
             </div>
-                <!-- 全文を見るボタン -->
-                <button class="read-more-btn" type="button">▼Read the full message</button>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
         </div>
 
-                <!-- 21-coment-->
+        <!-- 21-coment-->
         <div class="profile-card" style="--index: 21;">
             <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
-                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+                <img src="img/common-icon1.png" alt="プロフィールアイコン" class="profile-icon">
             </a>
             <div class="name-header">
                 <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
-                </h2>           
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">Erill</a>
+                </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
                 <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
                     <i class="fa-regular fa-images"></i>
                 </button>
-            </div>       
+            </div>
             <div class="comment-frame">
                 <!-- 左上翻訳ボタン -->
                 <button class="translate-btn" type="button" aria-label="言語切り替え">
                     <span class="btn-icon">🌐</span>
                     <span class="btn-text">translate</span>
                 </button>
-                    <div class="comment-text-wrapper">
-                        <!-- message-A -->
-                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br> </p>
-                        <!-- message-B -->
-                        <p class="text-en">Your message goes here. Long messages are welcome.<br> </p>
-                    </div>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">Namie 先生へ、初商業画集&amp;個展の開催おめでとうございます🎉✨<br>
+                        先生の画集を本屋さんで受け取れてとても嬉しかったです‼︎<br>
+                        これから先も、Namie先生のご活躍と新たに生まれるキャラ&amp;イラスト達を楽しみにしております‼︎</p>
+                    <!-- message-B -->
+                    <p class="text-en">To Namie-sensei, congratulations on your first commercial artbook and your
+                        exhibition! 🎉✨<br>
+                        I was so happy to pick up your artbook at the bookstore!!<br>
+                        I look forward to seeing all of your future achievements, as well as the wonderful new
+                        characters and illustrations you'll create!!</p>
+                </div>
             </div>
-                <!-- 全文を見るボタン -->
-                <button class="read-more-btn" type="button">▼Read the full message</button>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
         </div>
 
         <!-- 22-coment-->
         <div class="profile-card" style="--index: 22;">
             <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
-                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+                <img src="img/common-icon2.png" alt="プロフィールアイコン" class="profile-icon">
             </a>
             <div class="name-header">
                 <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
-                </h2>           
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">春叶</a>
+                </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
                 <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
                     <i class="fa-regular fa-images"></i>
                 </button>
-            </div>       
+            </div>
             <div class="comment-frame">
                 <!-- 左上翻訳ボタン -->
                 <button class="translate-btn" type="button" aria-label="言語切り替え">
                     <span class="btn-icon">🌐</span>
                     <span class="btn-text">translate</span>
                 </button>
-                    <div class="comment-text-wrapper">
-                        <!-- message-A -->
-                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br> </p>
-                        <!-- message-B -->
-                        <p class="text-en">Your message goes here. Long messages are welcome.<br> </p>
-                    </div>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">世界で一番大好きなイラストレーター Namie先生へ。<br>
+                        画集発売and個展開催おめでとうございます！！！画集を今、手に取って、読み終えて、「ささやか」どころではない！でっかい喜びでいっぱいです！<br>
+                        可愛くて綺麗な作品を生み出してくれてありがとう、愛おしい子たちを生み出してくれてありがとう！！！この本はとっても大事な宝物です。<br>
+                        これまでもこれからも、ずっと応援しています。大好きなNamie先生に、たくさんの愛を込めて。</p>
+                    <!-- message-B -->
+                    <p class="text-en">To Namie-sensei, my favorite illustrator in the world,<br>
+                        Congratulations on the release of your artbook and the opening of your exhibition!!!<br>
+                        I've just finished reading your artbook, and it's anything but "modest"—it's filled me with
+                        immense joy!<br>
+                        Thank you for creating such adorable and beautiful artwork, and thank you for bringing so many
+                        lovable characters into the world!!!<br>
+                        This book is truly one of my greatest treasures.<br>
+                        I'll always be cheering you on, now and forever.<br>
+                        Sending all my love to my beloved Namie-sensei.</p>
+                </div>
             </div>
-                <!-- 全文を見るボタン -->
-                <button class="read-more-btn" type="button">▼Read the full message</button>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
         </div>
 
-                <!-- 23-coment-->
+        <!-- 23-coment-->
         <div class="profile-card" style="--index: 23;">
             <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
-                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+                <img src="img/common-icon3.png" alt="プロフィールアイコン" class="profile-icon">
             </a>
             <div class="name-header">
                 <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
-                </h2>           
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">41</a>
+                </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
                 <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
                     <i class="fa-regular fa-images"></i>
                 </button>
-            </div>       
+            </div>
             <div class="comment-frame">
                 <!-- 左上翻訳ボタン -->
                 <button class="translate-btn" type="button" aria-label="言語切り替え">
                     <span class="btn-icon">🌐</span>
                     <span class="btn-text">translate</span>
                 </button>
-                    <div class="comment-text-wrapper">
-                        <!-- message-A -->
-                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br> </p>
-                        <!-- message-B -->
-                        <p class="text-en">Your message goes here. Long messages are welcome.<br> </p>
-                    </div>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">画集発売おめでとうございます！<br>
+                        Namie先生の描かれるかわいい子たちが大好きです。</p>
+                    <!-- message-B -->
+                    <p class="text-en">Congratulations on the release of your artbook!<br>
+                        I absolutely love all the adorable characters you draw.</p>
+                </div>
             </div>
-                <!-- 全文を見るボタン -->
-                <button class="read-more-btn" type="button">▼Read the full message</button>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
         </div>
 
         <!-- 24-coment-->
         <div class="profile-card" style="--index: 24;">
             <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
-                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+                <img src="img/common-icon4.png" alt="プロフィールアイコン" class="profile-icon">
             </a>
             <div class="name-header">
                 <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
-                </h2>           
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">そのひぐらし</a>
+                </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
                 <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
                     <i class="fa-regular fa-images"></i>
                 </button>
-            </div>       
+            </div>
             <div class="comment-frame">
                 <!-- 左上翻訳ボタン -->
                 <button class="translate-btn" type="button" aria-label="言語切り替え">
                     <span class="btn-icon">🌐</span>
                     <span class="btn-text">translate</span>
                 </button>
-                    <div class="comment-text-wrapper">
-                        <!-- message-A -->
-                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br> </p>
-                        <!-- message-B -->
-                        <p class="text-en">Your message goes here. Long messages are welcome.<br> </p>
-                    </div>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">いつも可愛らしいイラストに癒されています！<br>
+                        初画集の方も購入させていただき、Namie先生の描く世界観に常々感動しています！<br>
+                        これからも応援しています！</p>
+                    <!-- message-B -->
+                    <p class="text-en">Your adorable illustrations always brighten my day!<br>
+                        I also bought your first artbook, and I'm constantly amazed by the beautiful worlds you
+                        create.<br>
+                        I'll continue supporting you!</p>
+                </div>
             </div>
-                <!-- 全文を見るボタン -->
-                <button class="read-more-btn" type="button">▼Read the full message</button>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
         </div>
 
-                <!-- 25-coment-->
+        <!-- 25-coment-->
         <div class="profile-card" style="--index: 25;">
             <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
-                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+                <img src="img/common-icon1.png" alt="プロフィールアイコン" class="profile-icon">
             </a>
             <div class="name-header">
                 <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
-                </h2>           
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">篠宮</a>
+                </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
                 <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
                     <i class="fa-regular fa-images"></i>
                 </button>
-            </div>       
+            </div>
             <div class="comment-frame">
                 <!-- 左上翻訳ボタン -->
                 <button class="translate-btn" type="button" aria-label="言語切り替え">
                     <span class="btn-icon">🌐</span>
                     <span class="btn-text">translate</span>
                 </button>
-                    <div class="comment-text-wrapper">
-                        <!-- message-A -->
-                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br> </p>
-                        <!-- message-B -->
-                        <p class="text-en">Your message goes here. Long messages are welcome.<br> </p>
-                    </div>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">個展の開催おめでとうございます。<br>良い個展になるよう応援しております！</p>
+                    <!-- message-B -->
+                    <p class="text-en">Congratulations on your exhibition.<br>I hope it will be a wonderful success!</p>
+                </div>
             </div>
-                <!-- 全文を見るボタン -->
-                <button class="read-more-btn" type="button">▼Read the full message</button>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
         </div>
 
         <!-- 26-coment-->
         <div class="profile-card" style="--index: 26;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
-                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+            <a href="https://xhslink.cn/m/3q1T2RiHfkG" target="_blank" rel="noopener noreferrer"
+                class="profile-icon-link">
+                <img src="icon/Septpuff-icon - Septpuff.png" alt="プロフィールアイコン" class="profile-icon">
             </a>
             <div class="name-header">
                 <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
-                </h2>           
+                    <a href="https://xhslink.cn/m/3q1T2RiHfkG" target="_blank" rel="noopener noreferrer">Septpuff_</a>
+                </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
-                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                <button class="image-gallery-btn" type="button" data-img="pic/Septpuff-pic - Septpuff.jpg"
+                    aria-label="画像を見る">
                     <i class="fa-regular fa-images"></i>
                 </button>
-            </div>       
+            </div>
             <div class="comment-frame">
                 <!-- 左上翻訳ボタン -->
                 <button class="translate-btn" type="button" aria-label="言語切り替え">
                     <span class="btn-icon">🌐</span>
                     <span class="btn-text">translate</span>
                 </button>
-                    <div class="comment-text-wrapper">
-                        <!-- message-A -->
-                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br> </p>
-                        <!-- message-B -->
-                        <p class="text-en">Your message goes here. Long messages are welcome.<br> </p>
-                    </div>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">展覧会が大成功を収めますよう心よりお祈り申し上げます。ずっと応援し続けます。<br>
+                        5月1日、中国の上海でお会いできたことは、私にとって今年一番幸せな思い出になりました。本当に作者様にお会いできたなんて今でも信じられません。<br>
+                        これからも、作者様が描いてくださるゴールデングローのイラストをたくさん見られますよう願っています。</p>
+                    <!-- message-B -->
+                    <p class="text-en">I sincerely hope your exhibition is a great success. I'll continue supporting you
+                        always.<br>
+                        Meeting you in Shanghai on May 1st was the happiest memory of my year. I still can't believe I
+                        actually had the chance to meet you.<br>
+                        I hope I'll get to see many more illustrations of Goldenglow drawn by you in the future.</p>
+                </div>
             </div>
-                <!-- 全文を見るボタン -->
-                <button class="read-more-btn" type="button">▼Read the full message</button>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
         </div>
 
-                <!-- 27-coment-->
+        <!-- 27-coment-->
         <div class="profile-card" style="--index: 27;">
             <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
-                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+                <img src="img/common-icon2.png" alt="プロフィールアイコン" class="profile-icon">
             </a>
             <div class="name-header">
                 <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
-                </h2>           
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">まどろみ ひるね</a>
+                </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
                 <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
                     <i class="fa-regular fa-images"></i>
                 </button>
-            </div>       
+            </div>
             <div class="comment-frame">
                 <!-- 左上翻訳ボタン -->
                 <button class="translate-btn" type="button" aria-label="言語切り替え">
                     <span class="btn-icon">🌐</span>
                     <span class="btn-text">translate</span>
                 </button>
-                    <div class="comment-text-wrapper">
-                        <!-- message-A -->
-                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br> </p>
-                        <!-- message-B -->
-                        <p class="text-en">Your message goes here. Long messages are welcome.<br> </p>
-                    </div>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">Namie先生、個展と画集の発売おめでとうございます！<br>
+                        Namie先生のイラストが大好きです！</p>
+                    <!-- message-B -->
+                    <p class="text-en">Namie-sensei, congratulations on your exhibition and the release of your
+                        artbook!<br>
+                        I absolutely love your illustrations!</p>
+                </div>
             </div>
-                <!-- 全文を見るボタン -->
-                <button class="read-more-btn" type="button">▼Read the full message</button>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
         </div>
 
         <!-- 28-coment-->
         <div class="profile-card" style="--index: 28;">
             <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
-                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+                <img src="img/common-icon3.png" alt="プロフィールアイコン" class="profile-icon">
             </a>
             <div class="name-header">
                 <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
-                </h2>           
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">sigbird</a>
+                </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
                 <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
                     <i class="fa-regular fa-images"></i>
                 </button>
-            </div>       
+            </div>
             <div class="comment-frame">
                 <!-- 左上翻訳ボタン -->
                 <button class="translate-btn" type="button" aria-label="言語切り替え">
                     <span class="btn-icon">🌐</span>
                     <span class="btn-text">translate</span>
                 </button>
-                    <div class="comment-text-wrapper">
-                        <!-- message-A -->
-                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br> </p>
-                        <!-- message-B -->
-                        <p class="text-en">Your message goes here. Long messages are welcome.<br> </p>
-                    </div>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">可愛らしいイラストが大好きです！<br>これからも応援しています。</p>
+                    <!-- message-B -->
+                    <p class="text-en">I absolutely love your adorable illustrations!<br>I'll continue supporting you!
+                    </p>
+                </div>
             </div>
-                <!-- 全文を見るボタン -->
-                <button class="read-more-btn" type="button">▼Read the full message</button>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
         </div>
 
-                <!-- 29-coment-->
+        <!-- 29-coment-->
         <div class="profile-card" style="--index: 29;">
             <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
-                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+                <img src="img/common-icon4.png" alt="プロフィールアイコン" class="profile-icon">
             </a>
             <div class="name-header">
                 <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
-                </h2>           
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">宿無氏</a>
+                </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
                 <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
                     <i class="fa-regular fa-images"></i>
                 </button>
-            </div>       
+            </div>
             <div class="comment-frame">
                 <!-- 左上翻訳ボタン -->
                 <button class="translate-btn" type="button" aria-label="言語切り替え">
                     <span class="btn-icon">🌐</span>
                     <span class="btn-text">translate</span>
                 </button>
-                    <div class="comment-text-wrapper">
-                        <!-- message-A -->
-                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br> </p>
-                        <!-- message-B -->
-                        <p class="text-en">Your message goes here. Long messages are welcome.<br> </p>
-                    </div>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">初作品集『Kaleidoscope 千景箱』発売及び出版記念画展グローバルツアー「Kaleidoscope: The World of
+                        Wanderlust」・オフラインサイン会の開催、本当の本当におめでとうございます！！！！！！！！！<br>
+                        先生の個人作品や多くのコンテンツで手掛けられている様々なキャラクターたちに魅せられており、この度は素敵な企画に参加をさせていただきました……！！！！！<br>
+                        これまでもこれからも、Namie先生の活動をずっと応援しております！！！！！！！！！</p>
+                    <!-- message-B -->
+                    <p class="text-en">Congratulations on the release of your first artbook, Kaleidoscope, the launch of
+                        the global exhibition tour, Kaleidoscope: The World of Wanderlust, and your offline signing
+                        event!!!!!!!!!!!!!!!!<br>
+                        I've fallen in love with both your original works and the many wonderful characters you've
+                        created across so many different projects, and I'm so happy to be able to take part in this
+                        wonderful celebration...!!!!!!!!!<br>
+                        I'll continue supporting you and your work, now and always!!!!!!!!!!!!!!!!!</p>
+                </div>
             </div>
-                <!-- 全文を見るボタン -->
-                <button class="read-more-btn" type="button">▼Read the full message</button>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
         </div>
 
         <!-- 30-coment-->
         <div class="profile-card" style="--index: 30;">
             <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
-                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+                <img src="img/common-icon1.png" alt="プロフィールアイコン" class="profile-icon">
             </a>
             <div class="name-header">
                 <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
-                </h2>           
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">ChromeBread</a>
+                </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
                 <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
                     <i class="fa-regular fa-images"></i>
                 </button>
-            </div>       
+            </div>
             <div class="comment-frame">
                 <!-- 左上翻訳ボタン -->
                 <button class="translate-btn" type="button" aria-label="言語切り替え">
                     <span class="btn-icon">🌐</span>
                     <span class="btn-text">translate</span>
                 </button>
-                    <div class="comment-text-wrapper">
-                        <!-- message-A -->
-                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br> </p>
-                        <!-- message-B -->
-                        <p class="text-en">Your message goes here. Long messages are welcome.<br> </p>
-                    </div>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">初画集に個展！おめでとうございます！<br></p>
+                    <!-- message-B -->
+                    <p class="text-en">Congratulations on your first artbook and your exhibition!<br></p>
+                </div>
             </div>
-                <!-- 全文を見るボタン -->
-                <button class="read-more-btn" type="button">▼Read the full message</button>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
         </div>
 
-                <!-- 31-coment-->
+        <!-- 31-coment-->
         <div class="profile-card" style="--index: 31;">
             <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
-                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+                <img src="img/common-icon2.png" alt="プロフィールアイコン" class="profile-icon">
             </a>
             <div class="name-header">
                 <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
-                </h2>           
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">桔梗景</a>
+                </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
                 <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
                     <i class="fa-regular fa-images"></i>
                 </button>
-            </div>       
+            </div>
             <div class="comment-frame">
                 <!-- 左上翻訳ボタン -->
                 <button class="translate-btn" type="button" aria-label="言語切り替え">
                     <span class="btn-icon">🌐</span>
                     <span class="btn-text">translate</span>
                 </button>
-                    <div class="comment-text-wrapper">
-                        <!-- message-A -->
-                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br> </p>
-                        <!-- message-B -->
-                        <p class="text-en">Your message goes here. Long messages are welcome.<br> </p>
-                    </div>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">Namie先生の大ファンです。<br>素敵な個展になることを願っております。<br>もちろん、私も参ります！</p>
+                    <!-- message-B -->
+                    <p class="text-en">I'm a huge fan of yours, Namie-sensei.<br>I hope your exhibition will be a
+                        wonderful success.<br>Of course, I'll be there too!</p>
+                </div>
             </div>
-                <!-- 全文を見るボタン -->
-                <button class="read-more-btn" type="button">▼Read the full message</button>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
         </div>
 
         <!-- 32-coment-->
         <div class="profile-card" style="--index: 32;">
             <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
-                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+                <img src="img/common-icon3.png" alt="プロフィールアイコン" class="profile-icon">
             </a>
             <div class="name-header">
                 <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
-                </h2>           
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">みぞれココア</a>
+                </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
                 <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
                     <i class="fa-regular fa-images"></i>
                 </button>
-            </div>       
+            </div>
             <div class="comment-frame">
                 <!-- 左上翻訳ボタン -->
                 <button class="translate-btn" type="button" aria-label="言語切り替え">
                     <span class="btn-icon">🌐</span>
                     <span class="btn-text">translate</span>
                 </button>
-                    <div class="comment-text-wrapper">
-                        <!-- message-A -->
-                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br> </p>
-                        <!-- message-B -->
-                        <p class="text-en">Your message goes here. Long messages are welcome.<br> </p>
-                    </div>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">初画集おめでとうございます！<br>
+                        可愛いイラストでとてもよかったです！<br>
+                        これからも頑張ってください。</p>
+                    <!-- message-B -->
+                    <p class="text-en">Congratulations on your first artbook!<br>
+                        Your adorable illustrations are absolutely wonderful!<br>
+                        Please keep up the amazing work!</p>
+                </div>
             </div>
-                <!-- 全文を見るボタン -->
-                <button class="read-more-btn" type="button">▼Read the full message</button>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
         </div>
 
-                <!-- 33-coment-->
+        <!-- 33-coment-->
         <div class="profile-card" style="--index: 33;">
             <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
-                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+                <img src="img/common-icon4.png" alt="プロフィールアイコン" class="profile-icon">
             </a>
             <div class="name-header">
                 <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
-                </h2>           
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">サハル</a>
+                </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
                 <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
                     <i class="fa-regular fa-images"></i>
                 </button>
-            </div>       
+            </div>
             <div class="comment-frame">
                 <!-- 左上翻訳ボタン -->
                 <button class="translate-btn" type="button" aria-label="言語切り替え">
                     <span class="btn-icon">🌐</span>
                     <span class="btn-text">translate</span>
                 </button>
-                    <div class="comment-text-wrapper">
-                        <!-- message-A -->
-                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br> </p>
-                        <!-- message-B -->
-                        <p class="text-en">Your message goes here. Long messages are welcome.<br> </p>
-                    </div>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">Namie先生の絵が大好きです！！<br>これからも応援しています！！</p>
+                    <!-- message-B -->
+                    <p class="text-en">I absolutely love your artwork, Namie-sensei!!<br>I'll continue supporting
+                        you!!<br> </p>
+                </div>
             </div>
-                <!-- 全文を見るボタン -->
-                <button class="read-more-btn" type="button">▼Read the full message</button>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
         </div>
 
         <!-- 34-coment-->
         <div class="profile-card" style="--index: 34;">
             <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
-                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+                <img src="img/common-icon1.png" alt="プロフィールアイコン" class="profile-icon">
             </a>
             <div class="name-header">
                 <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
-                </h2>           
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">ももだま</a>
+                </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
                 <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
                     <i class="fa-regular fa-images"></i>
                 </button>
-            </div>       
+            </div>
             <div class="comment-frame">
                 <!-- 左上翻訳ボタン -->
                 <button class="translate-btn" type="button" aria-label="言語切り替え">
                     <span class="btn-icon">🌐</span>
                     <span class="btn-text">translate</span>
                 </button>
-                    <div class="comment-text-wrapper">
-                        <!-- message-A -->
-                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br> </p>
-                        <!-- message-B -->
-                        <p class="text-en">Your message goes here. Long messages are welcome.<br> </p>
-                    </div>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">この度は画集発売と個展開催おめでとうございます!!<br>
+                        いつもかわいいイラストを拝見させて頂いてありがとうございます!!<br>
+                        これからの活動も応援しています!!!!</p>
+                    <!-- message-B -->
+                    <p class="text-en">Congratulations on the release of your artbook and the opening of your
+                        exhibition!!<br>
+                        Thank you for always sharing your adorable illustrations with us!!<br>
+                        I'll continue cheering you on in all your future endeavors!!!!</p>
+                </div>
             </div>
-                <!-- 全文を見るボタン -->
-                <button class="read-more-btn" type="button">▼Read the full message</button>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
         </div>
 
-                <!-- 35-coment-->
+        <!-- 35-coment-->
         <div class="profile-card" style="--index: 35;">
             <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
-                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+                <img src="img/common-icon2.png" alt="プロフィールアイコン" class="profile-icon">
             </a>
             <div class="name-header">
                 <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
-                </h2>           
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">AoiroCosmos</a>
+                </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
                 <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
                     <i class="fa-regular fa-images"></i>
                 </button>
-            </div>       
+            </div>
             <div class="comment-frame">
                 <!-- 左上翻訳ボタン -->
                 <button class="translate-btn" type="button" aria-label="言語切り替え">
                     <span class="btn-icon">🌐</span>
                     <span class="btn-text">translate</span>
                 </button>
-                    <div class="comment-text-wrapper">
-                        <!-- message-A -->
-                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br> </p>
-                        <!-- message-B -->
-                        <p class="text-en">Your message goes here. Long messages are welcome.<br> </p>
-                    </div>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">初画集販売及び記念個展おめでとうございます！</p>
+                    <!-- message-B -->
+                    <p class="text-en">Congratulations on the release of your first artbook and your commemorative
+                        exhibition!</p>
+                </div>
             </div>
-                <!-- 全文を見るボタン -->
-                <button class="read-more-btn" type="button">▼Read the full message</button>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
         </div>
 
         <!-- 36-coment-->
         <div class="profile-card" style="--index: 36;">
             <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
-                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+                <img src="img/common-icon3.png" alt="プロフィールアイコン" class="profile-icon">
             </a>
             <div class="name-header">
                 <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
-                </h2>           
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">トオノ</a>
+                </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
                 <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
                     <i class="fa-regular fa-images"></i>
                 </button>
-            </div>       
+            </div>
             <div class="comment-frame">
                 <!-- 左上翻訳ボタン -->
                 <button class="translate-btn" type="button" aria-label="言語切り替え">
                     <span class="btn-icon">🌐</span>
                     <span class="btn-text">translate</span>
                 </button>
-                    <div class="comment-text-wrapper">
-                        <!-- message-A -->
-                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br> </p>
-                        <!-- message-B -->
-                        <p class="text-en">Your message goes here. Long messages are welcome.<br> </p>
-                    </div>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">Namie先生が描かれるかわいいキャラクターと万華鏡のような素敵な世界が大好きです！ずっと応援しています！</p>
+                    <!-- message-B -->
+                    <p class="text-en">I love the adorable characters you create and the beautiful, kaleidoscope-like
+                        worlds you bring to life! I'll always be cheering you on!</p>
+                </div>
             </div>
-                <!-- 全文を見るボタン -->
-                <button class="read-more-btn" type="button">▼Read the full message</button>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
         </div>
 
-                <!-- 37-coment-->
+        <!-- 37-coment-->
         <div class="profile-card" style="--index: 37;">
             <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
-                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+                <img src="img/common-icon4.png" alt="プロフィールアイコン" class="profile-icon">
             </a>
             <div class="name-header">
                 <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
-                </h2>           
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">すきま</a>
+                </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
                 <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
                     <i class="fa-regular fa-images"></i>
                 </button>
-            </div>       
+            </div>
             <div class="comment-frame">
                 <!-- 左上翻訳ボタン -->
                 <button class="translate-btn" type="button" aria-label="言語切り替え">
                     <span class="btn-icon">🌐</span>
                     <span class="btn-text">translate</span>
                 </button>
-                    <div class="comment-text-wrapper">
-                        <!-- message-A -->
-                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br> </p>
-                        <!-- message-B -->
-                        <p class="text-en">Your message goes here. Long messages are welcome.<br> </p>
-                    </div>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">これからも素敵な作品を楽しみにしております。</p>
+                    <!-- message-B -->
+                    <p class="text-en">I'm looking forward to seeing many more of your wonderful works in the future.
+                    </p>
+                </div>
             </div>
-                <!-- 全文を見るボタン -->
-                <button class="read-more-btn" type="button">▼Read the full message</button>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
         </div>
 
         <!-- 38-coment-->
         <div class="profile-card" style="--index: 38;">
             <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
-                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+                <img src="img/common-icon1.png" alt="プロフィールアイコン" class="profile-icon">
             </a>
             <div class="name-header">
                 <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
-                </h2>           
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">ささにしき</a>
+                </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
                 <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
                     <i class="fa-regular fa-images"></i>
                 </button>
-            </div>       
+            </div>
             <div class="comment-frame">
                 <!-- 左上翻訳ボタン -->
                 <button class="translate-btn" type="button" aria-label="言語切り替え">
                     <span class="btn-icon">🌐</span>
                     <span class="btn-text">translate</span>
                 </button>
-                    <div class="comment-text-wrapper">
-                        <!-- message-A -->
-                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br> </p>
-                        <!-- message-B -->
-                        <p class="text-en">Your message goes here. Long messages are welcome.<br> </p>
-                    </div>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">Congratulations on holding your solo exhibition!<br>I love your works and wish
+                        you continued good health and success!</p>
+                    <!-- message-B -->
+                    <p class="text-en">個展の開催、おめでとうございます！先生の作品が大好きです。<br>これからもご健康とさらなるご活躍を心よりお祈りしています！</p>
+                </div>
             </div>
-                <!-- 全文を見るボタン -->
-                <button class="read-more-btn" type="button">▼Read the full message</button>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
         </div>
 
-                <!-- 39-coment-->
+        <!-- 39-coment-->
         <div class="profile-card" style="--index: 39;">
             <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
-                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+                <img src="img/common-icon2.png" alt="プロフィールアイコン" class="profile-icon">
             </a>
             <div class="name-header">
                 <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
-                </h2>           
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">R-Yong</a>
+                </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
                 <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
                     <i class="fa-regular fa-images"></i>
                 </button>
-            </div>       
+            </div>
             <div class="comment-frame">
                 <!-- 左上翻訳ボタン -->
                 <button class="translate-btn" type="button" aria-label="言語切り替え">
                     <span class="btn-icon">🌐</span>
                     <span class="btn-text">translate</span>
                 </button>
-                    <div class="comment-text-wrapper">
-                        <!-- message-A -->
-                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br> </p>
-                        <!-- message-B -->
-                        <p class="text-en">Your message goes here. Long messages are welcome.<br> </p>
-                    </div>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">Congratulations on publishing your great artbook Namie sensei!<br>so happy for
+                        you!</p>
+                    <!-- message-B -->
+                    <p class="text-en">Namie先生、素晴らしい画集の発売おめでとうございます！<br>本当に自分のことのように嬉しいです！</p>
+                </div>
             </div>
-                <!-- 全文を見るボタン -->
-                <button class="read-more-btn" type="button">▼Read the full message</button>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
         </div>
 
         <!-- 40-coment-->
         <div class="profile-card" style="--index: 40;">
             <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
-                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+                <img src="img/common-icon3.png" alt="プロフィールアイコン" class="profile-icon">
             </a>
             <div class="name-header">
                 <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
-                </h2>           
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">おゆゆ</a>
+                </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
                 <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
                     <i class="fa-regular fa-images"></i>
                 </button>
-            </div>       
+            </div>
             <div class="comment-frame">
                 <!-- 左上翻訳ボタン -->
                 <button class="translate-btn" type="button" aria-label="言語切り替え">
                     <span class="btn-icon">🌐</span>
                     <span class="btn-text">translate</span>
                 </button>
-                    <div class="comment-text-wrapper">
-                        <!-- message-A -->
-                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br> </p>
-                        <!-- message-B -->
-                        <p class="text-en">Your message goes here. Long messages are welcome.<br> </p>
-                    </div>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">「千景箱 -Kaleidoscope」発売おめでとうございます！<br>
+                        Namie先生のかわいい作品たちが大好きです！<br>
+                        これからもずっと応援してます！</p>
+                    <!-- message-B -->
+                    <p class="text-en">Congratulations on the release of Kaleidoscope!<br>
+                        I absolutely love all of your adorable artwork, Namie-sensei!<br>
+                        I'll always be supporting you!</p>
+                </div>
             </div>
-                <!-- 全文を見るボタン -->
-                <button class="read-more-btn" type="button">▼Read the full message</button>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
         </div>
 
-                <!-- 41-coment-->
+        <!-- 41-coment-->
         <div class="profile-card" style="--index: 41;">
             <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
-                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+                <img src="img/common-icon4.png" alt="プロフィールアイコン" class="profile-icon">
             </a>
             <div class="name-header">
                 <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
-                </h2>           
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">Ark</a>
+                </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
                 <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
                     <i class="fa-regular fa-images"></i>
                 </button>
-            </div>       
+            </div>
             <div class="comment-frame">
                 <!-- 左上翻訳ボタン -->
                 <button class="translate-btn" type="button" aria-label="言語切り替え">
                     <span class="btn-icon">🌐</span>
                     <span class="btn-text">translate</span>
                 </button>
-                    <div class="comment-text-wrapper">
-                        <!-- message-A -->
-                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br> </p>
-                        <!-- message-B -->
-                        <p class="text-en">Your message goes here. Long messages are welcome.<br> </p>
-                    </div>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">Namie先生、画集の発売並びに個展の開催、誠におめでとうございます！<br>
+                        アークナイツで先生の産み出した素敵なキャラクター達に触れて、すっかり先生のファンになりました！<br>
+                        これからも、素晴らしい作品を描かれていけますように、先生の未来に幸多からん事をお祈り申し上げます！！</p>
+                    <!-- message-B -->
+                    <p class="text-en">Namie-sensei, congratulations on the release of your artbook and the opening of
+                        your exhibition!<br>
+                        I first discovered the wonderful characters you created through Arknights, and that's when I
+                        became a huge fan of yours.<br>
+                        I sincerely hope you'll continue creating many more amazing works, and I wish you all the
+                        happiness and success in the future!!</p>
+                </div>
             </div>
-                <!-- 全文を見るボタン -->
-                <button class="read-more-btn" type="button">▼Read the full message</button>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
         </div>
 
         <!-- 42-coment-->
         <div class="profile-card" style="--index: 42;">
             <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
-                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+                <img src="icon/waio-icon - o wai.jpg" alt="プロフィールアイコン" class="profile-icon">
             </a>
             <div class="name-header">
                 <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
-                </h2>           
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">waio</a>
+                </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
                 <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
                     <i class="fa-regular fa-images"></i>
                 </button>
-            </div>       
+            </div>
             <div class="comment-frame">
                 <!-- 左上翻訳ボタン -->
                 <button class="translate-btn" type="button" aria-label="言語切り替え">
                     <span class="btn-icon">🌐</span>
                     <span class="btn-text">translate</span>
                 </button>
-                    <div class="comment-text-wrapper">
-                        <!-- message-A -->
-                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br> </p>
-                        <!-- message-B -->
-                        <p class="text-en">Your message goes here. Long messages are welcome.<br> </p>
-                    </div>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">初画集、記念個展開催おめでとうございます!<br>
+                        これからも応援しています！大好きです!</p>
+                    <!-- message-B -->
+                    <p class="text-en">Congratulations on your first artbook and commemorative exhibition!<br>
+                        I'll continue supporting you! I love you!</p>
+                </div>
             </div>
-                <!-- 全文を見るボタン -->
-                <button class="read-more-btn" type="button">▼Read the full message</button>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
         </div>
 
-                <!-- 43-coment-->
+        <!-- 43-coment-->
         <div class="profile-card" style="--index: 43;">
             <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
-                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+                <img src="img/common-icon1.png" alt="プロフィールアイコン" class="profile-icon">
             </a>
             <div class="name-header">
                 <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
-                </h2>           
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">Shopkeeper</a>
+                </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
                 <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
                     <i class="fa-regular fa-images"></i>
                 </button>
-            </div>       
+            </div>
             <div class="comment-frame">
                 <!-- 左上翻訳ボタン -->
                 <button class="translate-btn" type="button" aria-label="言語切り替え">
                     <span class="btn-icon">🌐</span>
                     <span class="btn-text">translate</span>
                 </button>
-                    <div class="comment-text-wrapper">
-                        <!-- message-A -->
-                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br> </p>
-                        <!-- message-B -->
-                        <p class="text-en">Your message goes here. Long messages are welcome.<br> </p>
-                    </div>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">Thank you for sharing this dream of yours!<br>
+                        I hope it carries you to many, many wonderful places.<br>
+                        Wishing you the utmost success!!!!</p>
+                    <!-- message-B -->
+                    <p class="text-en">先生の夢を私たちと分かち合ってくださり、本当にありがとうございます！<br>
+                        この夢が先生をこれからもたくさんの素晴らしい場所へと導いてくれますように。<br>
+                        心から、先生のさらなるご成功をお祈りしています!!!!</p>
+                </div>
             </div>
-                <!-- 全文を見るボタン -->
-                <button class="read-more-btn" type="button">▼Read the full message</button>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
         </div>
 
         <!-- 44-coment-->
         <div class="profile-card" style="--index: 44;">
             <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
-                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+                <img src="img/common-icon2.png" alt="プロフィールアイコン" class="profile-icon">
             </a>
             <div class="name-header">
                 <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
-                </h2>           
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">ぴーえふわい/pfy</a>
+                </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
                 <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
                     <i class="fa-regular fa-images"></i>
                 </button>
-            </div>       
+            </div>
             <div class="comment-frame">
                 <!-- 左上翻訳ボタン -->
                 <button class="translate-btn" type="button" aria-label="言語切り替え">
                     <span class="btn-icon">🌐</span>
                     <span class="btn-text">translate</span>
                 </button>
-                    <div class="comment-text-wrapper">
-                        <!-- message-A -->
-                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br> </p>
-                        <!-- message-B -->
-                        <p class="text-en">Your message goes here. Long messages are welcome.<br> </p>
-                    </div>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">これまでもこれからもずっと応援してます！！</p>
+                    <!-- message-B -->
+                    <p class="text-en">I've always supported you, and I'll continue to do so!!</p>
+                </div>
             </div>
-                <!-- 全文を見るボタン -->
-                <button class="read-more-btn" type="button">▼Read the full message</button>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
         </div>
 
-                <!-- 45-coment-->
+        <!-- 45-coment-->
         <div class="profile-card" style="--index: 45;">
             <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
-                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+                <img src="img/common-icon3.png" alt="プロフィールアイコン" class="profile-icon">
             </a>
             <div class="name-header">
                 <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
-                </h2>           
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">灯野</a>
+                </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
                 <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
                     <i class="fa-regular fa-images"></i>
                 </button>
-            </div>       
+            </div>
             <div class="comment-frame">
                 <!-- 左上翻訳ボタン -->
                 <button class="translate-btn" type="button" aria-label="言語切り替え">
                     <span class="btn-icon">🌐</span>
                     <span class="btn-text">translate</span>
                 </button>
-                    <div class="comment-text-wrapper">
-                        <!-- message-A -->
-                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br> </p>
-                        <!-- message-B -->
-                        <p class="text-en">Your message goes here. Long messages are welcome.<br> </p>
-                    </div>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">Congratulations, Namie-sensei, on the release of your art book and your solo
+                        exhibition!<br>
+                        I’m so happy to be able to see all the characters you’ve drawn!<br>
+                        I absolutely love Ciaran!</p>
+                    <!-- message-B -->
+                    <p class="text-en">Namie先生、画集の発売と個展の開催、本当におめでとうございます！<br>
+                        先生がこれまで描いてこられたたくさんのキャラクターたちを一度に見られて、とても嬉しいです！<br>
+                        キアランが本当に大好きです！</p>
+                </div>
             </div>
-                <!-- 全文を見るボタン -->
-                <button class="read-more-btn" type="button">▼Read the full message</button>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
         </div>
 
         <!-- 46-coment-->
         <div class="profile-card" style="--index: 46;">
             <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
-                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+                <img src="img/common-icon4.png" alt="プロフィールアイコン" class="profile-icon">
             </a>
             <div class="name-header">
                 <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
-                </h2>           
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">烏兎</a>
+                </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
                 <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
                     <i class="fa-regular fa-images"></i>
                 </button>
-            </div>       
+            </div>
             <div class="comment-frame">
                 <!-- 左上翻訳ボタン -->
                 <button class="translate-btn" type="button" aria-label="言語切り替え">
                     <span class="btn-icon">🌐</span>
                     <span class="btn-text">translate</span>
                 </button>
-                    <div class="comment-text-wrapper">
-                        <!-- message-A -->
-                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br> </p>
-                        <!-- message-B -->
-                        <p class="text-en">Your message goes here. Long messages are welcome.<br> </p>
-                    </div>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">初画集発売おめでとうございます！！<br>
+                        いつも我々の目を幸せにしてくれてありがとうNamie先生！！</p>
+                    <!-- message-B -->
+                    <p class="text-en">Congratulations on the release of your first artbook!!<br>
+                        Thank you, Namie-sensei, for always bringing so much joy to our eyes!!</p>
+                </div>
             </div>
-                <!-- 全文を見るボタン -->
-                <button class="read-more-btn" type="button">▼Read the full message</button>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
         </div>
 
-                <!-- 47-coment-->
+        <!-- 47-coment-->
         <div class="profile-card" style="--index: 47;">
             <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
-                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+                <img src="img/common-icon1.png" alt="プロフィールアイコン" class="profile-icon">
             </a>
             <div class="name-header">
                 <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
-                </h2>           
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">み</a>
+                </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
                 <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
                     <i class="fa-regular fa-images"></i>
                 </button>
-            </div>       
+            </div>
             <div class="comment-frame">
                 <!-- 左上翻訳ボタン -->
                 <button class="translate-btn" type="button" aria-label="言語切り替え">
                     <span class="btn-icon">🌐</span>
                     <span class="btn-text">translate</span>
                 </button>
-                    <div class="comment-text-wrapper">
-                        <!-- message-A -->
-                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br> </p>
-                        <!-- message-B -->
-                        <p class="text-en">Your message goes here. Long messages are welcome.<br> </p>
-                    </div>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">この度は個展開催おめでとうございます！<br>
+                        これからもずっと先生のイラストが大好きでずっと陰ながら応援しております。<br>
+                        これからも先生のペースで素敵な作品を描き続けていただけましたら嬉しいです。</p>
+                    <!-- message-B -->
+                    <p class="text-en">Congratulations on your exhibition!<br>
+                        I've always loved your illustrations, and I'll continue supporting you from afar.<br>
+                        I hope you'll keep creating wonderful artwork at your own pace for many years to come.</p>
+                </div>
             </div>
-                <!-- 全文を見るボタン -->
-                <button class="read-more-btn" type="button">▼Read the full message</button>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
         </div>
 
         <!-- 48-coment-->
         <div class="profile-card" style="--index: 48;">
             <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
-                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+                <img src="img/common-icon2.png" alt="プロフィールアイコン" class="profile-icon">
             </a>
             <div class="name-header">
                 <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
-                </h2>           
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">八鳥スミノヒ</a>
+                </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
                 <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
                     <i class="fa-regular fa-images"></i>
                 </button>
-            </div>       
+            </div>
             <div class="comment-frame">
                 <!-- 左上翻訳ボタン -->
                 <button class="translate-btn" type="button" aria-label="言語切り替え">
                     <span class="btn-icon">🌐</span>
                     <span class="btn-text">translate</span>
                 </button>
-                    <div class="comment-text-wrapper">
-                        <!-- message-A -->
-                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br> </p>
-                        <!-- message-B -->
-                        <p class="text-en">Your message goes here. Long messages are welcome.<br> </p>
-                    </div>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">画集発売＆個展開催おめでとうございます！<br>
+                        Namie先生の柔らかくてかわいいイラストが大好きです！<br>
+                        これからも応援しています！</p>
+                    <!-- message-B -->
+                    <p class="text-en">Congratulations on the release of your artbook and your exhibition!<br>
+                        I absolutely love your soft and adorable illustrations!<br>
+                        I'll continue supporting you!</p>
+                </div>
             </div>
-                <!-- 全文を見るボタン -->
-                <button class="read-more-btn" type="button">▼Read the full message</button>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
         </div>
 
         <!-- 49-coment-->
         <div class="profile-card" style="--index: 49;">
             <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
-                <img src="img/icon.png" alt="プロフィールアイコン" class="profile-icon">
+                <img src="img/common-icon3.png" alt="プロフィールアイコン" class="profile-icon">
             </a>
             <div class="name-header">
                 <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">NAME</a>
-                </h2>           
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">ハル</a>
+                </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
                 <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
                     <i class="fa-regular fa-images"></i>
                 </button>
-            </div>       
+            </div>
             <div class="comment-frame">
                 <!-- 左上翻訳ボタン -->
                 <button class="translate-btn" type="button" aria-label="言語切り替え">
                     <span class="btn-icon">🌐</span>
                     <span class="btn-text">translate</span>
                 </button>
-                    <div class="comment-text-wrapper">
-                        <!-- message-A -->
-                        <p class="text-ja">ここにメッセージが入ります。長文でも問題ありません。<br> </p>
-                        <!-- message-B -->
-                        <p class="text-en">Your message goes here. Long messages are welcome.<br> </p>
-                    </div>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja"><br><br></p>
+                    <!-- message-B -->
+                    <p class="text-en"><br><br></p>
+                </div>
             </div>
-                <!-- 全文を見るボタン -->
-                <button class="read-more-btn" type="button">▼Read the full message</button>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
         </div>
+
+        <!-- 50-coment-->
+        <div class="profile-card" style="--index: 50;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/common-icon4.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">ebushi</a>
+                </h2>
+                <!-- 画像表示ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">画集買いました、刊行おめでとうございます！</p>
+                    <!-- message-B -->
+                    <p class="text-en">I bought your artbook, congratulations on its release!</p>
+                </div>
+            </div>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+        <!-- 51-coment-->
+        <div class="profile-card" style="--index: 51;">
+            <a href="https://x.com/garden1914" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="icon/garden-icon - garden.JPG" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com/garden1914" target="_blank" rel="noopener noreferrer">garden</a>
+                </h2>
+                <!-- 画像表示ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">アークナイツから先生を知りました、応援しています！</p>
+                    <!-- message-B -->
+                    <p class="text-en">I first discovered you through Arknights, and I've been supporting you ever
+                        since!</p>
+                </div>
+            </div>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+        <!-- 52-coment-->
+        <div class="profile-card" style="--index: 52;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/common-icon2.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">nokumi</a>
+                </h2>
+                <!-- 画像表示ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">いつも素晴らしいイラストをありがとうございます。<br>
+                        アークナイツでミヅキを見てからファンになりました。<br>
+                        これからの活動を陰ながら応援しています。</p>
+                    <!-- message-B -->
+                    <p class="text-en">Thank you for always creating such wonderful illustrations.<br>
+                        I became a fan after seeing Mizuki in Arknights, and I'll continue cheering you on from afar.
+                    </p>
+                </div>
+            </div>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+        <!-- 53-coment-->
+        <div class="profile-card" style="--index: 53;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/common-icon3.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">カンテラ</a>
+                </h2>
+                <!-- 画像表示ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja"><br><br></p>
+                    <!-- message-B -->
+                    <p class="text-en"><br><br></p>
+                </div>
+            </div>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+        <!-- 54-coment-->
+        <div class="profile-card" style="--index: 54;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/common-icon4.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">キョウ</a>
+                </h2>
+                <!-- 画像表示ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">Namie先生！！いつも応援しております！！<br>
+                        今後とも活動がんばってください！！</p>
+                    <!-- message-B -->
+                    <p class="text-en">Namie-sensei!! I'm always supporting you!!<br>
+                        Wishing you all the best in your future activities!!</p>
+                </div>
+            </div>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+        <!-- 55-coment-->
+        <div class="profile-card" style="--index: 55;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/common-icon1.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">ソラ</a>
+                </h2>
+                <!-- 画像表示ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja"><br><br> </p>
+                    <!-- message-B -->
+                    <p class="text-en"><br><br> </p>
+                </div>
+            </div>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+        <!-- 56-coment-->
+        <div class="profile-card" style="--index: 56;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/common-icon2.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">Noshi</a>
+                </h2>
+                <!-- 画像表示ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">いつも Namie 先生の素敵なイラストを見て元気をもらっています！<br>これからも応援しています！</p>
+                    <!-- message-B -->
+                    <p class="text-en">I love your cute &amp; beautiful art, Namie-sensei!<br>Thank you!</p>
+                </div>
+            </div>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+        <!-- 57-coment-->
+        <div class="profile-card" style="--index: 57;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/common-icon3.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">河端りうの</a>
+                </h2>
+                <!-- 画像表示ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">ずっと敬愛していたNamie先生から、ミヅキくんが生み出された瞬間の衝撃は今でも忘れられません！<br>これからも応援しています！</p>
+                    <!-- message-B -->
+                    <p class="text-en">I’ll never forget the shock I felt when Mizuki was created by Namie-sensei, whom
+                        I've always admired! I'll always be your fan and support you!</p>
+                </div>
+            </div>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+        <!-- 58-coment-->
+        <div class="profile-card" style="--index: 58;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/common-icon4.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">ばき</a>
+                </h2>
+                <!-- 画像表示ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">千景箱 -Kaleidoscopeの発売、本当におめでとうございます！</p>
+                    <!-- message-B -->
+                    <p class="text-en">Congratulations on the release of Kaleidoscope!<br>
+                        I'm truly happy for you!</p>
+                </div>
+            </div>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+        <!-- 59-coment-->
+        <div class="profile-card" style="--index: 59;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/common-icon1.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">Poyo man</a>
+                </h2>
+                <!-- 画像表示ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">Thank you for giving birth(?) to Mizuki 💙🪼💙🪼<br> He means the world to me
+                        😭😭</p>
+                    <!-- message-B -->
+                    <p class="text-en">そして、水月を生み出してくださって本当にありがとうございます（？）💙🪼💙🪼<br>
+                        私にとってミヅキは、本当にかけがえのない大切な存在です😭😭</p>
+                </div>
+            </div>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+        <!-- 60-coment-->
+        <div class="profile-card" style="--index: 60;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/common-icon2.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">kituki</a>
+                </h2>
+                <!-- 画像表示ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja"><br><br> </p>
+                    <!-- message-B -->
+                    <p class="text-en"><br><br></p>
+                </div>
+            </div>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+        <!-- 61-coment-->
+        <div class="profile-card" style="--index: 61;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/common-icon3.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">小夜しぐれ子</a>
+                </h2>
+                <!-- 画像表示ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">初の画集発売&amp;記念個展の開催おめでとうございます！<br>
+                        Namie先生の色彩と柔らかなタッチで描かれる世界観がずっと大好きです。<br>
+                        陰ながら応援しております！</p>
+                    <!-- message-B -->
+                    <p class="text-en">Congratulations on the release of your first art book and your commemorative solo
+                        exhibition!<br>
+                        I’ve always loved the world you create with your colors and soft brushstrokes, Namie-sensei.<br>
+                        I’m rooting for you from the sidelines!</p>
+                </div>
+            </div>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+        <!-- 62-coment-->
+        <div class="profile-card" style="--index: 62;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/common-icon4.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">kashimarul</a>
+                </h2>
+                <!-- 画像表示ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">個展開催おめでとうございます！<br>
+                        アークナイツで初めて知り、それからファンになりました。<br>
+                        お忙しいかと思いますが、これからも応援しています、頑張ってください！</p>
+                    <!-- message-B -->
+                    <p class="text-en">Congratulations on your exhibition!<br>
+                        I first discovered you through Arknights, and I've been a fan ever since.<br>
+                        I know you're very busy, but I'll continue supporting you. Wishing you all the best!</p>
+                </div>
+            </div>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+        <!-- 63-coment-->
+        <div class="profile-card" style="--index: 63;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/common-icon1.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">てい</a>
+                </h2>
+                <!-- 画像表示ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">私はペペのことが大好きです。<br>
+                        そんな大好きなペペを生んでくれたNamie先生の個展に行くことが出来るなんてとても幸せです！<br>
+                        本当にありがとうございます！</p>
+                    <!-- message-B -->
+                    <p class="text-en">I absolutely love Pepe.<br>
+                        Being able to visit an exhibition by the amazing Namie-sensei, who brought my beloved Pepe into
+                        the world, makes me incredibly happy!<br>
+                        Thank you so much!</p>
+                </div>
+            </div>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+        <!-- 64-coment-->
+        <div class="profile-card" style="--index: 64;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/common-icon2.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">Noin</a>
+                </h2>
+                <!-- 画像表示ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">初画集＆記念個展開催おめでとうございます！！<br>
+                        淡くポップな絵柄が本当に本当に好きです！！<br>
+                        これからの活躍も楽しみにしています！！！</p>
+                    <!-- message-B -->
+                    <p class="text-en">Congratulations on your first artbook and commemorative exhibition!!<br>
+                        I truly, truly love your soft, colorful art style!!<br>
+                        I'm looking forward to all of your future works!!!</p>
+                </div>
+            </div>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+        <!-- 65-coment-->
+        <div class="profile-card" style="--index: 65;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/common-icon3.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">すとあ</a>
+                </h2>
+                <!-- 画像表示ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja">Namie先生、画集発売&amp;個展開催おめでとうございます！</p>
+                    <!-- message-B -->
+                    <p class="text-en">Namie-sensei, congratulations on the release of your artbook and the opening of
+                        your exhibition!</p>
+                </div>
+            </div>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+        <!-- 60-coment-->
+        <div class="profile-card" style="--index: 60;">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+                <img src="img/common-icon4.png" alt="プロフィールアイコン" class="profile-icon">
+            </a>
+            <div class="name-header">
+                <h2 class="profile-name">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">kituki</a>
+                </h2>
+                <!-- 画像表示ボタン（画像がない場合は削除） -->
+                <button class="image-gallery-btn" type="button" data-img="img/test.jpg" aria-label="画像を見る">
+                    <i class="fa-regular fa-images"></i>
+                </button>
+            </div>
+            <div class="comment-frame">
+                <!-- 左上翻訳ボタン -->
+                <button class="translate-btn" type="button" aria-label="言語切り替え">
+                    <span class="btn-icon">🌐</span>
+                    <span class="btn-text">translate</span>
+                </button>
+                <div class="comment-text-wrapper">
+                    <!-- message-A -->
+                    <p class="text-ja"><br><br> </p>
+                    <!-- message-B -->
+                    <p class="text-en"><br><br></p>
+                </div>
+            </div>
+            <!-- 全文を見るボタン -->
+            <button class="read-more-btn" type="button">▼Read the full message</button>
+        </div>
+
+
     </div>
 
-<!-- 検索結果「該当なしメッセージ」 -->
-        <div id="no-results" class="no-results">
-            <p>🔍 該当するメッセージが見つかりませんでした</p>
-        </div>
+    <!-- 検索結果「該当なしメッセージ」 -->
+    <div id="no-results" class="no-results">
+        <p>🔍 該当するメッセージが見つかりませんでした</p>
+    </div>
 
 
 
-<!-- 画面端に追加するモーダル（拡大ポップアップ）構造 -->
+    <!-- 画面端に追加するモーダル（拡大ポップアップ）構造 -->
     <div id="message-modal" class="modal-overlay">
         <div class="modal-card">
             <!-- 閉じるボタン -->
@@ -1538,7 +2223,7 @@
         </div>
     </div>
 
-<!-- 画像拡大用モーダル（×ボタンを削除し、ヒントテキストを追加） -->
+    <!-- 画像拡大用モーダル（×ボタンを削除し、ヒントテキストを追加） -->
     <div id="image-modal" class="modal-overlay">
         <div class="image-modal-card">
             <img src="" alt="拡大画像" id="modal-img-src">
@@ -1548,8 +2233,8 @@
 
 
 </body>
- 
-    <!-- ここから下に <script> タグ -->
+
+<!-- ここから下に <script> タグ -->
 <script>
     // ==========================================
     // 1. 翻訳ボタンの機能
@@ -1559,7 +2244,7 @@
             const commentFrame = btn.closest('.comment-frame');
             const btnText = btn.querySelector('.btn-text');
             const isEnglish = commentFrame.classList.toggle('is-translated');
-            
+
             if (isEnglish) {
                 btnText.textContent = 'original';
             } else {
@@ -1582,10 +2267,10 @@
         btn.addEventListener('click', (e) => {
             const card = e.target.closest('.profile-card');
             const cardClone = card.cloneNode(true);
-            
+
             cardClone.querySelector('.read-more-btn').style.display = 'none';
             cardClone.querySelector('.comment-text-wrapper').style.webkitLineClamp = 'unset';
-            
+
             const cloneTranslateBtn = cardClone.querySelector('.translate-btn');
             if (cloneTranslateBtn) {
                 setupTranslateBtn(cloneTranslateBtn);
@@ -1605,7 +2290,7 @@
     });
 
 
-// ==========================================
+    // ==========================================
     // 3. 画像モーダル（全文表示モーダル内でも動作）
     // ==========================================
     const imageModal = document.getElementById('image-modal');
@@ -1628,7 +2313,7 @@
     imageModal.addEventListener('click', () => {
         imageModal.classList.remove('is-open');
     });
-    
+
     // ==========================================
     // 4. リアルタイム検索機能
     // ==========================================
@@ -1671,15 +2356,40 @@
         });
     }
 
-// オープニング画面の自動制御
+    // ==========================================
+    // オープニング画像のランダム設定
+    // ==========================================
+    // ① 用意した8枚の画像ファイル名をリストにする
+    const splashImages = [
+        'img/op-1.png', // 1枚目
+        'img/op-2.png', // 2枚目
+        'img/op-3.png', // 3枚目
+        'img/op-4.png', // 4枚目
+        'img/op-1.png', // 5枚目
+        'img/op-2.png', // 6枚目
+        'img/op-3.png', // 7枚目
+        'img/op-4.png'  // 8枚目
+    ];
+
+    const randomSplashImg = document.getElementById('random-splash-img');
+
+    if (randomSplashImg) {
+        // ② 0 〜 7 の数字をランダムに選ぶ
+        const randomIndex = Math.floor(Math.random() * splashImages.length);
+
+        // ③ 選ばれた画像をセットする
+        randomSplashImg.src = splashImages[randomIndex];
+    }
+
+    // オープニング画面の自動制御
     const splash = document.getElementById('splash-overlay');
     if (splash) {
         setTimeout(() => {
             splash.style.display = 'none';
-        }, 2200); // 演出完了後に要素を消去
+        }, 3700); // 3.7秒後に要素消去
     }
-
 </script>
 
 </body>
+
 </html>
