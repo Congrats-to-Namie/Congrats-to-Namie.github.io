@@ -32,13 +32,20 @@
     <div class="search-container">
         <input type="text" id="search-input" class="search-input" placeholder="Find messages" aria-label="検索">
         <span class="search-icon">🔍</span>
+
+        <!-- 追加：更新カード抽出ボタン-->
+        <button id="filter-updates-btn" class="filter-updates-btn" type="button" aria-label="最近の更新のみ表示">
+            <span class="btn-icon">🔔</span>
+            <span class="btn-text">Updates</span>
+        </button>
     </div>
 
     <!-- 2カラムをまとめる親コンテナ -->
     <div class="card-container">
 
         <!-- 1-coment-->
-        <div class="profile-card" style="--index: 1;">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 1;" data-update="2026/01/31">
             <a href="https://x.com/pg_lao" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
                 <img src="img/common-icon1.png" alt="プロフィールアイコン" class="profile-icon">
             </a>
@@ -66,14 +73,13 @@
         </div>
 
         <!-- 2-coment-->
-        <div class="profile-card" style="--index: 2;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 2;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon2.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">びすろう</a>
-                </h2>
+                <h2 class="profile-name">びすろう</h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
             </div>
             <div class="comment-frame">
@@ -95,13 +101,13 @@
         </div>
 
         <!-- 3-coment-->
-        <div class="profile-card" style="--index: 3;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 3;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="icon/dogsan-icon - dogsan.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">ドッグさん</a>
+                <h2 class="profile-name">ドッグさん</a>
                 </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
                 <button class="image-gallery-btn" type="button" data-img="pic/dogsan-pic - dogsan2.jpg"
@@ -127,13 +133,13 @@
         </div>
 
         <!-- 4-coment-->
-        <div class="profile-card" style="--index: 4;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 4;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon4.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">Miri Montan</a>
+                <h2 class="profile-name">Miri Montan</a>
                 </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
             </div>
@@ -156,13 +162,13 @@
         </div>
 
         <!-- 5-coment-->
-        <div class="profile-card" style="--index: 5;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 5;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon1.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">cobbu</a>
+                <h2 class="profile-name">cobbu</a>
                 </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
             </div>
@@ -186,13 +192,13 @@
         </div>
 
         <!-- 6-coment-->
-        <div class="profile-card" style="--index: 6;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 6;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon2.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">Jamuko</a>
+                <h2 class="profile-name">Jamuko</a>
                 </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
             </div>
@@ -216,13 +222,13 @@
         </div>
 
         <!-- 7-coment-->
-        <div class="profile-card" style="--index: 7;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 7;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon3.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">coup e</a>
+                <h2 class="profile-name">coup e</a>
                 </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
             </div>
@@ -245,13 +251,13 @@
         </div>
 
         <!-- 8-coment-->
-        <div class="profile-card" style="--index: 8;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 8;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon4.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">gomaaaaaa</a>
+                <h2 class="profile-name">gomaaaaaa</a>
                 </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
             </div>
@@ -273,13 +279,14 @@
         </div>
 
         <!-- 9-coment-->
-        <div class="profile-card" style="--index: 9;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 9;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon1.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">どう</a>
+
+                <h2 class="profile-name">どう</a>
                 </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
             </div>
@@ -303,13 +310,13 @@
         </div>
 
         <!-- 10-coment-->
-        <div class="profile-card" style="--index: 10;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 10;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon2.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">しろち</a>
+                <h2 class="profile-name">しろち</a>
                 </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
             </div>
@@ -332,13 +339,13 @@
         </div>
 
         <!-- 11-coment-->
-        <div class="profile-card" style="--index: 11;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 11;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon3.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">四季</a>
+                <h2 class="profile-name">四季</a>
                 </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
             </div>
@@ -363,13 +370,13 @@
         </div>
 
         <!-- 12-coment-->
-        <div class="profile-card" style="--index: 12;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 12;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon4.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">エゾシカ</a>
+                <h2 class="profile-name">エゾシカ</a>
                 </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
             </div>
@@ -392,7 +399,8 @@
         </div>
 
         <!-- 13-coment-->
-        <div class="profile-card" style="--index: 13;">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 13;" data-update="2026/01/01">
             <a href="https://x.com/1t1o1m1o1m1i" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
                 <img src="icon/Tomomi-icon - Tomomi.png" alt="プロフィールアイコン" class="profile-icon">
             </a>
@@ -429,13 +437,13 @@
         </div>
 
         <!-- 14-coment-->
-        <div class="profile-card" style="--index: 14;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 14;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon2.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">ノキ</a>
+                <h2 class="profile-name">ノキ</a>
                 </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
             </div>
@@ -457,13 +465,13 @@
         </div>
 
         <!-- 15-coment-->
-        <div class="profile-card" style="--index: 15;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 15;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon3.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">輝志レン</a>
+                <h2 class="profile-name">輝志レン</a>
                 </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
             </div>
@@ -486,7 +494,8 @@
         </div>
 
         <!-- 16-coment-->
-        <div class="profile-card" style="--index: 16;">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 16;" data-update="2026/01/01">
             <a href="https://x.com/GenSo670" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
                 <img src="icon/GenSo-icon - GenSo.JPG" alt="プロフィールアイコン" class="profile-icon">
             </a>
@@ -524,13 +533,13 @@
 
 
         <!-- 17-coment-->
-        <div class="profile-card" style="--index: 17;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 17;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon1.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">gamehand_souls</a>
+                <h2 class="profile-name">gamehand_souls</a>
                 </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
             </div>
@@ -552,13 +561,13 @@
         </div>
 
         <!-- 18-coment-->
-        <div class="profile-card" style="--index: 18;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 18;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon2.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">チョウデン</a>
+                <h2 class="profile-name">チョウデン</a>
                 </h2>
                 <!-- 画像表示ボタン（画像がない場合は削除） -->
             </div>
@@ -587,13 +596,13 @@
         <!-- 2026/07/28ここまでやったメモ -->
 
         <!-- 19-coment-->
-        <div class="profile-card" style="--index: 19;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 19;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon3.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">YOOKI</a>
+                <h2 class="profile-name">YOOKI</a>
                 </h2>
             </div>
             <div class="comment-frame">
@@ -618,13 +627,13 @@
         </div>
 
         <!-- 20-coment-->
-        <div class="profile-card" style="--index: 20;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 20;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon4.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">Boedromion</a>
+                <h2 class="profile-name">Boedromion</a>
                 </h2>
             </div>
             <div class="comment-frame">
@@ -647,13 +656,13 @@
         </div>
 
         <!-- 21-coment-->
-        <div class="profile-card" style="--index: 21;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 21;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon1.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">Erill</a>
+                <h2 class="profile-name">Erill</a>
                 </h2>
             </div>
             <div class="comment-frame">
@@ -680,13 +689,13 @@
         </div>
 
         <!-- 22-coment-->
-        <div class="profile-card" style="--index: 22;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 22;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon2.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">春叶</a>
+                <h2 class="profile-name">春叶</a>
                 </h2>
             </div>
             <div class="comment-frame">
@@ -718,13 +727,13 @@
         </div>
 
         <!-- 23-coment-->
-        <div class="profile-card" style="--index: 23;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 23;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon3.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">41</a>
+                <h2 class="profile-name">41</a>
                 </h2>
             </div>
             <div class="comment-frame">
@@ -747,13 +756,13 @@
         </div>
 
         <!-- 24-coment-->
-        <div class="profile-card" style="--index: 24;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 24;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon4.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">そのひぐらし</a>
+                <h2 class="profile-name">そのひぐらし</a>
                 </h2>
             </div>
             <div class="comment-frame">
@@ -779,13 +788,13 @@
         </div>
 
         <!-- 25-coment-->
-        <div class="profile-card" style="--index: 25;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 25;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon1.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">篠宮</a>
+                <h2 class="profile-name">篠宮</a>
                 </h2>
             </div>
             <div class="comment-frame">
@@ -806,7 +815,8 @@
         </div>
 
         <!-- 26-coment-->
-        <div class="profile-card" style="--index: 26;">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 26;" data-update="2026/01/01">
             <a href="https://xhslink.cn/m/3q1T2RiHfkG" target="_blank" rel="noopener noreferrer"
                 class="profile-icon-link">
                 <img src="icon/Septpuff-icon - Septpuff.png" alt="プロフィールアイコン" class="profile-icon">
@@ -845,7 +855,8 @@
         </div>
 
         <!-- 27-coment-->
-        <div class="profile-card" style="--index: 27;">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 27;" data-update="2026/07/31">
             <a href="https://x.com/Mahirune" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
                 <img src="icon/MadoromiHirune-icon - 睡余.png" alt="プロフィールアイコン" class="profile-icon">
             </a>
@@ -881,13 +892,13 @@
         </div>
 
         <!-- 28-coment-->
-        <div class="profile-card" style="--index: 28;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 28;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon3.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">sigbird</a>
+                <h2 class="profile-name">sigbird</a>
                 </h2>
             </div>
             <div class="comment-frame">
@@ -909,13 +920,13 @@
         </div>
 
         <!-- 29-coment-->
-        <div class="profile-card" style="--index: 29;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 29;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon4.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">宿無氏</a>
+                <h2 class="profile-name">宿無氏</a>
                 </h2>
             </div>
             <div class="comment-frame">
@@ -945,13 +956,13 @@
         </div>
 
         <!-- 30-coment-->
-        <div class="profile-card" style="--index: 30;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 30;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon1.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">ChromeBread</a>
+                <h2 class="profile-name">ChromeBread</a>
                 </h2>
             </div>
             <div class="comment-frame">
@@ -972,13 +983,13 @@
         </div>
 
         <!-- 31-coment-->
-        <div class="profile-card" style="--index: 31;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 31;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon2.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">桔梗景</a>
+                <h2 class="profile-name">桔梗景</a>
                 </h2>
             </div>
             <div class="comment-frame">
@@ -1000,13 +1011,13 @@
         </div>
 
         <!-- 32-coment-->
-        <div class="profile-card" style="--index: 32;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 32;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon3.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">みぞれココア</a>
+                <h2 class="profile-name">みぞれココア</a>
                 </h2>
             </div>
             <div class="comment-frame">
@@ -1031,13 +1042,13 @@
         </div>
 
         <!-- 33-coment-->
-        <div class="profile-card" style="--index: 33;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 33;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon4.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">サハル</a>
+                <h2 class="profile-name">サハル</a>
                 </h2>
             </div>
             <div class="comment-frame">
@@ -1059,13 +1070,13 @@
         </div>
 
         <!-- 34-coment-->
-        <div class="profile-card" style="--index: 34;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 34;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon1.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">ももだま</a>
+                <h2 class="profile-name">ももだま</a>
                 </h2>
             </div>
             <div class="comment-frame">
@@ -1091,13 +1102,13 @@
         </div>
 
         <!-- 35-coment-->
-        <div class="profile-card" style="--index: 35;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 35;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon2.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">AoiroCosmos</a>
+                <h2 class="profile-name">AoiroCosmos</a>
                 </h2>
             </div>
             <div class="comment-frame">
@@ -1119,13 +1130,13 @@
         </div>
 
         <!-- 36-coment-->
-        <div class="profile-card" style="--index: 36;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 36;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon3.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">トオノ</a>
+                <h2 class="profile-name">トオノ</a>
                 </h2>
             </div>
             <div class="comment-frame">
@@ -1147,13 +1158,13 @@
         </div>
 
         <!-- 37-coment-->
-        <div class="profile-card" style="--index: 37;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 37;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon4.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">すきま</a>
+                <h2 class="profile-name">すきま</a>
                 </h2>
             </div>
             <div class="comment-frame">
@@ -1175,13 +1186,13 @@
         </div>
 
         <!-- 38-coment-->
-        <div class="profile-card" style="--index: 38;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 38;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon1.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">ささにしき</a>
+                <h2 class="profile-name">ささにしき</a>
                 </h2>
             </div>
             <div class="comment-frame">
@@ -1203,13 +1214,13 @@
         </div>
 
         <!-- 39-coment-->
-        <div class="profile-card" style="--index: 39;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 39;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon2.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">R-Yong</a>
+                <h2 class="profile-name">R-Yong</a>
                 </h2>
             </div>
             <div class="comment-frame">
@@ -1231,13 +1242,13 @@
         </div>
 
         <!-- 40-coment-->
-        <div class="profile-card" style="--index: 40;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 40;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon3.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">おゆゆ</a>
+                <h2 class="profile-name">おゆゆ</a>
                 </h2>
             </div>
             <div class="comment-frame">
@@ -1262,13 +1273,13 @@
         </div>
 
         <!-- 41-coment-->
-        <div class="profile-card" style="--index: 41;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 41;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon4.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">Ark</a>
+                <h2 class="profile-name">Ark</a>
                 </h2>
             </div>
             <div class="comment-frame">
@@ -1296,13 +1307,13 @@
         </div>
 
         <!-- 42-coment-->
-        <div class="profile-card" style="--index: 42;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 42;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="icon/waio-icon - o wai.jpg" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">waio</a>
+                <h2 class="profile-name">waio</a>
                 </h2>
             </div>
             <div class="comment-frame">
@@ -1325,13 +1336,13 @@
         </div>
 
         <!-- 43-coment-->
-        <div class="profile-card" style="--index: 43;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 43;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon1.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">Shopkeeper</a>
+                <h2 class="profile-name">Shopkeeper</a>
                 </h2>
             </div>
             <div class="comment-frame">
@@ -1356,13 +1367,13 @@
         </div>
 
         <!-- 44-coment-->
-        <div class="profile-card" style="--index: 44;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 44;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon2.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">ぴーえふわい/pfy</a>
+                <h2 class="profile-name">ぴーえふわい/pfy</a>
                 </h2>
             </div>
             <div class="comment-frame">
@@ -1383,13 +1394,13 @@
         </div>
 
         <!-- 45-coment-->
-        <div class="profile-card" style="--index: 45;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 45;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon3.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">灯野</a>
+                <h2 class="profile-name">灯野</a>
                 </h2>
             </div>
             <div class="comment-frame">
@@ -1415,13 +1426,13 @@
         </div>
 
         <!-- 46-coment-->
-        <div class="profile-card" style="--index: 46;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 46;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon4.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">烏兎</a>
+                <h2 class="profile-name">烏兎</a>
                 </h2>
             </div>
             <div class="comment-frame">
@@ -1444,13 +1455,13 @@
         </div>
 
         <!-- 47-coment-->
-        <div class="profile-card" style="--index: 47;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 47;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon1.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">み</a>
+                <h2 class="profile-name">み</a>
                 </h2>
             </div>
             <div class="comment-frame">
@@ -1475,13 +1486,13 @@
         </div>
 
         <!-- 48-coment-->
-        <div class="profile-card" style="--index: 48;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 48;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon2.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">八鳥スミノヒ</a>
+                <h2 class="profile-name">八鳥スミノヒ</a>
                 </h2>
             </div>
             <div class="comment-frame">
@@ -1506,13 +1517,13 @@
         </div>
 
         <!-- 49-coment-->
-        <div class="profile-card" style="--index: 49;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 49;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon3.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">ハル</a>
+                <h2 class="profile-name">ハル</a>
                 </h2>
             </div>
             <div class="comment-frame">
@@ -1533,13 +1544,13 @@
         </div>
 
         <!-- 50-coment-->
-        <div class="profile-card" style="--index: 50;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 50;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon4.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">ebushi</a>
+                <h2 class="profile-name">ebushi</a>
                 </h2>
             </div>
             <div class="comment-frame">
@@ -1560,7 +1571,8 @@
         </div>
 
         <!-- 51-coment-->
-        <div class="profile-card" style="--index: 51;">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 51;" data-update="2026/01/01">
             <a href="https://x.com/garden1914" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
                 <img src="icon/garden-icon - garden.JPG" alt="プロフィールアイコン" class="profile-icon">
             </a>
@@ -1588,13 +1600,13 @@
         </div>
 
         <!-- 52-coment-->
-        <div class="profile-card" style="--index: 52;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 52;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon2.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">nokumi</a>
+                <h2 class="profile-name">nokumi</a>
                 </h2>
             </div>
             <div class="comment-frame">
@@ -1619,13 +1631,13 @@
         </div>
 
         <!-- 53-coment-->
-        <div class="profile-card" style="--index: 53;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 53;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon3.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">カンテラ</a>
+                <h2 class="profile-name">カンテラ</a>
                 </h2>
             </div>
             <div class="comment-frame">
@@ -1646,13 +1658,13 @@
         </div>
 
         <!-- 54-coment-->
-        <div class="profile-card" style="--index: 54;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 54;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon4.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">キョウ</a>
+                <h2 class="profile-name">キョウ</a>
                 </h2>
             </div>
             <div class="comment-frame">
@@ -1675,13 +1687,13 @@
         </div>
 
         <!-- 55-coment-->
-        <div class="profile-card" style="--index: 55;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 55;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon1.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">ソラ</a>
+                <h2 class="profile-name">ソラ</a>
                 </h2>
             </div>
             <div class="comment-frame">
@@ -1702,13 +1714,13 @@
         </div>
 
         <!-- 56-coment-->
-        <div class="profile-card" style="--index: 56;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 56;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon2.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">Noshi</a>
+                <h2 class="profile-name">Noshi</a>
                 </h2>
             </div>
             <div class="comment-frame">
@@ -1729,13 +1741,13 @@
         </div>
 
         <!-- 57-coment-->
-        <div class="profile-card" style="--index: 57;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 57;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon3.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">河端りうの</a>
+                <h2 class="profile-name">河端りうの</a>
                 </h2>
             </div>
             <div class="comment-frame">
@@ -1757,13 +1769,13 @@
         </div>
 
         <!-- 58-coment-->
-        <div class="profile-card" style="--index: 58;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 58;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon4.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">ばき</a>
+                <h2 class="profile-name">ばき</a>
                 </h2>
             </div>
             <div class="comment-frame">
@@ -1785,13 +1797,13 @@
         </div>
 
         <!-- 59-coment-->
-        <div class="profile-card" style="--index: 59;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 59;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon1.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">Poyo man</a>
+                <h2 class="profile-name">Poyo man</a>
                 </h2>
             </div>
             <div class="comment-frame">
@@ -1814,13 +1826,13 @@
         </div>
 
         <!-- 60-coment-->
-        <div class="profile-card" style="--index: 60;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 60;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon2.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">kituki</a>
+                <h2 class="profile-name">kituki</a>
                 </h2>
             </div>
             <div class="comment-frame">
@@ -1841,13 +1853,13 @@
         </div>
 
         <!-- 61-coment-->
-        <div class="profile-card" style="--index: 61;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 61;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon3.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">小夜しぐれ子</a>
+                <h2 class="profile-name">小夜しぐれ子</a>
                 </h2>
             </div>
             <div class="comment-frame">
@@ -1873,13 +1885,13 @@
         </div>
 
         <!-- 62-coment-->
-        <div class="profile-card" style="--index: 62;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 62;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon4.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">kashimarul</a>
+                <h2 class="profile-name">kashimarul</a>
                 </h2>
             </div>
             <div class="comment-frame">
@@ -1904,13 +1916,13 @@
         </div>
 
         <!-- 63-coment-->
-        <div class="profile-card" style="--index: 63;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 63;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon1.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">てい</a>
+                <h2 class="profile-name">てい</a>
                 </h2>
             </div>
             <div class="comment-frame">
@@ -1936,13 +1948,13 @@
         </div>
 
         <!-- 64-coment-->
-        <div class="profile-card" style="--index: 64;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 64;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon2.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">Noin</a>
+                <h2 class="profile-name">Noin</a>
                 </h2>
             </div>
             <div class="comment-frame">
@@ -1967,13 +1979,13 @@
         </div>
 
         <!-- 65-coment-->
-        <div class="profile-card" style="--index: 65;">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
+        <!-- 更新があった場合、data-updateに更新日-->
+        <div class="profile-card" style="--index: 65;" data-update="2026/01/01">
+            <div class="profile-icon-link">
                 <img src="img/common-icon3.png" alt="プロフィールアイコン" class="profile-icon">
-            </a>
+            </div>
             <div class="name-header">
-                <h2 class="profile-name">
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer">すとあ</a>
+                <h2 class="profile-name">すとあ</a>
                 </h2>
             </div>
             <div class="comment-frame">
@@ -2021,6 +2033,11 @@
         </div>
     </div>
 
+    <!-- トップへ戻るボタン -->
+    <button id="page-top-btn" class="page-top-btn" aria-label="ページトップへ戻る">
+        <!-- FontAwesome -->
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
 
 </body>
 
@@ -2177,6 +2194,126 @@
         setTimeout(() => {
             splash.style.display = 'none';
         }, 3700); // 3.7秒後に要素消去
+    }
+
+    // ==========================================
+    // 更新バッジの自動表示・非表示（3日間）
+    // ==========================================
+    // data-update 属性が設定されているカードを全て探す
+    const updateCards = document.querySelectorAll('.profile-card[data-update]');
+
+    // 今日の日付を取得（時間は0時にリセットして純粋な日付比較にする）
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    updateCards.forEach(card => {
+        // カードに書かれた日付を取得
+        const updateStr = card.getAttribute('data-update');
+        if (!updateStr) return;
+
+        const updateDate = new Date(updateStr);
+        updateDate.setHours(0, 0, 0, 0);
+
+        // 「今日」と「更新日」の差を日数で計算
+        const diffTime = today.getTime() - updateDate.getTime();
+        const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+
+        // ★設定：更新日から何日間表示するか（今回は 3日以内）
+        // 0日(当日), 1日後, 2日後, 3日後 まで表示
+        if (diffDays >= 0 && diffDays <= 3) {
+            // 表示用の「月/日」を作成 (例: 7/31)
+            const month = updateDate.getMonth() + 1;
+            const date = updateDate.getDate();
+            const badgeText = `${month}/${date} UPDATE!`;
+
+            // CSSに渡すために data-badge-text を設定し、is-updated クラスをつける
+            card.setAttribute('data-badge-text', badgeText);
+            card.classList.add('is-updated');
+        }
+    });
+    // ==========================================
+    // 5. 更新カードの抽出（フィルター）機能（修正版）
+    // ==========================================
+    const filterBtn = document.getElementById('filter-updates-btn');
+
+    if (filterBtn) {
+        filterBtn.addEventListener('click', () => {
+            // 1. ボタン自体の見た目を切り替え
+            const isActive = filterBtn.classList.toggle('is-active');
+
+            // 全カードを取得
+            const allCards = document.querySelectorAll('.card-container .profile-card');
+            let visibleCount = 0;
+
+            allCards.forEach(card => {
+                // ★ボタンが押された時点で、今後のアニメーション遅延(3秒待ち)を解除するクラスをつける
+                card.classList.add('is-shown-instant');
+
+                if (isActive) {
+                    // 抽出ONの場合：更新バッジ(.is-updated)が無いカードに、隠す用クラスをつける
+                    if (!card.classList.contains('is-updated')) {
+                        card.classList.add('is-hidden-by-filter');
+                    } else {
+                        if (!card.classList.contains('is-hidden')) {
+                            visibleCount++;
+                        }
+                    }
+                } else {
+                    // 抽出OFFの場合：フィルターによる非表示を全て解除（パッと一瞬で再表示されます！）
+                    card.classList.remove('is-hidden-by-filter');
+
+                    if (!card.classList.contains('is-hidden')) {
+                        visibleCount++;
+                    }
+                }
+            });
+
+            // 「検索結果なし」メッセージの表示制御
+            if (noResults) {
+                const query = searchInput ? searchInput.value.trim() : '';
+                if ((isActive || query !== '') && visibleCount === 0) {
+                    noResults.classList.add('is-visible');
+                } else {
+                    noResults.classList.remove('is-visible');
+                }
+            }
+        });
+    }
+    // ==========================================
+    // 6. F5(リロード)時に必ずページトップから表示する
+    // ==========================================
+    // ブラウザがスクロール位置を記憶する機能を「手動(無効)」にする
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+    }
+    // 念のため、ページ読み込み時に強制的に上へ戻す
+    window.scrollTo(0, 0);
+
+
+    // ==========================================
+    // 7. トップへ戻るボタンの表示・クリック動作
+    // ==========================================
+    const pageTopBtn = document.getElementById('page-top-btn');
+
+    if (pageTopBtn) {
+        // スクロールしたときの動作
+        window.addEventListener('scroll', () => {
+            // 上から 300px 以上スクロールしたらボタンを表示
+            if (window.scrollY > 300) {
+                pageTopBtn.classList.add('is-visible');
+            } else {
+                pageTopBtn.classList.remove('is-visible');
+            }
+        });
+
+        // ボタンをクリックしたときの動作
+        pageTopBtn.addEventListener('click', () => {
+            // behavior: 'smooth' を指定することで、パッと切り替わらずに高速で滑らかに上に戻ります
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
     }
 </script>
 
