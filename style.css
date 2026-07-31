@@ -131,7 +131,7 @@ body::before {
         font-size: 0.75rem !important;
     }
 
-    /* 6. コメント枠（★ここを修正！ボタンと被らないよう上余白36pxを確保） */
+    /* 6. コメント枠 */
     .comment-frame {
         padding: 36px 6px 10px 6px !important; /* 上 右 下 左 */
     }
@@ -705,7 +705,10 @@ body::before {
     justify-content: center;
     align-items: center;
     
-    animation: logoFadeIn 0.6s ease 0.2s forwards;
+    /* ★修正：ヘッダー化する際にズレを「0」に戻す動き（logoAdjust）を追加 */
+    animation: 
+        logoFadeIn 0.6s ease 0.2s forwards,
+        logoAdjust 0.8s cubic-bezier(0.77, 0, 0.175, 1) 2.5s forwards;
     opacity: 0;
 }
 
@@ -741,15 +744,27 @@ body::before {
    アニメーションのキーフレーム定義
    ========================================== */
 
-/* ロゴが画面中央でふんわり表示 */
+/* ★修正：最初から全体を上（-45px）にずらして表示する */
 @keyframes logoFadeIn {
     0% {
         opacity: 0;
-        transform: translateY(15px);
+        /* 少し下から上へふんわり現れる */
+        transform: translateY(-25px); 
     }
     100% {
         opacity: 1;
-        transform: translateY(0);
+        /* 全体を上にずらす（-45px の数字で高さ調整可能） */
+        transform: translateY(-45px); 
+    }
+}
+
+/* ヘッダーへ収縮する時に、ずらした分(-45px)を「0」に戻してピッタリ重ねる */
+@keyframes logoAdjust {
+    0% {
+        transform: translateY(-45px);
+    }
+    100% {
+        transform: translateY(0); /* 本来のヘッダーロゴの位置 */
     }
 }
 
@@ -812,5 +827,173 @@ body::before {
     100% {
         opacity: 0;
         visibility: hidden;
+    }
+}
+
+/* ==========================================
+   更新バッジ（アイデアA：カード右上）
+   ========================================== */
+/* バッジを表示する基準点として相対配置を設定 */
+.profile-card.is-updated {
+    position: relative; 
+}
+
+/* クラスがついたカードの右上にバッジを自動生成 */
+.profile-card.is-updated::before {
+    /* Sが計算した「7/31 UPDATE!」というテキストを受け取る */
+    content: attr(data-badge-text); 
+    position: absolute;
+    top: -12px;
+    right: -8px;    
+    /* サイトの華やかさに合わせたピンク系のグラデーション */
+    background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%); 
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    padding: 4px 12px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(255, 117, 140, 0.4);
+    z-index: 10;
+    
+    /* ぷかぷか揺れるアニメーション */
+    animation: floatBadge 2s ease-in-out infinite;
+}
+
+/* 揺れる動きの設定 */
+@keyframes floatBadge {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+}
+
+/* スマホ表示の時はバッジを少しだけ小さく調整 */
+@media (max-width: 767px) {
+    .profile-card.is-updated::before {
+        font-size: 0.65rem;
+        padding: 3px 8px;
+        top: -10px;
+        right: -4px;
+    }
+}
+
+/* ==========================================
+   更新抽出ボタン（検索エリア内）
+   ========================================== */
+/* 検索コンテナを横並び(flex)にしてボタンを並べる */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* 検索窓とボタンの隙間 */
+    margin-bottom: 20px;
+    position: relative; /* 虫眼鏡アイコンの位置基準 */
+}
+
+/* 抽出ボタンのデザイン */
+.filter-updates-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 16px;
+    border: 1px solid rgba(142, 197, 252, 0.5);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #555;
+    font-size: 0.85rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    height: 40px; /* 検索窓と高さを合わせる（必要に応じて調整） */
+}
+
+.filter-updates-btn:hover {
+    background-color: #ffffff;
+    color: #667eea;
+    border-color: #667eea;
+}
+
+/* ボタンが押されている（抽出中）のスタイル */
+.filter-updates-btn.is-active {
+    background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%);
+    color: #fff;
+    border-color: transparent;
+    box-shadow: 0 4px 10px rgba(255, 117, 140, 0.3);
+}
+
+/* 抽出ボタンによって隠されるカード */
+.profile-card.is-hidden-by-filter {
+    display: none !important;
+}
+
+/* 一度でもボタンで再表示されたカードは、オープニングの「3秒待ち」を無効化する */
+.profile-card.is-shown-instant {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    animation: none !important; /* オープニング用のアニメーションを消し去る */
+    animation-delay: 0.5s !important; /* 待ち時間を0秒にする */
+}
+
+/* スマホ表示の微調整 */
+@media (max-width: 767px) {
+    .filter-updates-btn {
+        padding: 6px 10px;
+        font-size: 0.75rem;
+        height: 36px;
+    }
+}
+
+/* ==========================================
+   ページトップへ戻るボタン
+   ========================================== */
+.page-top-btn {
+    position: fixed;
+    bottom: 30px; /* 下からの距離 */
+    right: 30px;  /* 右からの距離 */
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(142, 197, 252, 0.5);
+    border-radius: 50%; /* まん丸にする */
+    color: #667eea;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100; /* 他の要素より上に表示 */
+    
+    /* 初期状態は透明にして隠しておく */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px); /* 少し下にずらしておく */
+    transition: all 0.3s ease;
+}
+
+/* スクロールして表示される時のクラス */
+.page-top-btn.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* マウスを乗せた時の動き */
+.page-top-btn:hover {
+    background-color: #ffffff;
+    box-shadow: 0 6px 15px rgba(102, 126, 234, 0.3);
+    transform: translateY(-3px); /* ぽわんと少し浮く */
+}
+
+/* スマホ表示の時は少し小さく、端に寄せる */
+@media (max-width: 767px) {
+    .page-top-btn {
+        width: 40px;
+        height: 40px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 1rem;
     }
 }
