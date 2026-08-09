@@ -1060,18 +1060,18 @@ body::before {
     perspective: 800px; 
 }
 
-/* 画像を包むコンテナ（サイズやアニメーション基準） */
+/* 画像コンテナ */
 .filler-inner {
     position: relative;
     width: 100%;
-    aspect-ratio: 1 / 1; 
-    cursor: pointer; 
-    transform-style: preserve-3d; 
+    aspect-ratio: 1 / 1;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    
     -webkit-tap-highlight-color: transparent; 
     user-select: none;
     -webkit-user-select: none;
     -webkit-touch-callout: none;
-}
 }
 
 /* 表と裏の画像共通設定 */
@@ -1093,22 +1093,22 @@ body::before {
     transform: rotateY(0deg);
 }
 
-/* 裏面の画像設定 */
+/* 裏面の画像設定（最初から180度回転しておく） */
 .filler-back {
     transform: rotateY(180deg);
 }
 
-/* 表から裏へ */
+/* 表→裏へ */
 .filler-inner.is-flipped {
     animation: bounceAndFlip 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
-/* 裏から表へ */
+/* 裏→表へ */
 .filler-inner.is-unflipped {
     animation: bounceAndUnflip 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
-/* キーフレーム */
+/* 裏へキーフレーム */
 @keyframes bounceAndFlip {
     0% {
         transform: translateY(0) rotateY(0deg) scale(1);
@@ -1117,11 +1117,11 @@ body::before {
         transform: translateY(-35px) rotateY(90deg) scale(1.1); /* 最高点で35px浮き上がり、半回転 */
     }
     100% {
-        transform: translateY(0) rotateY(180deg) scale(1); /* 着地＆裏返し完了 */
+        transform: translateY(0) rotateY(180deg) scale(1); /* 裏返し */
     }
 }
 
-/* ぴょんと跳ねて表に戻る動き（キーフレーム） */
+/* 表へキーフレーム */
 @keyframes bounceAndUnflip {
     0% {
         transform: translateY(0) rotateY(180deg) scale(1);
