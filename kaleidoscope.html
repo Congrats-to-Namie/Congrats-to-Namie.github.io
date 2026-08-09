@@ -12,7 +12,7 @@
 
 <body>
 
-    <!-- ★オープニングアニメーション用幕 -->
+    <!-- オープニングアニメーション用幕 -->
     <div id="splash-overlay">
         <div class="splash-logo-wrapper">
             <img src="img/header-logo.png" alt="ロゴ" class="splash-logo">
@@ -22,7 +22,7 @@
         </div>
     </div>
 
-    <!-- ▼ 上部固定ヘッダー（既存のまま） -->
+    <!-- 上部固定ヘッダー -->
     <header class="site-header">
         <div class="header-inner">
             <img src="img/header-logo.png" alt="ロゴ" class="site-logo">
@@ -33,17 +33,15 @@
     <div class="search-container">
         <input type="text" id="search-input" class="search-input" placeholder="Find messages" aria-label="検索">
 
-        <!-- ★spanからbutton（id="search-btn"）に変更 -->
         <button type="button" id="search-btn" class="search-btn" aria-label="検索を実行">🔍</button>
 
-        <!-- 追加：更新カード抽出ボタン-->
+        <!-- 更新カード抽出ボタン-->
         <button id="filter-updates-btn" class="filter-updates-btn" type="button" aria-label="最近の更新のみ表示">
             <span class="btn-icon">🔔</span>
             <span class="btn-text">Updates</span>
         </button>
     </div>
 
-    <!-- 2カラムをまとめる親コンテナ -->
     <div class="card-container">
 
         <!-- 1-coment-->
@@ -96,7 +94,8 @@
                     <p class="text-ja">Namie先生、初画集『千景箱
                         -Kaleidoscope』の発売おめでとうございます！<br>鮮やかな色彩でイラストを描くNamie先生を今後も応援しています！<br></p>
                     <!-- message-B -->
-                    <p class="text-en">Your message goes here. Long messages are welcome.<br> </p>
+                    <p class="text-en">Congratulations on the release of your first artbook, Kaleidoscope!<br>
+                        I'll continue supporting you and your beautifully vibrant illustrations!</p>
                 </div>
             </div>
             <!-- 全文を見るボタン -->
@@ -2021,7 +2020,7 @@
             <button class="read-more-btn" type="button">▼Read the full message</button>
         </div>
 
-        <!-- 最終画像（profile-card クラスを外してフィルターJSの干渉を防止） -->
+        <!-- 最終画像 -->
         <div class="filler-card">
             <div class="filler-inner" id="filler-inner">
                 <img src="img/last-1.png" alt="" class="filler-img filler-front" id="filler-front">
@@ -2037,17 +2036,16 @@
         <img id="no-results-img" src="img/op-1.png" alt="" class="no-results-img">
     </div>
 
-    <!-- 画面端に追加するモーダル（拡大ポップアップ）構造 -->
+    <!--拡大ポップアップ -->
     <div id="message-modal" class="modal-overlay">
         <div class="modal-card">
             <!-- 閉じるボタン -->
             <button class="modal-close-btn" type="button" aria-label="閉じる">×</button>
-            <!-- ここにクリックされたカードの中身がコピーされて表示されます -->
             <div class="modal-body"></div>
         </div>
     </div>
 
-    <!-- 画像拡大用モーダル（×ボタンを削除し、ヒントテキストを追加） -->
+    <!-- 画像拡大用モーダル -->
     <div id="image-modal" class="modal-overlay">
         <div class="image-modal-card">
             <img src="" alt="拡大画像" id="modal-img-src">
