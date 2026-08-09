@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title変更作業< /title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-        <link rel="stylesheet" href="style.css">
+    <title>Message for Namie-sensei</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -31,7 +32,9 @@
     <!-- 検索用 -->
     <div class="search-container">
         <input type="text" id="search-input" class="search-input" placeholder="Find messages" aria-label="検索">
-        <span class="search-icon">🔍</span>
+
+        <!-- ★spanからbutton（id="search-btn"）に変更 -->
+        <button type="button" id="search-btn" class="search-btn" aria-label="検索を実行">🔍</button>
 
         <!-- 追加：更新カード抽出ボタン-->
         <button id="filter-updates-btn" class="filter-updates-btn" type="button" aria-label="最近の更新のみ表示">
@@ -400,7 +403,7 @@
 
         <!-- 13-coment-->
         <!-- 更新があった場合、data-updateに更新日-->
-        <div class="profile-card" style="--index: 13;" data-update="2026/08/07">
+        <div class="profile-card" style="--index: 13;" data-update="2026/01/10">
             <a href="https://x.com/1t1o1m1o1m1i" target="_blank" rel="noopener noreferrer" class="profile-icon-link">
                 <img src="icon/Tomomi-icon - Tomomi.png" alt="プロフィールアイコン" class="profile-icon">
             </a>
@@ -442,7 +445,7 @@
 
         <!-- 14-coment-->
         <!-- 更新があった場合、data-updateに更新日-->
-        <div class="profile-card" style="--index: 14;" data-update="2026/08/07">
+        <div class="profile-card" style="--index: 14;" data-update="2026/01/07">
             <div class="profile-icon-link">
                 <img src="img/common-icon2.png" alt="プロフィールアイコン" class="profile-icon">
             </div>
@@ -461,7 +464,8 @@
                     <!-- message-A -->
                     <p class="text-ja">画集発売&個展開催おめでとうございます！これからもずっと応援しています…！</p>
                     <!-- message-B -->
-                    <p class="text-en">Congratulations on the release of your artbook and the opening of your exhibition!<br>I'll always be cheering you on...!</p>
+                    <p class="text-en">Congratulations on the release of your artbook and the opening of your
+                        exhibition!<br>I'll always be cheering you on...!</p>
                 </div>
             </div>
             <!-- 全文を見るボタン -->
@@ -2010,14 +2014,21 @@
             <button class="read-more-btn" type="button">▼Read the full message</button>
         </div>
 
+        <!-- 最終画像（profile-card クラスを外してフィルターJSの干渉を防止） -->
+        <div class="filler-card">
+            <div class="filler-inner" id="filler-inner">
+                <img src="img/last-1.png" alt="" class="filler-img filler-front" id="filler-front">
+                <img src="img/last-2.png" alt="" class="filler-img filler-back" id="filler-back">
+            </div>
+        </div>
+
+
     </div>
 
-    <!-- 検索結果「該当なしメッセージ」 -->
+    <!-- 検索結果「該当なし」 -->
     <div id="no-results" class="no-results">
-        <p>🔍 該当するメッセージが見つかりませんでした</p>
+        <img id="no-results-img" src="img/op-1.png" alt="" class="no-results-img">
     </div>
-
-
 
     <!-- 画面端に追加するモーダル（拡大ポップアップ）構造 -->
     <div id="message-modal" class="modal-overlay">
@@ -2042,284 +2053,6 @@
         <!-- FontAwesome -->
         <i class="fa-solid fa-chevron-up"></i>
     </button>
-
-</body>
-
-<!-- ここから下に <script> タグ -->
-<script>
-    // ==========================================
-    // 1. 翻訳ボタンの機能
-    // ==========================================
-    function setupTranslateBtn(btn) {
-        btn.addEventListener('click', () => {
-            const commentFrame = btn.closest('.comment-frame');
-            const btnText = btn.querySelector('.btn-text');
-            const isEnglish = commentFrame.classList.toggle('is-translated');
-
-            if (isEnglish) {
-                btnText.textContent = 'original';
-            } else {
-                btnText.textContent = 'translate';
-            }
-        });
-    }
-
-    document.querySelectorAll('.translate-btn').forEach(setupTranslateBtn);
-
-
-    // ==========================================
-    // 2. メッセージモーダル（拡大表示）の機能
-    // ==========================================
-    const modal = document.getElementById('message-modal');
-    const modalBody = modal.querySelector('.modal-body');
-    const modalClose = modal.querySelector('.modal-close-btn');
-
-    document.querySelectorAll('.read-more-btn').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            const card = e.target.closest('.profile-card');
-            const cardClone = card.cloneNode(true);
-
-            cardClone.querySelector('.read-more-btn').style.display = 'none';
-            cardClone.querySelector('.comment-text-wrapper').style.webkitLineClamp = 'unset';
-
-            const cloneTranslateBtn = cardClone.querySelector('.translate-btn');
-            if (cloneTranslateBtn) {
-                setupTranslateBtn(cloneTranslateBtn);
-            }
-
-            modalBody.innerHTML = '';
-            modalBody.appendChild(cardClone);
-            modal.classList.add('is-open');
-        });
-    });
-
-    modalClose.addEventListener('click', () => modal.classList.remove('is-open'));
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            modal.classList.remove('is-open');
-        }
-    });
-
-
-    // ==========================================
-    // 3. 画像モーダル（全文表示モーダル内でも動作）
-    // ==========================================
-    const imageModal = document.getElementById('image-modal');
-    const modalImgSrc = document.getElementById('modal-img-src');
-
-    // ページ全体のクリックを監視することで、複製されたボタンでも確実に動くようにします
-    document.addEventListener('click', (e) => {
-        const btn = e.target.closest('.image-gallery-btn');
-        if (btn) {
-            e.stopPropagation();
-            const imgSrc = btn.getAttribute('data-img');
-            if (imgSrc) {
-                modalImgSrc.src = imgSrc;
-                imageModal.classList.add('is-open');
-            }
-        }
-    });
-
-    // 画像モーダル画面のどこをタップしても閉じる
-    imageModal.addEventListener('click', () => {
-        imageModal.classList.remove('is-open');
-    });
-
-    // ==========================================
-    // 4. リアルタイム検索機能
-    // ==========================================
-    const searchInput = document.getElementById('search-input');
-    const cardContainer = document.querySelector('.card-container');
-    const noResults = document.getElementById('no-results');
-
-    if (searchInput) {
-        searchInput.addEventListener('input', (e) => {
-            const query = e.target.value.toLowerCase().trim();
-            const cards = document.querySelectorAll('.card-container .profile-card');
-            let visibleCount = 0;
-
-            if (query !== '') {
-                cardContainer.classList.add('is-searching');
-            } else {
-                cardContainer.classList.remove('is-searching');
-            }
-
-            cards.forEach(card => {
-                const name = card.querySelector('.profile-name')?.textContent.toLowerCase() || '';
-                const textJa = card.querySelector('.text-ja')?.textContent.toLowerCase() || '';
-                const textEn = card.querySelector('.text-en')?.textContent.toLowerCase() || '';
-
-                if (name.includes(query) || textJa.includes(query) || textEn.includes(query)) {
-                    card.classList.remove('is-hidden');
-                    visibleCount++;
-                } else {
-                    card.classList.add('is-hidden');
-                }
-            });
-
-            if (noResults) {
-                if (visibleCount === 0 && query !== '') {
-                    noResults.classList.add('is-visible');
-                } else {
-                    noResults.classList.remove('is-visible');
-                }
-            }
-        });
-    }
-
-    // ==========================================
-    // オープニング画像のランダム設定
-    // ==========================================
-    // ① 用意した8枚の画像ファイル名をリストにする
-    const splashImages = [
-        'img/op-1.png', // 1枚目
-        'img/op-2.png', // 2枚目
-        'img/op-3.png', // 3枚目
-        'img/op-4.png', // 4枚目
-        'img/op-5.png', // 5枚目
-        'img/op-6.png', // 6枚目
-        'img/op-7.png', // 7枚目
-        'img/op-8.png'  // 8枚目
-    ];
-
-    const randomSplashImg = document.getElementById('random-splash-img');
-
-    if (randomSplashImg) {
-        // ② 0 〜 7 の数字をランダムに選ぶ
-        const randomIndex = Math.floor(Math.random() * splashImages.length);
-
-        // ③ 選ばれた画像をセットする
-        randomSplashImg.src = splashImages[randomIndex];
-    }
-
-    // オープニング画面の自動制御
-    const splash = document.getElementById('splash-overlay');
-    if (splash) {
-        setTimeout(() => {
-            splash.style.display = 'none';
-        }, 3700); // 3.7秒後に要素消去
-    }
-
-    // ==========================================
-    // 更新バッジの自動表示・非表示（3日間）
-    // ==========================================
-    // data-update 属性が設定されているカードを全て探す
-    const updateCards = document.querySelectorAll('.profile-card[data-update]');
-
-    // 今日の日付を取得（時間は0時にリセットして純粋な日付比較にする）
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
-
-    updateCards.forEach(card => {
-        // カードに書かれた日付を取得
-        const updateStr = card.getAttribute('data-update');
-        if (!updateStr) return;
-
-        const updateDate = new Date(updateStr);
-        updateDate.setHours(0, 0, 0, 0);
-
-        // 「今日」と「更新日」の差を日数で計算
-        const diffTime = today.getTime() - updateDate.getTime();
-        const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
-
-        // ★設定：更新日から何日間表示するか（今回は 3日以内）
-        // 0日(当日), 1日後, 2日後, 3日後 まで表示
-        if (diffDays >= 0 && diffDays <= 3) {
-            // 表示用の「月/日」を作成 (例: 7/31)
-            const month = updateDate.getMonth() + 1;
-            const date = updateDate.getDate();
-            const badgeText = `${month}/${date} UPDATE!`;
-
-            // CSSに渡すために data-badge-text を設定し、is-updated クラスをつける
-            card.setAttribute('data-badge-text', badgeText);
-            card.classList.add('is-updated');
-        }
-    });
-    // ==========================================
-    // 5. 更新カードの抽出（フィルター）機能（修正版）
-    // ==========================================
-    const filterBtn = document.getElementById('filter-updates-btn');
-
-    if (filterBtn) {
-        filterBtn.addEventListener('click', () => {
-            // 1. ボタン自体の見た目を切り替え
-            const isActive = filterBtn.classList.toggle('is-active');
-
-            // 全カードを取得
-            const allCards = document.querySelectorAll('.card-container .profile-card');
-            let visibleCount = 0;
-
-            allCards.forEach(card => {
-                // ★ボタンが押された時点で、今後のアニメーション遅延(3秒待ち)を解除するクラスをつける
-                card.classList.add('is-shown-instant');
-
-                if (isActive) {
-                    // 抽出ONの場合：更新バッジ(.is-updated)が無いカードに、隠す用クラスをつける
-                    if (!card.classList.contains('is-updated')) {
-                        card.classList.add('is-hidden-by-filter');
-                    } else {
-                        if (!card.classList.contains('is-hidden')) {
-                            visibleCount++;
-                        }
-                    }
-                } else {
-                    // 抽出OFFの場合：フィルターによる非表示を全て解除（パッと一瞬で再表示されます！）
-                    card.classList.remove('is-hidden-by-filter');
-
-                    if (!card.classList.contains('is-hidden')) {
-                        visibleCount++;
-                    }
-                }
-            });
-
-            // 「検索結果なし」メッセージの表示制御
-            if (noResults) {
-                const query = searchInput ? searchInput.value.trim() : '';
-                if ((isActive || query !== '') && visibleCount === 0) {
-                    noResults.classList.add('is-visible');
-                } else {
-                    noResults.classList.remove('is-visible');
-                }
-            }
-        });
-    }
-    // ==========================================
-    // 6. F5(リロード)時に必ずページトップから表示する
-    // ==========================================
-    // ブラウザがスクロール位置を記憶する機能を「手動(無効)」にする
-    if ('scrollRestoration' in history) {
-        history.scrollRestoration = 'manual';
-    }
-    // 念のため、ページ読み込み時に強制的に上へ戻す
-    window.scrollTo(0, 0);
-
-
-    // ==========================================
-    // 7. トップへ戻るボタンの表示・クリック動作
-    // ==========================================
-    const pageTopBtn = document.getElementById('page-top-btn');
-
-    if (pageTopBtn) {
-        // スクロールしたときの動作
-        window.addEventListener('scroll', () => {
-            // 上から 300px 以上スクロールしたらボタンを表示
-            if (window.scrollY > 300) {
-                pageTopBtn.classList.add('is-visible');
-            } else {
-                pageTopBtn.classList.remove('is-visible');
-            }
-        });
-
-        // ボタンをクリックしたときの動作
-        pageTopBtn.addEventListener('click', () => {
-            // behavior: 'smooth' を指定することで、パッと切り替わらずに高速で滑らかに上に戻ります
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    }
-</script>
 
 </body>
 
