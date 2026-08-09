@@ -1,3 +1,10 @@
+
+html {
+    /* スクロールバー用のスペースを常に確保する（バーが出ないときは透明） */
+    scrollbar-gutter: stable;
+}
+
+
 /* ==========================================
    全体の基本設定（華やかグラデーション背景）
    ========================================== */
@@ -7,6 +14,9 @@ body {
     background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
     /* あるいは、もっと鮮やかにするなら以下コメントアウトを外す */
     /* background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%); */
+    
+min-height: 100vh;
+
     margin: 0;
     padding: 0;
     color: #333;
@@ -192,6 +202,7 @@ body::before {
 }
 
 /* 検索実行中（.is-searching）は待ち時間を解除して一瞬で表示する */
+.card-container.animation-done .profile-card,
 .card-container.is-searching .profile-card {
     opacity: 1 !important;
     transform: none !important;
@@ -544,14 +555,30 @@ body::before {
 }
 
 /* 虫眼鏡アイコン */
-.search-icon {
+.search-btn {
     position: absolute;
     left: 38px;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
     opacity: 0.6;
-    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: 2; /* 押せるように前面へ */
+}
+
+/* ホバー（マウスを乗せたとき）の演出 */
+.search-btn:hover {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.15);
+}
+
+/* クリックした瞬間 */
+.search-btn:active {
+    transform: translateY(-50%) scale(0.95);
 }
 
 /* 検索結果で非表示にするカード */
@@ -564,9 +591,24 @@ body::before {
     display: none;
     grid-column: 1 / -1; /* 2カラム分を突き抜けて中央に表示 */
     text-align: center;
-    padding: 50px 20px;
-    color: #777;
-    font-weight: bold;
+    padding: 10px 20px 0px 20px;
+}
+/* 該当なし画像専用のアニメーション */
+@keyframes noResultsShake {
+    0%   { transform: rotate(0deg); }  /* 正面 */
+    25%  { transform: rotate(7deg); }  /* 右傾き */
+    50%  { transform: rotate(0deg); }  /* 正面 */
+    75%  { transform: rotate(-7deg); } /* 左傾き */
+    100% { transform: rotate(0deg); }
+}
+
+/* 該当なし画像のサイズ調整 */
+.no-results-img {
+    max-width: 100%;   
+    width: 250px; 
+    height: auto;
+    cursor: pointer;
+    animation: noResultsShake 0.8s 1 step-end; 
 }
 
 .no-results.is-visible {
@@ -996,4 +1038,107 @@ body::before {
         right: 20px;
         font-size: 1rem;
     }
+}
+
+
+/* ==========================================
+   最終段の埋め合わせ画像（立体フリップ＆跳ねるアニメーション）
+   ========================================== */
+.filler-card {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    padding: 0 !important;
+
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: flex-end !important;
+    
+    /* 立体感（奥行き）を出す設定 */
+    perspective: 800px; 
+}
+
+/* 画像を包むコンテナ（サイズやアニメーション基準） */
+.filler-inner {
+    position: relative;
+    width: 100%;           /* 幅（お好みで調整可） */
+    aspect-ratio: 1 / 1;   /* 正方形の枠（縦横比を維持） */
+    cursor: pointer;       /* ポインターアイコンにする */
+    transform-style: preserve-3d; /* 3D回転を有効化 */
+}
+
+/* 表と裏の画像共通設定 */
+.filler-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain;
+    border-radius: 12px;
+    backface-visibility: hidden; /* 裏側になった時に非表示にする */
+    display: block;
+}
+
+/* 表面の画像設定 */
+.filler-front {
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+
+/* 裏面の画像設定（最初から180度回転しておく） */
+.filler-back {
+    transform: rotateY(180deg);
+}
+
+/* 表 ➔ 裏へ跳ねて回転するアニメーション */
+.filler-inner.is-flipped {
+    animation: bounceAndFlip 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* 裏 ➔ 表へ跳ねて戻るアニメーション */
+.filler-inner.is-unflipped {
+    animation: bounceAndUnflip 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* ぴょんと跳ねて裏返る動き（キーフレーム） */
+@keyframes bounceAndFlip {
+    0% {
+        transform: translateY(0) rotateY(0deg) scale(1);
+    }
+    50% {
+        transform: translateY(-35px) rotateY(90deg) scale(1.1); /* 最高点で35px浮き上がり、半回転 */
+    }
+    100% {
+        transform: translateY(0) rotateY(180deg) scale(1); /* 着地＆裏返し完了 */
+    }
+}
+
+/* ぴょんと跳ねて表に戻る動き（キーフレーム） */
+@keyframes bounceAndUnflip {
+    0% {
+        transform: translateY(0) rotateY(180deg) scale(1);
+    }
+    50% {
+        transform: translateY(-35px) rotateY(90deg) scale(1.1);
+    }
+    100% {
+        transform: translateY(0) rotateY(0deg) scale(1);
+    }
+}
+
+/* 検索実行時や更新抽出時には確実に非表示 */
+.card-container.is-searching .filler-card,
+.card-container.is-filtered .filler-card,
+.card-container.is-active .filler-card,
+.filter-updates-btn.is-active ~ .card-container .filler-card,
+.filter-updates-btn.is-active ~ * .filler-card,
+body.is-filtering .filler-card,
+.filler-card.is-hidden {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
 }
